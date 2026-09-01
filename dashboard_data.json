@@ -1,0 +1,885 @@
+{
+    "dates": [
+        "2026-08-31"
+    ],
+    "branches": {
+        "Centeno": [
+            528847
+        ],
+        "Sede Aeronautica": [
+            568364
+        ],
+        "Dibujantes": [
+            53012
+        ],
+        "G. Cremero I": [
+            43736
+        ],
+        "G. Cremero II": [
+            25889
+        ],
+        "G. Cremero III": [
+            25644
+        ],
+        "Xochimilco Uno": [
+            17937
+        ],
+        "Xochimilco Dos": [
+            41057
+        ],
+        "La Nueva": [
+            259354
+        ],
+        "Los G\u00fceros": [
+            546911
+        ],
+        "Sur 16": [
+            27978
+        ],
+        "La Gran Monarca": [
+            58206
+        ]
+    },
+    "products": [
+        {
+            "Sucursal": "Centeno",
+            "Fecha": "2026-08-31",
+            "Descripcion": "JAMON PREMIUM",
+            "Cantidad": 18.17,
+            "Total": 4804.64
+        },
+        {
+            "Sucursal": "Centeno",
+            "Fecha": "2026-08-31",
+            "Descripcion": "QUESO OAXACA",
+            "Cantidad": 94.32,
+            "Total": 7136.51
+        },
+        {
+            "Sucursal": "Centeno",
+            "Fecha": "2026-08-31",
+            "Descripcion": "SALCHICHA FRANK",
+            "Cantidad": 12.55,
+            "Total": 4986.87
+        },
+        {
+            "Sucursal": "Centeno",
+            "Fecha": "2026-08-31",
+            "Descripcion": "CREMA ACIDULA",
+            "Cantidad": 33.75,
+            "Total": 1653.43
+        },
+        {
+            "Sucursal": "Centeno",
+            "Fecha": "2026-08-31",
+            "Descripcion": "YOGURT NATURAL",
+            "Cantidad": 24.91,
+            "Total": 2509.11
+        },
+        {
+            "Sucursal": "Sede Aeronautica",
+            "Fecha": "2026-08-31",
+            "Descripcion": "JAMON PREMIUM",
+            "Cantidad": 43.35,
+            "Total": 2865.64
+        },
+        {
+            "Sucursal": "Sede Aeronautica",
+            "Fecha": "2026-08-31",
+            "Descripcion": "QUESO OAXACA",
+            "Cantidad": 65.17,
+            "Total": 3916.83
+        },
+        {
+            "Sucursal": "Sede Aeronautica",
+            "Fecha": "2026-08-31",
+            "Descripcion": "SALCHICHA FRANK",
+            "Cantidad": 28.45,
+            "Total": 4679.99
+        },
+        {
+            "Sucursal": "Sede Aeronautica",
+            "Fecha": "2026-08-31",
+            "Descripcion": "CREMA ACIDULA",
+            "Cantidad": 45.8,
+            "Total": 2737.82
+        },
+        {
+            "Sucursal": "Sede Aeronautica",
+            "Fecha": "2026-08-31",
+            "Descripcion": "YOGURT NATURAL",
+            "Cantidad": 16.17,
+            "Total": 2729.71
+        },
+        {
+            "Sucursal": "Dibujantes",
+            "Fecha": "2026-08-31",
+            "Descripcion": "JAMON PREMIUM",
+            "Cantidad": 11.69,
+            "Total": 6431.87
+        },
+        {
+            "Sucursal": "Dibujantes",
+            "Fecha": "2026-08-31",
+            "Descripcion": "QUESO OAXACA",
+            "Cantidad": 80.12,
+            "Total": 7573.7
+        },
+        {
+            "Sucursal": "Dibujantes",
+            "Fecha": "2026-08-31",
+            "Descripcion": "SALCHICHA FRANK",
+            "Cantidad": 18.16,
+            "Total": 3823.09
+        },
+        {
+            "Sucursal": "Dibujantes",
+            "Fecha": "2026-08-31",
+            "Descripcion": "CREMA ACIDULA",
+            "Cantidad": 58.5,
+            "Total": 3942.6
+        },
+        {
+            "Sucursal": "Dibujantes",
+            "Fecha": "2026-08-31",
+            "Descripcion": "YOGURT NATURAL",
+            "Cantidad": 25.33,
+            "Total": 1274.53
+        },
+        {
+            "Sucursal": "G. Cremero I",
+            "Fecha": "2026-08-31",
+            "Descripcion": "JAMON PREMIUM",
+            "Cantidad": 48.01,
+            "Total": 7116.33
+        },
+        {
+            "Sucursal": "G. Cremero I",
+            "Fecha": "2026-08-31",
+            "Descripcion": "QUESO OAXACA",
+            "Cantidad": 70.18,
+            "Total": 9405.2
+        },
+        {
+            "Sucursal": "G. Cremero I",
+            "Fecha": "2026-08-31",
+            "Descripcion": "SALCHICHA FRANK",
+            "Cantidad": 18.57,
+            "Total": 2862.88
+        },
+        {
+            "Sucursal": "G. Cremero I",
+            "Fecha": "2026-08-31",
+            "Descripcion": "CREMA ACIDULA",
+            "Cantidad": 17.64,
+            "Total": 4281.65
+        },
+        {
+            "Sucursal": "G. Cremero I",
+            "Fecha": "2026-08-31",
+            "Descripcion": "YOGURT NATURAL",
+            "Cantidad": 16.06,
+            "Total": 2684.88
+        },
+        {
+            "Sucursal": "G. Cremero II",
+            "Fecha": "2026-08-31",
+            "Descripcion": "JAMON PREMIUM",
+            "Cantidad": 17.09,
+            "Total": 7514.7
+        },
+        {
+            "Sucursal": "G. Cremero II",
+            "Fecha": "2026-08-31",
+            "Descripcion": "QUESO OAXACA",
+            "Cantidad": 89.49,
+            "Total": 7888.42
+        },
+        {
+            "Sucursal": "G. Cremero II",
+            "Fecha": "2026-08-31",
+            "Descripcion": "SALCHICHA FRANK",
+            "Cantidad": 21.22,
+            "Total": 1361.83
+        },
+        {
+            "Sucursal": "G. Cremero II",
+            "Fecha": "2026-08-31",
+            "Descripcion": "CREMA ACIDULA",
+            "Cantidad": 22.68,
+            "Total": 4159.35
+        },
+        {
+            "Sucursal": "G. Cremero II",
+            "Fecha": "2026-08-31",
+            "Descripcion": "YOGURT NATURAL",
+            "Cantidad": 35.63,
+            "Total": 2450.9
+        },
+        {
+            "Sucursal": "G. Cremero III",
+            "Fecha": "2026-08-31",
+            "Descripcion": "JAMON PREMIUM",
+            "Cantidad": 27.92,
+            "Total": 4004.38
+        },
+        {
+            "Sucursal": "G. Cremero III",
+            "Fecha": "2026-08-31",
+            "Descripcion": "QUESO OAXACA",
+            "Cantidad": 77.3,
+            "Total": 10767.0
+        },
+        {
+            "Sucursal": "G. Cremero III",
+            "Fecha": "2026-08-31",
+            "Descripcion": "SALCHICHA FRANK",
+            "Cantidad": 16.44,
+            "Total": 1905.7
+        },
+        {
+            "Sucursal": "G. Cremero III",
+            "Fecha": "2026-08-31",
+            "Descripcion": "CREMA ACIDULA",
+            "Cantidad": 47.61,
+            "Total": 1545.31
+        },
+        {
+            "Sucursal": "G. Cremero III",
+            "Fecha": "2026-08-31",
+            "Descripcion": "YOGURT NATURAL",
+            "Cantidad": 12.62,
+            "Total": 1947.07
+        },
+        {
+            "Sucursal": "Xochimilco Uno",
+            "Fecha": "2026-08-31",
+            "Descripcion": "JAMON PREMIUM",
+            "Cantidad": 13.32,
+            "Total": 7712.14
+        },
+        {
+            "Sucursal": "Xochimilco Uno",
+            "Fecha": "2026-08-31",
+            "Descripcion": "QUESO OAXACA",
+            "Cantidad": 76.27,
+            "Total": 10868.36
+        },
+        {
+            "Sucursal": "Xochimilco Uno",
+            "Fecha": "2026-08-31",
+            "Descripcion": "SALCHICHA FRANK",
+            "Cantidad": 13.94,
+            "Total": 1214.38
+        },
+        {
+            "Sucursal": "Xochimilco Uno",
+            "Fecha": "2026-08-31",
+            "Descripcion": "CREMA ACIDULA",
+            "Cantidad": 20.78,
+            "Total": 5947.92
+        },
+        {
+            "Sucursal": "Xochimilco Uno",
+            "Fecha": "2026-08-31",
+            "Descripcion": "YOGURT NATURAL",
+            "Cantidad": 38.57,
+            "Total": 3320.03
+        },
+        {
+            "Sucursal": "Xochimilco Dos",
+            "Fecha": "2026-08-31",
+            "Descripcion": "JAMON PREMIUM",
+            "Cantidad": 13.63,
+            "Total": 5194.28
+        },
+        {
+            "Sucursal": "Xochimilco Dos",
+            "Fecha": "2026-08-31",
+            "Descripcion": "QUESO OAXACA",
+            "Cantidad": 86.39,
+            "Total": 4907.94
+        },
+        {
+            "Sucursal": "Xochimilco Dos",
+            "Fecha": "2026-08-31",
+            "Descripcion": "SALCHICHA FRANK",
+            "Cantidad": 28.02,
+            "Total": 2921.87
+        },
+        {
+            "Sucursal": "Xochimilco Dos",
+            "Fecha": "2026-08-31",
+            "Descripcion": "CREMA ACIDULA",
+            "Cantidad": 30.61,
+            "Total": 2834.31
+        },
+        {
+            "Sucursal": "Xochimilco Dos",
+            "Fecha": "2026-08-31",
+            "Descripcion": "YOGURT NATURAL",
+            "Cantidad": 20.93,
+            "Total": 1734.85
+        },
+        {
+            "Sucursal": "La Nueva",
+            "Fecha": "2026-08-31",
+            "Descripcion": "JAMON PREMIUM",
+            "Cantidad": 36.72,
+            "Total": 7096.96
+        },
+        {
+            "Sucursal": "La Nueva",
+            "Fecha": "2026-08-31",
+            "Descripcion": "QUESO OAXACA",
+            "Cantidad": 44.44,
+            "Total": 9069.98
+        },
+        {
+            "Sucursal": "La Nueva",
+            "Fecha": "2026-08-31",
+            "Descripcion": "SALCHICHA FRANK",
+            "Cantidad": 13.44,
+            "Total": 1508.69
+        },
+        {
+            "Sucursal": "La Nueva",
+            "Fecha": "2026-08-31",
+            "Descripcion": "CREMA ACIDULA",
+            "Cantidad": 47.99,
+            "Total": 4246.26
+        },
+        {
+            "Sucursal": "La Nueva",
+            "Fecha": "2026-08-31",
+            "Descripcion": "YOGURT NATURAL",
+            "Cantidad": 18.61,
+            "Total": 1649.38
+        },
+        {
+            "Sucursal": "Los G\u00fceros",
+            "Fecha": "2026-08-31",
+            "Descripcion": "JAMON PREMIUM",
+            "Cantidad": 25.64,
+            "Total": 2882.17
+        },
+        {
+            "Sucursal": "Los G\u00fceros",
+            "Fecha": "2026-08-31",
+            "Descripcion": "QUESO OAXACA",
+            "Cantidad": 56.41,
+            "Total": 8514.9
+        },
+        {
+            "Sucursal": "Los G\u00fceros",
+            "Fecha": "2026-08-31",
+            "Descripcion": "SALCHICHA FRANK",
+            "Cantidad": 26.25,
+            "Total": 1529.72
+        },
+        {
+            "Sucursal": "Los G\u00fceros",
+            "Fecha": "2026-08-31",
+            "Descripcion": "CREMA ACIDULA",
+            "Cantidad": 39.04,
+            "Total": 4400.15
+        },
+        {
+            "Sucursal": "Los G\u00fceros",
+            "Fecha": "2026-08-31",
+            "Descripcion": "YOGURT NATURAL",
+            "Cantidad": 22.88,
+            "Total": 1368.54
+        },
+        {
+            "Sucursal": "Sur 16",
+            "Fecha": "2026-08-31",
+            "Descripcion": "JAMON PREMIUM",
+            "Cantidad": 12.4,
+            "Total": 4264.45
+        },
+        {
+            "Sucursal": "Sur 16",
+            "Fecha": "2026-08-31",
+            "Descripcion": "QUESO OAXACA",
+            "Cantidad": 74.96,
+            "Total": 7613.89
+        },
+        {
+            "Sucursal": "Sur 16",
+            "Fecha": "2026-08-31",
+            "Descripcion": "SALCHICHA FRANK",
+            "Cantidad": 8.75,
+            "Total": 4621.35
+        },
+        {
+            "Sucursal": "Sur 16",
+            "Fecha": "2026-08-31",
+            "Descripcion": "CREMA ACIDULA",
+            "Cantidad": 42.4,
+            "Total": 4688.77
+        },
+        {
+            "Sucursal": "Sur 16",
+            "Fecha": "2026-08-31",
+            "Descripcion": "YOGURT NATURAL",
+            "Cantidad": 37.44,
+            "Total": 1196.32
+        },
+        {
+            "Sucursal": "La Gran Monarca",
+            "Fecha": "2026-08-31",
+            "Descripcion": "JAMON PREMIUM",
+            "Cantidad": 17.29,
+            "Total": 3302.55
+        },
+        {
+            "Sucursal": "La Gran Monarca",
+            "Fecha": "2026-08-31",
+            "Descripcion": "QUESO OAXACA",
+            "Cantidad": 44.27,
+            "Total": 10631.34
+        },
+        {
+            "Sucursal": "La Gran Monarca",
+            "Fecha": "2026-08-31",
+            "Descripcion": "SALCHICHA FRANK",
+            "Cantidad": 12.54,
+            "Total": 2789.46
+        },
+        {
+            "Sucursal": "La Gran Monarca",
+            "Fecha": "2026-08-31",
+            "Descripcion": "CREMA ACIDULA",
+            "Cantidad": 36.13,
+            "Total": 2451.53
+        },
+        {
+            "Sucursal": "La Gran Monarca",
+            "Fecha": "2026-08-31",
+            "Descripcion": "YOGURT NATURAL",
+            "Cantidad": 36.66,
+            "Total": 1896.77
+        },
+        {
+            "Sucursal": "Centeno",
+            "Fecha": "2026-08-31",
+            "Descripcion": "JAMON PREMIUM",
+            "Cantidad": 47.17,
+            "Total": 5426.51
+        },
+        {
+            "Sucursal": "Centeno",
+            "Fecha": "2026-08-31",
+            "Descripcion": "QUESO OAXACA",
+            "Cantidad": 35.7,
+            "Total": 10954.6
+        },
+        {
+            "Sucursal": "Centeno",
+            "Fecha": "2026-08-31",
+            "Descripcion": "SALCHICHA FRANK",
+            "Cantidad": 8.96,
+            "Total": 4103.82
+        },
+        {
+            "Sucursal": "Centeno",
+            "Fecha": "2026-08-31",
+            "Descripcion": "CREMA ACIDULA",
+            "Cantidad": 20.8,
+            "Total": 4833.19
+        },
+        {
+            "Sucursal": "Centeno",
+            "Fecha": "2026-08-31",
+            "Descripcion": "YOGURT NATURAL",
+            "Cantidad": 38.35,
+            "Total": 3483.2
+        },
+        {
+            "Sucursal": "Sede Aeronautica",
+            "Fecha": "2026-08-31",
+            "Descripcion": "JAMON PREMIUM",
+            "Cantidad": 15.79,
+            "Total": 3297.48
+        },
+        {
+            "Sucursal": "Sede Aeronautica",
+            "Fecha": "2026-08-31",
+            "Descripcion": "QUESO OAXACA",
+            "Cantidad": 24.11,
+            "Total": 11085.88
+        },
+        {
+            "Sucursal": "Sede Aeronautica",
+            "Fecha": "2026-08-31",
+            "Descripcion": "SALCHICHA FRANK",
+            "Cantidad": 17.33,
+            "Total": 2092.37
+        },
+        {
+            "Sucursal": "Sede Aeronautica",
+            "Fecha": "2026-08-31",
+            "Descripcion": "CREMA ACIDULA",
+            "Cantidad": 21.33,
+            "Total": 1803.42
+        },
+        {
+            "Sucursal": "Sede Aeronautica",
+            "Fecha": "2026-08-31",
+            "Descripcion": "YOGURT NATURAL",
+            "Cantidad": 36.84,
+            "Total": 1818.37
+        },
+        {
+            "Sucursal": "Dibujantes",
+            "Fecha": "2026-08-31",
+            "Descripcion": "JAMON PREMIUM",
+            "Cantidad": 15.4,
+            "Total": 6987.94
+        },
+        {
+            "Sucursal": "Dibujantes",
+            "Fecha": "2026-08-31",
+            "Descripcion": "QUESO OAXACA",
+            "Cantidad": 51.14,
+            "Total": 4522.68
+        },
+        {
+            "Sucursal": "Dibujantes",
+            "Fecha": "2026-08-31",
+            "Descripcion": "SALCHICHA FRANK",
+            "Cantidad": 20.03,
+            "Total": 4380.28
+        },
+        {
+            "Sucursal": "Dibujantes",
+            "Fecha": "2026-08-31",
+            "Descripcion": "CREMA ACIDULA",
+            "Cantidad": 49.79,
+            "Total": 3902.69
+        },
+        {
+            "Sucursal": "Dibujantes",
+            "Fecha": "2026-08-31",
+            "Descripcion": "YOGURT NATURAL",
+            "Cantidad": 33.26,
+            "Total": 1349.36
+        },
+        {
+            "Sucursal": "G. Cremero I",
+            "Fecha": "2026-08-31",
+            "Descripcion": "JAMON PREMIUM",
+            "Cantidad": 17.7,
+            "Total": 2025.59
+        },
+        {
+            "Sucursal": "G. Cremero I",
+            "Fecha": "2026-08-31",
+            "Descripcion": "QUESO OAXACA",
+            "Cantidad": 21.15,
+            "Total": 10482.63
+        },
+        {
+            "Sucursal": "G. Cremero I",
+            "Fecha": "2026-08-31",
+            "Descripcion": "SALCHICHA FRANK",
+            "Cantidad": 11.19,
+            "Total": 2787.14
+        },
+        {
+            "Sucursal": "G. Cremero I",
+            "Fecha": "2026-08-31",
+            "Descripcion": "CREMA ACIDULA",
+            "Cantidad": 19.99,
+            "Total": 3054.94
+        },
+        {
+            "Sucursal": "G. Cremero I",
+            "Fecha": "2026-08-31",
+            "Descripcion": "YOGURT NATURAL",
+            "Cantidad": 18.35,
+            "Total": 3157.34
+        },
+        {
+            "Sucursal": "G. Cremero II",
+            "Fecha": "2026-08-31",
+            "Descripcion": "JAMON PREMIUM",
+            "Cantidad": 23.49,
+            "Total": 7309.49
+        },
+        {
+            "Sucursal": "G. Cremero II",
+            "Fecha": "2026-08-31",
+            "Descripcion": "QUESO OAXACA",
+            "Cantidad": 41.67,
+            "Total": 4385.85
+        },
+        {
+            "Sucursal": "G. Cremero II",
+            "Fecha": "2026-08-31",
+            "Descripcion": "SALCHICHA FRANK",
+            "Cantidad": 12.12,
+            "Total": 4536.69
+        },
+        {
+            "Sucursal": "G. Cremero II",
+            "Fecha": "2026-08-31",
+            "Descripcion": "CREMA ACIDULA",
+            "Cantidad": 48.55,
+            "Total": 2711.19
+        },
+        {
+            "Sucursal": "G. Cremero II",
+            "Fecha": "2026-08-31",
+            "Descripcion": "YOGURT NATURAL",
+            "Cantidad": 24.53,
+            "Total": 1001.28
+        },
+        {
+            "Sucursal": "G. Cremero III",
+            "Fecha": "2026-08-31",
+            "Descripcion": "JAMON PREMIUM",
+            "Cantidad": 46.01,
+            "Total": 3908.27
+        },
+        {
+            "Sucursal": "G. Cremero III",
+            "Fecha": "2026-08-31",
+            "Descripcion": "QUESO OAXACA",
+            "Cantidad": 43.46,
+            "Total": 5664.19
+        },
+        {
+            "Sucursal": "G. Cremero III",
+            "Fecha": "2026-08-31",
+            "Descripcion": "SALCHICHA FRANK",
+            "Cantidad": 8.69,
+            "Total": 4859.96
+        },
+        {
+            "Sucursal": "G. Cremero III",
+            "Fecha": "2026-08-31",
+            "Descripcion": "CREMA ACIDULA",
+            "Cantidad": 49.58,
+            "Total": 5986.18
+        },
+        {
+            "Sucursal": "G. Cremero III",
+            "Fecha": "2026-08-31",
+            "Descripcion": "YOGURT NATURAL",
+            "Cantidad": 17.57,
+            "Total": 1706.57
+        },
+        {
+            "Sucursal": "Xochimilco Uno",
+            "Fecha": "2026-08-31",
+            "Descripcion": "JAMON PREMIUM",
+            "Cantidad": 22.38,
+            "Total": 7670.77
+        },
+        {
+            "Sucursal": "Xochimilco Uno",
+            "Fecha": "2026-08-31",
+            "Descripcion": "QUESO OAXACA",
+            "Cantidad": 21.82,
+            "Total": 10304.04
+        },
+        {
+            "Sucursal": "Xochimilco Uno",
+            "Fecha": "2026-08-31",
+            "Descripcion": "SALCHICHA FRANK",
+            "Cantidad": 19.26,
+            "Total": 3271.11
+        },
+        {
+            "Sucursal": "Xochimilco Uno",
+            "Fecha": "2026-08-31",
+            "Descripcion": "CREMA ACIDULA",
+            "Cantidad": 49.97,
+            "Total": 5755.48
+        },
+        {
+            "Sucursal": "Xochimilco Uno",
+            "Fecha": "2026-08-31",
+            "Descripcion": "YOGURT NATURAL",
+            "Cantidad": 11.4,
+            "Total": 3688.52
+        },
+        {
+            "Sucursal": "Xochimilco Dos",
+            "Fecha": "2026-08-31",
+            "Descripcion": "JAMON PREMIUM",
+            "Cantidad": 39.54,
+            "Total": 3216.6
+        },
+        {
+            "Sucursal": "Xochimilco Dos",
+            "Fecha": "2026-08-31",
+            "Descripcion": "QUESO OAXACA",
+            "Cantidad": 24.43,
+            "Total": 6244.15
+        },
+        {
+            "Sucursal": "Xochimilco Dos",
+            "Fecha": "2026-08-31",
+            "Descripcion": "SALCHICHA FRANK",
+            "Cantidad": 14.55,
+            "Total": 3010.23
+        },
+        {
+            "Sucursal": "Xochimilco Dos",
+            "Fecha": "2026-08-31",
+            "Descripcion": "CREMA ACIDULA",
+            "Cantidad": 55.03,
+            "Total": 4441.47
+        },
+        {
+            "Sucursal": "Xochimilco Dos",
+            "Fecha": "2026-08-31",
+            "Descripcion": "YOGURT NATURAL",
+            "Cantidad": 22.55,
+            "Total": 2832.29
+        },
+        {
+            "Sucursal": "La Nueva",
+            "Fecha": "2026-08-31",
+            "Descripcion": "JAMON PREMIUM",
+            "Cantidad": 48.21,
+            "Total": 5517.99
+        },
+        {
+            "Sucursal": "La Nueva",
+            "Fecha": "2026-08-31",
+            "Descripcion": "QUESO OAXACA",
+            "Cantidad": 32.08,
+            "Total": 3942.75
+        },
+        {
+            "Sucursal": "La Nueva",
+            "Fecha": "2026-08-31",
+            "Descripcion": "SALCHICHA FRANK",
+            "Cantidad": 19.89,
+            "Total": 4750.78
+        },
+        {
+            "Sucursal": "La Nueva",
+            "Fecha": "2026-08-31",
+            "Descripcion": "CREMA ACIDULA",
+            "Cantidad": 20.24,
+            "Total": 1658.72
+        },
+        {
+            "Sucursal": "La Nueva",
+            "Fecha": "2026-08-31",
+            "Descripcion": "YOGURT NATURAL",
+            "Cantidad": 13.71,
+            "Total": 2336.51
+        },
+        {
+            "Sucursal": "Los G\u00fceros",
+            "Fecha": "2026-08-31",
+            "Descripcion": "JAMON PREMIUM",
+            "Cantidad": 21.84,
+            "Total": 4452.39
+        },
+        {
+            "Sucursal": "Los G\u00fceros",
+            "Fecha": "2026-08-31",
+            "Descripcion": "QUESO OAXACA",
+            "Cantidad": 38.99,
+            "Total": 3149.67
+        },
+        {
+            "Sucursal": "Los G\u00fceros",
+            "Fecha": "2026-08-31",
+            "Descripcion": "SALCHICHA FRANK",
+            "Cantidad": 9.32,
+            "Total": 4085.54
+        },
+        {
+            "Sucursal": "Los G\u00fceros",
+            "Fecha": "2026-08-31",
+            "Descripcion": "CREMA ACIDULA",
+            "Cantidad": 37.85,
+            "Total": 5267.16
+        },
+        {
+            "Sucursal": "Los G\u00fceros",
+            "Fecha": "2026-08-31",
+            "Descripcion": "YOGURT NATURAL",
+            "Cantidad": 18.9,
+            "Total": 1439.92
+        },
+        {
+            "Sucursal": "Sur 16",
+            "Fecha": "2026-08-31",
+            "Descripcion": "JAMON PREMIUM",
+            "Cantidad": 23.02,
+            "Total": 4652.49
+        },
+        {
+            "Sucursal": "Sur 16",
+            "Fecha": "2026-08-31",
+            "Descripcion": "QUESO OAXACA",
+            "Cantidad": 28.55,
+            "Total": 11270.25
+        },
+        {
+            "Sucursal": "Sur 16",
+            "Fecha": "2026-08-31",
+            "Descripcion": "SALCHICHA FRANK",
+            "Cantidad": 16.83,
+            "Total": 1582.11
+        },
+        {
+            "Sucursal": "Sur 16",
+            "Fecha": "2026-08-31",
+            "Descripcion": "CREMA ACIDULA",
+            "Cantidad": 44.84,
+            "Total": 1739.12
+        },
+        {
+            "Sucursal": "Sur 16",
+            "Fecha": "2026-08-31",
+            "Descripcion": "YOGURT NATURAL",
+            "Cantidad": 18.3,
+            "Total": 2348.75
+        },
+        {
+            "Sucursal": "La Gran Monarca",
+            "Fecha": "2026-08-31",
+            "Descripcion": "JAMON PREMIUM",
+            "Cantidad": 25.81,
+            "Total": 4272.75
+        },
+        {
+            "Sucursal": "La Gran Monarca",
+            "Fecha": "2026-08-31",
+            "Descripcion": "QUESO OAXACA",
+            "Cantidad": 69.5,
+            "Total": 10782.04
+        },
+        {
+            "Sucursal": "La Gran Monarca",
+            "Fecha": "2026-08-31",
+            "Descripcion": "SALCHICHA FRANK",
+            "Cantidad": 21.79,
+            "Total": 2616.53
+        },
+        {
+            "Sucursal": "La Gran Monarca",
+            "Fecha": "2026-08-31",
+            "Descripcion": "CREMA ACIDULA",
+            "Cantidad": 33.14,
+            "Total": 2092.16
+        },
+        {
+            "Sucursal": "La Gran Monarca",
+            "Fecha": "2026-08-31",
+            "Descripcion": "YOGURT NATURAL",
+            "Cantidad": 28.47,
+            "Total": 3965.29
+        }
+    ]
+}
