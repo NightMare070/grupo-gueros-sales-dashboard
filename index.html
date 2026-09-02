@@ -106,6 +106,19 @@
     </div>
 
     <script>
+
+    // FORCE CORRECT DATE FORMATTING
+    window.formatDashboardDate = function(dateStr) {
+        if (!dateStr) return '';
+        const parts = dateStr.split('-');
+        const months = ["Ene", "Feb", "Mar", "Abr", "May", "Jun", "Jul", "Ago", "Sep", "Oct", "Nov", "Dic"];
+        const day = parts[2];
+        const month = months[parseInt(parts[1]) - 1];
+        return `${day} ${month}`;
+    };
+    // Patch Date.prototype.toLocaleDateString or any other logic if necessary
+    // But better to replace the specific logic in the chart and table.
+
         const FULL_DATA = {
             "dates": [
                         "2026-08-31",
