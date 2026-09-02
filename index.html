@@ -107,26 +107,6 @@
 
     <script>
 
-    window.renderDate = function(dateStr) {
-        if(!dateStr) return "";
-        const parts = dateStr.split('-');
-        if(parts.length !== 3) return dateStr;
-        const months = ["Ene", "Feb", "Mar", "Abr", "May", "Jun", "Jul", "Ago", "Sep", "Oct", "Nov", "Dic"];
-        const mIdx = parseInt(parts[1]) - 1;
-        const monthName = (mIdx >= 0 && mIdx < 12) ? months[mIdx] : parts[1];
-        return parts[2] + " " + monthName;
-    };
-
-
-    window.formatDateFixed = function(dateStr) {
-        if(!dateStr) return "";
-        const d = dateStr.split('-');
-        const m = ["Ene", "Feb", "Mar", "Abr", "May", "Jun", "Jul", "Ago", "Sep", "Oct", "Nov", "Dic"];
-        return d[2] + " " + m[parseInt(d[1]) - 1];
-    };
-    // We will now replace all occurrences of the chart's date handling and the table's date handling
-
-
     // FORCE CORRECT DATE FORMATTING
     window.formatDashboardDate = function(dateStr) {
         if (!dateStr) return '';
@@ -149,6 +129,7 @@
                                     528847,
                                     1655605.31988
                         ],
+                        "Sede Aeronautica": [
                                     568364,
                                     0.0
                         ],
