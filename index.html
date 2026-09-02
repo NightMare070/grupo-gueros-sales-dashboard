@@ -81991,7 +81991,7 @@
             const body = document.getElementById('table-body');
             const foot = document.getElementById('table-foot');
             let headHtml = '<tr class="border-b text-gray-500 uppercase text-xs"><th class="py-3 px-4 sticky-col font-bold">Sucursal</th>';
-            indices.forEach(i => { headHtml += '<th class="py-3 px-2 text-right font-medium">' + FULL_DATA.dates[i].split('-')[2] + ' Ago</th>'; });
+            indices.forEach(i => { headHtml += '<th class="py-3 px-2 text-right font-medium">' + window.formatDashboardDate(FULL_DATA.dates[i]) + '</th>'; });
             head.innerHTML = headHtml + '</tr>';
             let bodyHtml = '';
             let dailyTotals = new Array(indices.length).fill(0);
@@ -82012,7 +82012,7 @@
 
         function updateChart(branches, indices) {
             const ctx = document.getElementById('trendChart').getContext('2d');
-            const labels = indices.map(i => FULL_DATA.dates[i].split('-')[2] + ' Ago');
+            const labels = indices.map(i => window.formatDashboardDate(FULL_DATA.dates[i]));
             const datasets = branches.map((b, idx) => ({
                 label: b,
                 data: indices.map(i => FULL_DATA.branches[b][i]),
