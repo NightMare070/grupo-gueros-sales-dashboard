@@ -120,11 +120,7 @@
     // But better to replace the specific logic in the chart and table.
 
         const FULL_DATA = {
-    "dates": [
-        "2026-08-31",
-        "2026-09-01",
-        "2026-09-02"
-    ],
+    "dates": ["2026-08-31", "2026-09-01"],
     "branches": {
         "Centeno": [
             544373.545,
@@ -94763,8 +94759,8 @@
             filtered.forEach(p => {
                 const name = p.Descripcion;
                 if (!agg[name]) agg[name] = { qty: 0, total: 0 };
-                agg[name].qty += p.Cantidad;
-                agg[name].total += p.Total;
+                agg[name].qty += (p.Cantidad || 0);
+                agg[name].total += (p.Total || 0);
             });
 
             const sorted = Object.entries(agg)
