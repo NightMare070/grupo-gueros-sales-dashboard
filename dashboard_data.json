@@ -11,7 +11,8 @@
     "2026-09-08",
     "2026-09-09",
     "2026-09-10",
-    "2026-09-11"
+    "2026-09-11",
+    "2026-09-12"
   ],
   "branches": {
     "Centeno": [
@@ -391507,6 +391508,2785 @@
     {
       "Sucursal": "Los Güeros",
       "Fecha": "2026-09-11",
+      "Descripcion": "YOG SABINO ZARZAMORA",
+      "Cantidad": 2.0,
+      "Total": 194.0
+    },
+    {
+      "Sucursal": "La Nueva",
+      "Fecha": "2026-09-12",
+      "Descripcion": "ACEITE 1.5L CRISTAL",
+      "Cantidad": 1.0,
+      "Total": 454.99998
+    },
+    {
+      "Sucursal": "La Nueva",
+      "Fecha": "2026-09-12",
+      "Descripcion": "ACEITE CRISTAL GALON",
+      "Cantidad": 12.0,
+      "Total": 2255.0001
+    },
+    {
+      "Sucursal": "La Nueva",
+      "Fecha": "2026-09-12",
+      "Descripcion": "AD VENECIA GALON",
+      "Cantidad": 8.0,
+      "Total": 800.0
+    },
+    {
+      "Sucursal": "La Nueva",
+      "Fecha": "2026-09-12",
+      "Descripcion": "AGUA BONAFONT 1.5 LT",
+      "Cantidad": 1.0,
+      "Total": 105.0
+    },
+    {
+      "Sucursal": "La Nueva",
+      "Fecha": "2026-09-12",
+      "Descripcion": "AMA BIOLAC",
+      "Cantidad": 33.0,
+      "Total": 2730.0
+    },
+    {
+      "Sucursal": "La Nueva",
+      "Fecha": "2026-09-12",
+      "Descripcion": "AMA CASTELL",
+      "Cantidad": 126.0,
+      "Total": 11455.439999999999
+    },
+    {
+      "Sucursal": "La Nueva",
+      "Fecha": "2026-09-12",
+      "Descripcion": "AMA CHIPILO",
+      "Cantidad": 2.0,
+      "Total": 274.0
+    },
+    {
+      "Sucursal": "La Nueva",
+      "Fecha": "2026-09-12",
+      "Descripcion": "AMA RANCH REBANADO",
+      "Cantidad": 8.0,
+      "Total": 766.0
+    },
+    {
+      "Sucursal": "La Nueva",
+      "Fecha": "2026-09-12",
+      "Descripcion": "ATE FRESA",
+      "Cantidad": 1.0,
+      "Total": 256.99999
+    },
+    {
+      "Sucursal": "La Nueva",
+      "Fecha": "2026-09-12",
+      "Descripcion": "ATE GUAYABA",
+      "Cantidad": 2.0,
+      "Total": 513.99998
+    },
+    {
+      "Sucursal": "La Nueva",
+      "Fecha": "2026-09-12",
+      "Descripcion": "ATE MEMBRILLO",
+      "Cantidad": 3.0,
+      "Total": 770.9999700000001
+    },
+    {
+      "Sucursal": "La Nueva",
+      "Fecha": "2026-09-12",
+      "Descripcion": "ATE TEJOCOTE",
+      "Cantidad": 2.0,
+      "Total": 513.99998
+    },
+    {
+      "Sucursal": "La Nueva",
+      "Fecha": "2026-09-12",
+      "Descripcion": "ATUN 133G AGUA DOLORES",
+      "Cantidad": 1.0,
+      "Total": 697.0
+    },
+    {
+      "Sucursal": "La Nueva",
+      "Fecha": "2026-09-12",
+      "Descripcion": "BARRA EL ABUELO",
+      "Cantidad": 3.8,
+      "Total": 418.0
+    },
+    {
+      "Sucursal": "La Nueva",
+      "Fecha": "2026-09-12",
+      "Descripcion": "BARRA QUESOMEX",
+      "Cantidad": 3.0,
+      "Total": 303.0
+    },
+    {
+      "Sucursal": "La Nueva",
+      "Fecha": "2026-09-12",
+      "Descripcion": "BOING 1/4 CUARTO",
+      "Cantidad": 1.0,
+      "Total": 229.99999
+    },
+    {
+      "Sucursal": "La Nueva",
+      "Fecha": "2026-09-12",
+      "Descripcion": "BURRITOS TORTILLA",
+      "Cantidad": 55.0,
+      "Total": 2174.5
+    },
+    {
+      "Sucursal": "La Nueva",
+      "Fecha": "2026-09-12",
+      "Descripcion": "CAN DURANGUEÑO",
+      "Cantidad": 98.80000000000001,
+      "Total": 11295.804
+    },
+    {
+      "Sucursal": "La Nueva",
+      "Fecha": "2026-09-12",
+      "Descripcion": "CAN QUESOMEX",
+      "Cantidad": 83.9,
+      "Total": 8527.75
+    },
+    {
+      "Sucursal": "La Nueva",
+      "Fecha": "2026-09-12",
+      "Descripcion": "CAN SELLO CHILCHOTA",
+      "Cantidad": 4.3,
+      "Total": 546.53
+    },
+    {
+      "Sucursal": "La Nueva",
+      "Fecha": "2026-09-12",
+      "Descripcion": "CAT BACHI GALON",
+      "Cantidad": 17.0,
+      "Total": 1430.0
+    },
+    {
+      "Sucursal": "La Nueva",
+      "Fecha": "2026-09-12",
+      "Descripcion": "CHANTILLY 1KG",
+      "Cantidad": 39.0,
+      "Total": 2106.0
+    },
+    {
+      "Sucursal": "La Nueva",
+      "Fecha": "2026-09-12",
+      "Descripcion": "CHIPOTLE 1K CHEFPINA",
+      "Cantidad": 8.0,
+      "Total": 428.0
+    },
+    {
+      "Sucursal": "La Nueva",
+      "Fecha": "2026-09-12",
+      "Descripcion": "CHIPOTLE 2.8K TORRE",
+      "Cantidad": 10.0,
+      "Total": 1916.0
+    },
+    {
+      "Sucursal": "La Nueva",
+      "Fecha": "2026-09-12",
+      "Descripcion": "CHOR ARGEN GALICIA",
+      "Cantidad": 4.0,
+      "Total": 140.0
+    },
+    {
+      "Sucursal": "La Nueva",
+      "Fecha": "2026-09-12",
+      "Descripcion": "CHORIZO 275G ESPAÑOL",
+      "Cantidad": 4.0,
+      "Total": 160.0
+    },
+    {
+      "Sucursal": "La Nueva",
+      "Fecha": "2026-09-12",
+      "Descripcion": "CHORIZO BOLONIA",
+      "Cantidad": 13.7,
+      "Total": 1369.3
+    },
+    {
+      "Sucursal": "La Nueva",
+      "Fecha": "2026-09-12",
+      "Descripcion": "CHULETA REB MONARCA A/V",
+      "Cantidad": 2.1,
+      "Total": 161.70000000000002
+    },
+    {
+      "Sucursal": "La Nueva",
+      "Fecha": "2026-09-12",
+      "Descripcion": "CLAVEL 1L 12PZ",
+      "Cantidad": 5.0,
+      "Total": 2450.0
+    },
+    {
+      "Sucursal": "La Nueva",
+      "Fecha": "2026-09-12",
+      "Descripcion": "CLAVEL CJA 48P LATA",
+      "Cantidad": 3.0,
+      "Total": 2610.00012
+    },
+    {
+      "Sucursal": "La Nueva",
+      "Fecha": "2026-09-12",
+      "Descripcion": "CREM 900ML ALPURA",
+      "Cantidad": 732.0,
+      "Total": 46189.962
+    },
+    {
+      "Sucursal": "La Nueva",
+      "Fecha": "2026-09-12",
+      "Descripcion": "CREM ALPURA 190 ML",
+      "Cantidad": 965.0,
+      "Total": 14956.800000000001
+    },
+    {
+      "Sucursal": "La Nueva",
+      "Fecha": "2026-09-12",
+      "Descripcion": "CREM ALPURA 4 LT",
+      "Cantidad": 59.0,
+      "Total": 12727.0
+    },
+    {
+      "Sucursal": "La Nueva",
+      "Fecha": "2026-09-12",
+      "Descripcion": "CREM ALPURA 426 ML",
+      "Cantidad": 1663.0,
+      "Total": 52439.98895999999
+    },
+    {
+      "Sucursal": "La Nueva",
+      "Fecha": "2026-09-12",
+      "Descripcion": "CREM LALA 200ML",
+      "Cantidad": 233.0,
+      "Total": 3484.072
+    },
+    {
+      "Sucursal": "La Nueva",
+      "Fecha": "2026-09-12",
+      "Descripcion": "CREM LALA 4 LT",
+      "Cantidad": 182.0,
+      "Total": 38651.9982
+    },
+    {
+      "Sucursal": "La Nueva",
+      "Fecha": "2026-09-12",
+      "Descripcion": "CREM LALA 426ML",
+      "Cantidad": 377.0,
+      "Total": 11104.99816
+    },
+    {
+      "Sucursal": "La Nueva",
+      "Fecha": "2026-09-12",
+      "Descripcion": "CREM LALA 900ML",
+      "Cantidad": 270.0,
+      "Total": 16690.74
+    },
+    {
+      "Sucursal": "La Nueva",
+      "Fecha": "2026-09-12",
+      "Descripcion": "CREM SNT CLRA 420ML",
+      "Cantidad": 3.0,
+      "Total": 762.00003
+    },
+    {
+      "Sucursal": "La Nueva",
+      "Fecha": "2026-09-12",
+      "Descripcion": "CREM VEGETAL SABINO",
+      "Cantidad": 4.0,
+      "Total": 660.0
+    },
+    {
+      "Sucursal": "La Nueva",
+      "Fecha": "2026-09-12",
+      "Descripcion": "CREMA GINA",
+      "Cantidad": 160.0,
+      "Total": 3955.0
+    },
+    {
+      "Sucursal": "La Nueva",
+      "Fecha": "2026-09-12",
+      "Descripcion": "DOBLE 1/2 KG",
+      "Cantidad": 308.0,
+      "Total": 18290.58
+    },
+    {
+      "Sucursal": "La Nueva",
+      "Fecha": "2026-09-12",
+      "Descripcion": "DOBLE 1KG CHILCHOTA",
+      "Cantidad": 44.0,
+      "Total": 5201.46
+    },
+    {
+      "Sucursal": "La Nueva",
+      "Fecha": "2026-09-12",
+      "Descripcion": "DOBLE CREMA SUPREMO",
+      "Cantidad": 24.0,
+      "Total": 2220.0
+    },
+    {
+      "Sucursal": "La Nueva",
+      "Fecha": "2026-09-12",
+      "Descripcion": "DOBLE DURANGUEÑO",
+      "Cantidad": 24.0,
+      "Total": 2464.32
+    },
+    {
+      "Sucursal": "La Nueva",
+      "Fecha": "2026-09-12",
+      "Descripcion": "DULCIMA 1 KG",
+      "Cantidad": 13.0,
+      "Total": 702.0
+    },
+    {
+      "Sucursal": "La Nueva",
+      "Fecha": "2026-09-12",
+      "Descripcion": "DULCIMA 5KG",
+      "Cantidad": 1.0,
+      "Total": 208.00001
+    },
+    {
+      "Sucursal": "La Nueva",
+      "Fecha": "2026-09-12",
+      "Descripcion": "ESP CUADR AROS",
+      "Cantidad": 1.0,
+      "Total": 177.0
+    },
+    {
+      "Sucursal": "La Nueva",
+      "Fecha": "2026-09-12",
+      "Descripcion": "FLORENTINA 1K MOZARELLA",
+      "Cantidad": 18.0,
+      "Total": 1748.0
+    },
+    {
+      "Sucursal": "La Nueva",
+      "Fecha": "2026-09-12",
+      "Descripcion": "FLORENTINA 5K MOZARELLA",
+      "Cantidad": 8.0,
+      "Total": 3120.00016
+    },
+    {
+      "Sucursal": "La Nueva",
+      "Fecha": "2026-09-12",
+      "Descripcion": "FRIJOL BAYO REF ISADORA 24/450G",
+      "Cantidad": 1.0,
+      "Total": 345.00001
+    },
+    {
+      "Sucursal": "La Nueva",
+      "Fecha": "2026-09-12",
+      "Descripcion": "GOU MON RAY 1K",
+      "Cantidad": 5.0,
+      "Total": 305.0
+    },
+    {
+      "Sucursal": "La Nueva",
+      "Fecha": "2026-09-12",
+      "Descripcion": "JALAPE TORRE 2.8K",
+      "Cantidad": 1.0,
+      "Total": 67.001
+    },
+    {
+      "Sucursal": "La Nueva",
+      "Fecha": "2026-09-12",
+      "Descripcion": "JAM ALPINO PAVO",
+      "Cantidad": 1.0,
+      "Total": 290.00001
+    },
+    {
+      "Sucursal": "La Nueva",
+      "Fecha": "2026-09-12",
+      "Descripcion": "JAM ALPINO PIERNA",
+      "Cantidad": 6.0,
+      "Total": 2701.99989
+    },
+    {
+      "Sucursal": "La Nueva",
+      "Fecha": "2026-09-12",
+      "Descripcion": "JAM AMERICANO FUD",
+      "Cantidad": 2.0,
+      "Total": 939.99998
+    },
+    {
+      "Sucursal": "La Nueva",
+      "Fecha": "2026-09-12",
+      "Descripcion": "JAM BALA SAN ANTONIO",
+      "Cantidad": 15.0,
+      "Total": 3975.0
+    },
+    {
+      "Sucursal": "La Nueva",
+      "Fecha": "2026-09-12",
+      "Descripcion": "JAM GALICIA MANDOLINA",
+      "Cantidad": 24.0,
+      "Total": 15072.00024
+    },
+    {
+      "Sucursal": "La Nueva",
+      "Fecha": "2026-09-12",
+      "Descripcion": "JAM GALY MAND AMERICANO",
+      "Cantidad": 8.0,
+      "Total": 3560.00016
+    },
+    {
+      "Sucursal": "La Nueva",
+      "Fecha": "2026-09-12",
+      "Descripcion": "JAM GUEROS TABIQUE",
+      "Cantidad": 4.0,
+      "Total": 2424.00005
+    },
+    {
+      "Sucursal": "La Nueva",
+      "Fecha": "2026-09-12",
+      "Descripcion": "JAM HACIENDA BLANCO",
+      "Cantidad": 3.0,
+      "Total": 921.0
+    },
+    {
+      "Sucursal": "La Nueva",
+      "Fecha": "2026-09-12",
+      "Descripcion": "JAM HOLANDES ECO MONARCA",
+      "Cantidad": 19.1,
+      "Total": 687.6
+    },
+    {
+      "Sucursal": "La Nueva",
+      "Fecha": "2026-09-12",
+      "Descripcion": "JAM HOR PIERNA SR",
+      "Cantidad": 3.0,
+      "Total": 2280.0
+    },
+    {
+      "Sucursal": "La Nueva",
+      "Fecha": "2026-09-12",
+      "Descripcion": "JAM HORN. NUTRI DELI",
+      "Cantidad": 4.0,
+      "Total": 1384.0
+    },
+    {
+      "Sucursal": "La Nueva",
+      "Fecha": "2026-09-12",
+      "Descripcion": "JAM NEZA MANDOLINA YORK",
+      "Cantidad": 13.1,
+      "Total": 1401.7
+    },
+    {
+      "Sucursal": "La Nueva",
+      "Fecha": "2026-09-12",
+      "Descripcion": "JAM PATRON AZUL CUADRADO",
+      "Cantidad": 1.0,
+      "Total": 719.99997
+    },
+    {
+      "Sucursal": "La Nueva",
+      "Fecha": "2026-09-12",
+      "Descripcion": "JAM PATRON NEGRO HOLANDEZ CUAD",
+      "Cantidad": 7.0,
+      "Total": 6059.99981
+    },
+    {
+      "Sucursal": "La Nueva",
+      "Fecha": "2026-09-12",
+      "Descripcion": "JAM PAVO GALICIA",
+      "Cantidad": 90.0,
+      "Total": 32418.001739999996
+    },
+    {
+      "Sucursal": "La Nueva",
+      "Fecha": "2026-09-12",
+      "Descripcion": "JAM PAVO GUEROS",
+      "Cantidad": 8.0,
+      "Total": 2426.00014
+    },
+    {
+      "Sucursal": "La Nueva",
+      "Fecha": "2026-09-12",
+      "Descripcion": "JAM PIER HOR. HECTOR",
+      "Cantidad": 1.0,
+      "Total": 526.0
+    },
+    {
+      "Sucursal": "La Nueva",
+      "Fecha": "2026-09-12",
+      "Descripcion": "JAM PIERNA FUD",
+      "Cantidad": 26.0,
+      "Total": 15209.999480000004
+    },
+    {
+      "Sucursal": "La Nueva",
+      "Fecha": "2026-09-12",
+      "Descripcion": "JAM PNA FAM CAPISTRANO",
+      "Cantidad": 1.0,
+      "Total": 455.0
+    },
+    {
+      "Sucursal": "La Nueva",
+      "Fecha": "2026-09-12",
+      "Descripcion": "JAM ROJO GALICIA",
+      "Cantidad": 40.0,
+      "Total": 19420.0
+    },
+    {
+      "Sucursal": "La Nueva",
+      "Fecha": "2026-09-12",
+      "Descripcion": "JAM SAN CARLOS",
+      "Cantidad": 4.9,
+      "Total": 392.0
+    },
+    {
+      "Sucursal": "La Nueva",
+      "Fecha": "2026-09-12",
+      "Descripcion": "JAM TABIQUE MANANTIALES",
+      "Cantidad": 1.0,
+      "Total": 908.50002
+    },
+    {
+      "Sucursal": "La Nueva",
+      "Fecha": "2026-09-12",
+      "Descripcion": "JAM VIRG GALICIA MIXTO",
+      "Cantidad": 63.0,
+      "Total": 17049.999370000005
+    },
+    {
+      "Sucursal": "La Nueva",
+      "Fecha": "2026-09-12",
+      "Descripcion": "JAM VIRG GALY",
+      "Cantidad": 2.0,
+      "Total": 450.0
+    },
+    {
+      "Sucursal": "La Nueva",
+      "Fecha": "2026-09-12",
+      "Descripcion": "JAM VIRG PAVO FUD",
+      "Cantidad": 22.0,
+      "Total": 10450.00044
+    },
+    {
+      "Sucursal": "La Nueva",
+      "Fecha": "2026-09-12",
+      "Descripcion": "JAM VIRG PREM ZWAN",
+      "Cantidad": 1.0,
+      "Total": 534.00002
+    },
+    {
+      "Sucursal": "La Nueva",
+      "Fecha": "2026-09-12",
+      "Descripcion": "JAMON PAVO SN ANTONIO",
+      "Cantidad": 2.0,
+      "Total": 610.0
+    },
+    {
+      "Sucursal": "La Nueva",
+      "Fecha": "2026-09-12",
+      "Descripcion": "KRAFT PARME.85G",
+      "Cantidad": 24.0,
+      "Total": 1145.04
+    },
+    {
+      "Sucursal": "La Nueva",
+      "Fecha": "2026-09-12",
+      "Descripcion": "LECHE ALPURA DESLACTOSADA",
+      "Cantidad": 4.0,
+      "Total": 1160.00004
+    },
+    {
+      "Sucursal": "La Nueva",
+      "Fecha": "2026-09-12",
+      "Descripcion": "LECHE CLASICA ALPURA 2000",
+      "Cantidad": 8.0,
+      "Total": 2359.99984
+    },
+    {
+      "Sucursal": "La Nueva",
+      "Fecha": "2026-09-12",
+      "Descripcion": "LECHE SANTA CLARA",
+      "Cantidad": 5.0,
+      "Total": 1500.0000499999999
+    },
+    {
+      "Sucursal": "La Nueva",
+      "Fecha": "2026-09-12",
+      "Descripcion": "LECHERA GUEROS",
+      "Cantidad": 1.0,
+      "Total": 835.00003
+    },
+    {
+      "Sucursal": "La Nueva",
+      "Fecha": "2026-09-12",
+      "Descripcion": "LONGANIZA BOLONIA",
+      "Cantidad": 16.1,
+      "Total": 1601.9500000000003
+    },
+    {
+      "Sucursal": "La Nueva",
+      "Fecha": "2026-09-12",
+      "Descripcion": "MAIZ LA COSECHITA POZOLERO",
+      "Cantidad": 573.0,
+      "Total": 10320.0
+    },
+    {
+      "Sucursal": "La Nueva",
+      "Fecha": "2026-09-12",
+      "Descripcion": "MAN ARCONOR",
+      "Cantidad": 85.3,
+      "Total": 6237.1
+    },
+    {
+      "Sucursal": "La Nueva",
+      "Fecha": "2026-09-12",
+      "Descripcion": "MAN FIORELO 3.8K PZA",
+      "Cantidad": 4.0,
+      "Total": 1960.00004
+    },
+    {
+      "Sucursal": "La Nueva",
+      "Fecha": "2026-09-12",
+      "Descripcion": "MAN GOUDA CAMPESINA ROJO",
+      "Cantidad": 68.54999999999998,
+      "Total": 8352.25
+    },
+    {
+      "Sucursal": "La Nueva",
+      "Fecha": "2026-09-12",
+      "Descripcion": "MAN NOCHE BUENA",
+      "Cantidad": 150.90000000000003,
+      "Total": 23540.399999999998
+    },
+    {
+      "Sucursal": "La Nueva",
+      "Fecha": "2026-09-12",
+      "Descripcion": "MANCHEGO CAPERUCITA",
+      "Cantidad": 49.15,
+      "Total": 6881.0
+    },
+    {
+      "Sucursal": "La Nueva",
+      "Fecha": "2026-09-12",
+      "Descripcion": "MANCHEGO VILLITA",
+      "Cantidad": 55.5,
+      "Total": 8220.300000000001
+    },
+    {
+      "Sucursal": "La Nueva",
+      "Fecha": "2026-09-12",
+      "Descripcion": "MANTE CHIPILO  225GR",
+      "Cantidad": 1.0,
+      "Total": 359.99999
+    },
+    {
+      "Sucursal": "La Nueva",
+      "Fecha": "2026-09-12",
+      "Descripcion": "MANTE CHIPILO 90GR",
+      "Cantidad": 1.0,
+      "Total": 370.0
+    },
+    {
+      "Sucursal": "La Nueva",
+      "Fecha": "2026-09-12",
+      "Descripcion": "MARG IBERIA 1KG",
+      "Cantidad": 6.0,
+      "Total": 4620.0
+    },
+    {
+      "Sucursal": "La Nueva",
+      "Fecha": "2026-09-12",
+      "Descripcion": "MARG IBERIA 225GR",
+      "Cantidad": 11.0,
+      "Total": 2288.0
+    },
+    {
+      "Sucursal": "La Nueva",
+      "Fecha": "2026-09-12",
+      "Descripcion": "MARG IBERIA 90GR",
+      "Cantidad": 17.0,
+      "Total": 3135.0
+    },
+    {
+      "Sucursal": "La Nueva",
+      "Fecha": "2026-09-12",
+      "Descripcion": "MARG PRINCIPADO 1KG",
+      "Cantidad": 5.0,
+      "Total": 225.0
+    },
+    {
+      "Sucursal": "La Nueva",
+      "Fecha": "2026-09-12",
+      "Descripcion": "MARG VILLITA 1K S/SAL",
+      "Cantidad": 10.0,
+      "Total": 585.0
+    },
+    {
+      "Sucursal": "La Nueva",
+      "Fecha": "2026-09-12",
+      "Descripcion": "MARG190 PRIMAVERA",
+      "Cantidad": 2.0,
+      "Total": 789.99994
+    },
+    {
+      "Sucursal": "La Nueva",
+      "Fecha": "2026-09-12",
+      "Descripcion": "MAYO 16 MC CORMICK",
+      "Cantidad": 36.0,
+      "Total": 1590.12
+    },
+    {
+      "Sucursal": "La Nueva",
+      "Fecha": "2026-09-12",
+      "Descripcion": "MAYO 32 MC CORMICK",
+      "Cantidad": 24.0,
+      "Total": 1680.0
+    },
+    {
+      "Sucursal": "La Nueva",
+      "Fecha": "2026-09-12",
+      "Descripcion": "MAYO 4 MC CORMICK",
+      "Cantidad": 72.0,
+      "Total": 1215.3600000000001
+    },
+    {
+      "Sucursal": "La Nueva",
+      "Fecha": "2026-09-12",
+      "Descripcion": "MAYO 64 MC CORMICK",
+      "Cantidad": 42.0,
+      "Total": 5410.200000000001
+    },
+    {
+      "Sucursal": "La Nueva",
+      "Fecha": "2026-09-12",
+      "Descripcion": "MAYO 8 MC CORMICK",
+      "Cantidad": 48.0,
+      "Total": 1250.4
+    },
+    {
+      "Sucursal": "La Nueva",
+      "Fecha": "2026-09-12",
+      "Descripcion": "MAYO GALON MC CORMICK",
+      "Cantidad": 89.0,
+      "Total": 24710.0
+    },
+    {
+      "Sucursal": "La Nueva",
+      "Fecha": "2026-09-12",
+      "Descripcion": "MENONITA",
+      "Cantidad": 256.34999999999997,
+      "Total": 27596.7
+    },
+    {
+      "Sucursal": "La Nueva",
+      "Fecha": "2026-09-12",
+      "Descripcion": "MORTADELA DUBY",
+      "Cantidad": 35.0,
+      "Total": 8470.00035
+    },
+    {
+      "Sucursal": "La Nueva",
+      "Fecha": "2026-09-12",
+      "Descripcion": "MORTADELA FUD",
+      "Cantidad": 5.0,
+      "Total": 1325.0
+    },
+    {
+      "Sucursal": "La Nueva",
+      "Fecha": "2026-09-12",
+      "Descripcion": "MORTADELA SAN ANTONIO",
+      "Cantidad": 1.0,
+      "Total": 240.00001
+    },
+    {
+      "Sucursal": "La Nueva",
+      "Fecha": "2026-09-12",
+      "Descripcion": "MOZARELLA 1K GUEROS.",
+      "Cantidad": 20.0,
+      "Total": 1600.0
+    },
+    {
+      "Sucursal": "La Nueva",
+      "Fecha": "2026-09-12",
+      "Descripcion": "NESCAFE 350G",
+      "Cantidad": 30.0,
+      "Total": 5250.000300000001
+    },
+    {
+      "Sucursal": "La Nueva",
+      "Fecha": "2026-09-12",
+      "Descripcion": "NUTRILECHE",
+      "Cantidad": 1.0,
+      "Total": 219.99999
+    },
+    {
+      "Sucursal": "La Nueva",
+      "Fecha": "2026-09-12",
+      "Descripcion": "NUTRILECHE DESLACTOSADA",
+      "Cantidad": 1.0,
+      "Total": 231.00001
+    },
+    {
+      "Sucursal": "La Nueva",
+      "Fecha": "2026-09-12",
+      "Descripcion": "PAN SELLO CHILCHOTA",
+      "Cantidad": 6.5,
+      "Total": 819.0000000000001
+    },
+    {
+      "Sucursal": "La Nueva",
+      "Fecha": "2026-09-12",
+      "Descripcion": "PAN VOLCANES 1K",
+      "Cantidad": 21.0,
+      "Total": 2708.0
+    },
+    {
+      "Sucursal": "La Nueva",
+      "Fecha": "2026-09-12",
+      "Descripcion": "PANELA BARRA MONARCA",
+      "Cantidad": 9.95,
+      "Total": 597.0
+    },
+    {
+      "Sucursal": "La Nueva",
+      "Fecha": "2026-09-12",
+      "Descripcion": "PANELA D´LECHE",
+      "Cantidad": 35.6,
+      "Total": 3633.2000000000003
+    },
+    {
+      "Sucursal": "La Nueva",
+      "Fecha": "2026-09-12",
+      "Descripcion": "PANELA FRANJA 2.2KG",
+      "Cantidad": 23.0,
+      "Total": 3805.0
+    },
+    {
+      "Sucursal": "La Nueva",
+      "Fecha": "2026-09-12",
+      "Descripcion": "PANELA GUEROS GDE PREMIUM",
+      "Cantidad": 2.3,
+      "Total": 246.1
+    },
+    {
+      "Sucursal": "La Nueva",
+      "Fecha": "2026-09-12",
+      "Descripcion": "PANELA VOLCANES GDE",
+      "Cantidad": 49.0,
+      "Total": 18205.000190000002
+    },
+    {
+      "Sucursal": "La Nueva",
+      "Fecha": "2026-09-12",
+      "Descripcion": "PARME PREMIER 2K",
+      "Cantidad": 1.0,
+      "Total": 238.5
+    },
+    {
+      "Sucursal": "La Nueva",
+      "Fecha": "2026-09-12",
+      "Descripcion": "PARMESANO CERA NEGRA 7K",
+      "Cantidad": 15.399999999999999,
+      "Total": 2541.0
+    },
+    {
+      "Sucursal": "La Nueva",
+      "Fecha": "2026-09-12",
+      "Descripcion": "PECH AHUM CAMPESTRE DE PAVO",
+      "Cantidad": 2.0,
+      "Total": 954.00006
+    },
+    {
+      "Sucursal": "La Nueva",
+      "Fecha": "2026-09-12",
+      "Descripcion": "PECH AHUMADA MANANTIALES",
+      "Cantidad": 9.0,
+      "Total": 3122.9999100000005
+    },
+    {
+      "Sucursal": "La Nueva",
+      "Fecha": "2026-09-12",
+      "Descripcion": "PECH ALPINO PAVO",
+      "Cantidad": 4.0,
+      "Total": 1872.00004
+    },
+    {
+      "Sucursal": "La Nueva",
+      "Fecha": "2026-09-12",
+      "Descripcion": "PECH DIAMANTE REAL",
+      "Cantidad": 1.0,
+      "Total": 458.00001
+    },
+    {
+      "Sucursal": "La Nueva",
+      "Fecha": "2026-09-12",
+      "Descripcion": "PECH NATURAL MANANTIALES",
+      "Cantidad": 4.0,
+      "Total": 1305.99996
+    },
+    {
+      "Sucursal": "La Nueva",
+      "Fecha": "2026-09-12",
+      "Descripcion": "PECH SAN RAFAEL",
+      "Cantidad": 2.0,
+      "Total": 1750.00004
+    },
+    {
+      "Sucursal": "La Nueva",
+      "Fecha": "2026-09-12",
+      "Descripcion": "PECHUG PAVO SABORI 6K",
+      "Cantidad": 1.0,
+      "Total": 998.00002
+    },
+    {
+      "Sucursal": "La Nueva",
+      "Fecha": "2026-09-12",
+      "Descripcion": "PEPERONI GALICIA",
+      "Cantidad": 15.0,
+      "Total": 1614.0
+    },
+    {
+      "Sucursal": "La Nueva",
+      "Fecha": "2026-09-12",
+      "Descripcion": "PEPERONI MONARCA",
+      "Cantidad": 10.0,
+      "Total": 915.0
+    },
+    {
+      "Sucursal": "La Nueva",
+      "Fecha": "2026-09-12",
+      "Descripcion": "PEPERONI PATRON",
+      "Cantidad": 16.0,
+      "Total": 1529.5
+    },
+    {
+      "Sucursal": "La Nueva",
+      "Fecha": "2026-09-12",
+      "Descripcion": "PHILADELPHIA 1KG",
+      "Cantidad": 7.0,
+      "Total": 1085.0
+    },
+    {
+      "Sucursal": "La Nueva",
+      "Fecha": "2026-09-12",
+      "Descripcion": "PIMIENTO DUBY",
+      "Cantidad": 1.0,
+      "Total": 220.00001
+    },
+    {
+      "Sucursal": "La Nueva",
+      "Fecha": "2026-09-12",
+      "Descripcion": "Q MANCHEGO FUD 180GR",
+      "Cantidad": 4.0,
+      "Total": 136.0
+    },
+    {
+      "Sucursal": "La Nueva",
+      "Fecha": "2026-09-12",
+      "Descripcion": "Q. CAN RAY MONARCA",
+      "Cantidad": 40.0,
+      "Total": 1480.0
+    },
+    {
+      "Sucursal": "La Nueva",
+      "Fecha": "2026-09-12",
+      "Descripcion": "Q. PUERCO ANTHUR",
+      "Cantidad": 20.6,
+      "Total": 1297.8
+    },
+    {
+      "Sucursal": "La Nueva",
+      "Fecha": "2026-09-12",
+      "Descripcion": "Q. PUERCO FUD",
+      "Cantidad": 10.0,
+      "Total": 4370.0
+    },
+    {
+      "Sucursal": "La Nueva",
+      "Fecha": "2026-09-12",
+      "Descripcion": "Q. PUERCO JARVA",
+      "Cantidad": 4.2,
+      "Total": 310.8
+    },
+    {
+      "Sucursal": "La Nueva",
+      "Fecha": "2026-09-12",
+      "Descripcion": "Q. PUERCO NEZA",
+      "Cantidad": 4.1,
+      "Total": 344.4
+    },
+    {
+      "Sucursal": "La Nueva",
+      "Fecha": "2026-09-12",
+      "Descripcion": "Q.CHI LALA 2.3K PZA",
+      "Cantidad": 1.0,
+      "Total": 324.99999
+    },
+    {
+      "Sucursal": "La Nueva",
+      "Fecha": "2026-09-12",
+      "Descripcion": "Q.PUERCO GALICIA",
+      "Cantidad": 59.44,
+      "Total": 5385.263999999999
+    },
+    {
+      "Sucursal": "La Nueva",
+      "Fecha": "2026-09-12",
+      "Descripcion": "Q.PUERCO PQT JASAN 1K REB",
+      "Cantidad": 4.0,
+      "Total": 336.0
+    },
+    {
+      "Sucursal": "La Nueva",
+      "Fecha": "2026-09-12",
+      "Descripcion": "QUESO AME NAT FUD 180 GR",
+      "Cantidad": 6.0,
+      "Total": 201.0
+    },
+    {
+      "Sucursal": "La Nueva",
+      "Fecha": "2026-09-12",
+      "Descripcion": "QUESO CABRA NATURAL",
+      "Cantidad": 33.0,
+      "Total": 1617.0
+    },
+    {
+      "Sucursal": "La Nueva",
+      "Fecha": "2026-09-12",
+      "Descripcion": "QUESO COTIJA",
+      "Cantidad": 16.099999999999998,
+      "Total": 1561.4
+    },
+    {
+      "Sucursal": "La Nueva",
+      "Fecha": "2026-09-12",
+      "Descripcion": "QUESO GOUDA GALICIA",
+      "Cantidad": 19.3,
+      "Total": 2316.0
+    },
+    {
+      "Sucursal": "La Nueva",
+      "Fecha": "2026-09-12",
+      "Descripcion": "QUESO GOUDA MONARCA",
+      "Cantidad": 37.6,
+      "Total": 2112.0
+    },
+    {
+      "Sucursal": "La Nueva",
+      "Fecha": "2026-09-12",
+      "Descripcion": "QUESO MOLIDO",
+      "Cantidad": 200.0,
+      "Total": 2415.0
+    },
+    {
+      "Sucursal": "La Nueva",
+      "Fecha": "2026-09-12",
+      "Descripcion": "QUESO PANELA ESPECIAL",
+      "Cantidad": 51.0,
+      "Total": 6018.0
+    },
+    {
+      "Sucursal": "La Nueva",
+      "Fecha": "2026-09-12",
+      "Descripcion": "QUESO PHILADELPHIA 180GR",
+      "Cantidad": 144.0,
+      "Total": 5100.4800000000005
+    },
+    {
+      "Sucursal": "La Nueva",
+      "Fecha": "2026-09-12",
+      "Descripcion": "RALLADO 5K DELICIAS",
+      "Cantidad": 7.0,
+      "Total": 1569.00005
+    },
+    {
+      "Sucursal": "La Nueva",
+      "Fecha": "2026-09-12",
+      "Descripcion": "RALLADO COCO 10K BOL",
+      "Cantidad": 5.0,
+      "Total": 625.0
+    },
+    {
+      "Sucursal": "La Nueva",
+      "Fecha": "2026-09-12",
+      "Descripcion": "RANCHERITO LIQUIDO",
+      "Cantidad": 110.0,
+      "Total": 3017.5
+    },
+    {
+      "Sucursal": "La Nueva",
+      "Fecha": "2026-09-12",
+      "Descripcion": "SAL  ALEM CERDO CAPI",
+      "Cantidad": 2.0,
+      "Total": 174.0
+    },
+    {
+      "Sucursal": "La Nueva",
+      "Fecha": "2026-09-12",
+      "Descripcion": "SAL ALEM DE RES CAPISTRANO",
+      "Cantidad": 2.0,
+      "Total": 228.0
+    },
+    {
+      "Sucursal": "La Nueva",
+      "Fecha": "2026-09-12",
+      "Descripcion": "SAL ALEM PAVO CAPI",
+      "Cantidad": 3.0,
+      "Total": 273.0
+    },
+    {
+      "Sucursal": "La Nueva",
+      "Fecha": "2026-09-12",
+      "Descripcion": "SAL ANY",
+      "Cantidad": 75.0,
+      "Total": 7370.0
+    },
+    {
+      "Sucursal": "La Nueva",
+      "Fecha": "2026-09-12",
+      "Descripcion": "SAL CHERO",
+      "Cantidad": 88.0,
+      "Total": 8485.0
+    },
+    {
+      "Sucursal": "La Nueva",
+      "Fecha": "2026-09-12",
+      "Descripcion": "SAL COCK. 1/2 ZWAN",
+      "Cantidad": 10.0,
+      "Total": 576.0
+    },
+    {
+      "Sucursal": "La Nueva",
+      "Fecha": "2026-09-12",
+      "Descripcion": "SAL FRANKF ALPINO",
+      "Cantidad": 86.0,
+      "Total": 9540.0
+    },
+    {
+      "Sucursal": "La Nueva",
+      "Fecha": "2026-09-12",
+      "Descripcion": "SAL FRANKF SAN ANTONIO",
+      "Cantidad": 217.0,
+      "Total": 21645.0
+    },
+    {
+      "Sucursal": "La Nueva",
+      "Fecha": "2026-09-12",
+      "Descripcion": "SAL FUD HOT DOG",
+      "Cantidad": 2.0,
+      "Total": 414.0
+    },
+    {
+      "Sucursal": "La Nueva",
+      "Fecha": "2026-09-12",
+      "Descripcion": "SAL HECTTOR",
+      "Cantidad": 9.0,
+      "Total": 733.5
+    },
+    {
+      "Sucursal": "La Nueva",
+      "Fecha": "2026-09-12",
+      "Descripcion": "SAL MILLAN 2/K",
+      "Cantidad": 49.0,
+      "Total": 2948.0
+    },
+    {
+      "Sucursal": "La Nueva",
+      "Fecha": "2026-09-12",
+      "Descripcion": "SAL MILLAN ROJA",
+      "Cantidad": 5.0,
+      "Total": 375.0
+    },
+    {
+      "Sucursal": "La Nueva",
+      "Fecha": "2026-09-12",
+      "Descripcion": "SAL PAVO FUD",
+      "Cantidad": 168.0,
+      "Total": 18743.000809999998
+    },
+    {
+      "Sucursal": "La Nueva",
+      "Fecha": "2026-09-12",
+      "Descripcion": "SAL PAVO JUM HECTOR",
+      "Cantidad": 31.0,
+      "Total": 3208.0
+    },
+    {
+      "Sucursal": "La Nueva",
+      "Fecha": "2026-09-12",
+      "Descripcion": "SAL PAVO ZWAN 3K",
+      "Cantidad": 1.0,
+      "Total": 182.0
+    },
+    {
+      "Sucursal": "La Nueva",
+      "Fecha": "2026-09-12",
+      "Descripcion": "SAL PREMIUM SAN ANTONIO",
+      "Cantidad": 227.0,
+      "Total": 24584.0
+    },
+    {
+      "Sucursal": "La Nueva",
+      "Fecha": "2026-09-12",
+      "Descripcion": "SAL ROJA HECTOR 2.4",
+      "Cantidad": 9.0,
+      "Total": 702.0
+    },
+    {
+      "Sucursal": "La Nueva",
+      "Fecha": "2026-09-12",
+      "Descripcion": "SAL VIVA NORMAL",
+      "Cantidad": 95.0,
+      "Total": 10184.0
+    },
+    {
+      "Sucursal": "La Nueva",
+      "Fecha": "2026-09-12",
+      "Descripcion": "SAL ZWAN COC 2K",
+      "Cantidad": 2.0,
+      "Total": 436.00002
+    },
+    {
+      "Sucursal": "La Nueva",
+      "Fecha": "2026-09-12",
+      "Descripcion": "SALMUERA PAVO FUD",
+      "Cantidad": 4.0,
+      "Total": 640.0
+    },
+    {
+      "Sucursal": "La Nueva",
+      "Fecha": "2026-09-12",
+      "Descripcion": "SALMUERA VIENA FUD",
+      "Cantidad": 1.0,
+      "Total": 177.99999
+    },
+    {
+      "Sucursal": "La Nueva",
+      "Fecha": "2026-09-12",
+      "Descripcion": "SALSA BBQ L&K GALON",
+      "Cantidad": 16.0,
+      "Total": 2320.0
+    },
+    {
+      "Sucursal": "La Nueva",
+      "Fecha": "2026-09-12",
+      "Descripcion": "SELLO BARRA CAN CHILCHOTA",
+      "Cantidad": 16.549999999999997,
+      "Total": 2140.2459999999996
+    },
+    {
+      "Sucursal": "La Nueva",
+      "Fecha": "2026-09-12",
+      "Descripcion": "SINCHO",
+      "Cantidad": 2.4,
+      "Total": 242.39999999999998
+    },
+    {
+      "Sucursal": "La Nueva",
+      "Fecha": "2026-09-12",
+      "Descripcion": "SUSTITUTO DE CREMA MEMBERS",
+      "Cantidad": 12.0,
+      "Total": 1030.08
+    },
+    {
+      "Sucursal": "La Nueva",
+      "Fecha": "2026-09-12",
+      "Descripcion": "TOCINETA D HECTOR",
+      "Cantidad": 6.0,
+      "Total": 1020.0
+    },
+    {
+      "Sucursal": "La Nueva",
+      "Fecha": "2026-09-12",
+      "Descripcion": "TOCINO GUEROS AHUMADO",
+      "Cantidad": 77.05000000000001,
+      "Total": 6337.125
+    },
+    {
+      "Sucursal": "La Nueva",
+      "Fecha": "2026-09-12",
+      "Descripcion": "TOR CHICA HARINA",
+      "Cantidad": 60.0,
+      "Total": 1920.0
+    },
+    {
+      "Sucursal": "La Nueva",
+      "Fecha": "2026-09-12",
+      "Descripcion": "TOR GRANDE HARINA",
+      "Cantidad": 35.0,
+      "Total": 1120.0
+    },
+    {
+      "Sucursal": "La Nueva",
+      "Fecha": "2026-09-12",
+      "Descripcion": "TOSTA SHERYN AJONJOLI",
+      "Cantidad": 1.0,
+      "Total": 585.99998
+    },
+    {
+      "Sucursal": "La Nueva",
+      "Fecha": "2026-09-12",
+      "Descripcion": "TOSTADAS CHARRAS",
+      "Cantidad": 9.0,
+      "Total": 4575.00003
+    },
+    {
+      "Sucursal": "La Nueva",
+      "Fecha": "2026-09-12",
+      "Descripcion": "TOSTADAS TIO BETO",
+      "Cantidad": 12.0,
+      "Total": 6495.000000000001
+    },
+    {
+      "Sucursal": "La Nueva",
+      "Fecha": "2026-09-12",
+      "Descripcion": "YAKULT",
+      "Cantidad": 1.0,
+      "Total": 189.99999
+    },
+    {
+      "Sucursal": "La Nueva",
+      "Fecha": "2026-09-12",
+      "Descripcion": "YOG FRESA YOP 4K",
+      "Cantidad": 1.0,
+      "Total": 162.0
+    },
+    {
+      "Sucursal": "La Nueva",
+      "Fecha": "2026-09-12",
+      "Descripcion": "YOG GRIE NAT YOP 1K",
+      "Cantidad": 7.0,
+      "Total": 501.0
+    },
+    {
+      "Sucursal": "La Nueva",
+      "Fecha": "2026-09-12",
+      "Descripcion": "YOG GRIE SIN AZCR 1K YOP",
+      "Cantidad": 2.0,
+      "Total": 146.0
+    },
+    {
+      "Sucursal": "La Nueva",
+      "Fecha": "2026-09-12",
+      "Descripcion": "YOG NATURAL 1KYOP",
+      "Cantidad": 1.0,
+      "Total": 44.0
+    },
+    {
+      "Sucursal": "La Nueva",
+      "Fecha": "2026-09-12",
+      "Descripcion": "YOG SABINO CEREAL",
+      "Cantidad": 1.0,
+      "Total": 97.0
+    },
+    {
+      "Sucursal": "La Nueva",
+      "Fecha": "2026-09-12",
+      "Descripcion": "YOG SABINO DURAZNO",
+      "Cantidad": 1.0,
+      "Total": 97.0
+    },
+    {
+      "Sucursal": "La Nueva",
+      "Fecha": "2026-09-12",
+      "Descripcion": "YOG SABINO FRESA",
+      "Cantidad": 2.0,
+      "Total": 194.0
+    },
+    {
+      "Sucursal": "La Nueva",
+      "Fecha": "2026-09-12",
+      "Descripcion": "YOG SABINO MANGO",
+      "Cantidad": 1.0,
+      "Total": 97.0
+    },
+    {
+      "Sucursal": "La Nueva",
+      "Fecha": "2026-09-12",
+      "Descripcion": "YOG SABINO MANZANA",
+      "Cantidad": 1.0,
+      "Total": 97.0
+    },
+    {
+      "Sucursal": "La Nueva",
+      "Fecha": "2026-09-12",
+      "Descripcion": "YOG SABINO ZARZAMORA",
+      "Cantidad": 1.0,
+      "Total": 97.0
+    },
+    {
+      "Sucursal": "La Nueva",
+      "Fecha": "2026-09-12",
+      "Descripcion": "YOG YOP 125G OREO PLACR BAT",
+      "Cantidad": 2.0,
+      "Total": 30.0
+    },
+    {
+      "Sucursal": "Los Güeros",
+      "Fecha": "2026-09-12",
+      "Descripcion": "ACEITE CRISTAL GALON",
+      "Cantidad": 2.0,
+      "Total": 380.0
+    },
+    {
+      "Sucursal": "Los Güeros",
+      "Fecha": "2026-09-12",
+      "Descripcion": "AGUA BONAFONT 1.5 LT",
+      "Cantidad": 7.0,
+      "Total": 686.0
+    },
+    {
+      "Sucursal": "Los Güeros",
+      "Fecha": "2026-09-12",
+      "Descripcion": "AGUA BONAFONT 1LT",
+      "Cantidad": 1.0,
+      "Total": 82.0
+    },
+    {
+      "Sucursal": "Los Güeros",
+      "Fecha": "2026-09-12",
+      "Descripcion": "AMA BIOLAC",
+      "Cantidad": 15.0,
+      "Total": 1245.0
+    },
+    {
+      "Sucursal": "Los Güeros",
+      "Fecha": "2026-09-12",
+      "Descripcion": "AMA CASTELL",
+      "Cantidad": 56.0,
+      "Total": 5145.28
+    },
+    {
+      "Sucursal": "Los Güeros",
+      "Fecha": "2026-09-12",
+      "Descripcion": "AMA LOS GUEROS",
+      "Cantidad": 6.0,
+      "Total": 427.02
+    },
+    {
+      "Sucursal": "Los Güeros",
+      "Fecha": "2026-09-12",
+      "Descripcion": "AMA RANCH REBANADO",
+      "Cantidad": 15.0,
+      "Total": 1434.0
+    },
+    {
+      "Sucursal": "Los Güeros",
+      "Fecha": "2026-09-12",
+      "Descripcion": "ATE MEMBRILLO",
+      "Cantidad": 2.0,
+      "Total": 513.99998
+    },
+    {
+      "Sucursal": "Los Güeros",
+      "Fecha": "2026-09-12",
+      "Descripcion": "ATE TEJOCOTE",
+      "Cantidad": 1.0,
+      "Total": 256.99999
+    },
+    {
+      "Sucursal": "Los Güeros",
+      "Fecha": "2026-09-12",
+      "Descripcion": "BARRA QUESOMEX",
+      "Cantidad": 12.280000000000001,
+      "Total": 1235.74
+    },
+    {
+      "Sucursal": "Los Güeros",
+      "Fecha": "2026-09-12",
+      "Descripcion": "BOING 1/2 LITRO",
+      "Cantidad": 2.0,
+      "Total": 629.99998
+    },
+    {
+      "Sucursal": "Los Güeros",
+      "Fecha": "2026-09-12",
+      "Descripcion": "BOING 1/4 CUARTO",
+      "Cantidad": 1.0,
+      "Total": 229.99999
+    },
+    {
+      "Sucursal": "Los Güeros",
+      "Fecha": "2026-09-12",
+      "Descripcion": "BURRITOS TORTILLA",
+      "Cantidad": 33.0,
+      "Total": 1305.5
+    },
+    {
+      "Sucursal": "Los Güeros",
+      "Fecha": "2026-09-12",
+      "Descripcion": "CAN DURANGUEÑO",
+      "Cantidad": 61.18999999999999,
+      "Total": 6995.8526999999995
+    },
+    {
+      "Sucursal": "Los Güeros",
+      "Fecha": "2026-09-12",
+      "Descripcion": "CAN QUESOMEX",
+      "Cantidad": 27.54,
+      "Total": 2805.21
+    },
+    {
+      "Sucursal": "Los Güeros",
+      "Fecha": "2026-09-12",
+      "Descripcion": "CAN SELLO CHILCHOTA",
+      "Cantidad": 4.4,
+      "Total": 559.24
+    },
+    {
+      "Sucursal": "Los Güeros",
+      "Fecha": "2026-09-12",
+      "Descripcion": "CAT BACHI GALON",
+      "Cantidad": 22.0,
+      "Total": 1828.0
+    },
+    {
+      "Sucursal": "Los Güeros",
+      "Fecha": "2026-09-12",
+      "Descripcion": "CHANTILLY 1KG",
+      "Cantidad": 22.0,
+      "Total": 1188.0
+    },
+    {
+      "Sucursal": "Los Güeros",
+      "Fecha": "2026-09-12",
+      "Descripcion": "CHANTILLY 5 KG",
+      "Cantidad": 1.0,
+      "Total": 209.99999
+    },
+    {
+      "Sucursal": "Los Güeros",
+      "Fecha": "2026-09-12",
+      "Descripcion": "CHIPOTLES 380G SAN MARCOS",
+      "Cantidad": 24.0,
+      "Total": 1110.0
+    },
+    {
+      "Sucursal": "Los Güeros",
+      "Fecha": "2026-09-12",
+      "Descripcion": "CHORIZO BOLONIA",
+      "Cantidad": 10.0,
+      "Total": 995.0
+    },
+    {
+      "Sucursal": "Los Güeros",
+      "Fecha": "2026-09-12",
+      "Descripcion": "CHORIZO RIOJANO",
+      "Cantidad": 0.78,
+      "Total": 75.66
+    },
+    {
+      "Sucursal": "Los Güeros",
+      "Fecha": "2026-09-12",
+      "Descripcion": "CHULETA REB MONARCA A/V",
+      "Cantidad": 15.0,
+      "Total": 1142.0
+    },
+    {
+      "Sucursal": "Los Güeros",
+      "Fecha": "2026-09-12",
+      "Descripcion": "CLAVEL 1L 12PZ",
+      "Cantidad": 1.0,
+      "Total": 490.0
+    },
+    {
+      "Sucursal": "Los Güeros",
+      "Fecha": "2026-09-12",
+      "Descripcion": "CREM 900ML ALPURA",
+      "Cantidad": 559.0,
+      "Total": 35240.9724
+    },
+    {
+      "Sucursal": "Los Güeros",
+      "Fecha": "2026-09-12",
+      "Descripcion": "CREM ALPURA 190 ML",
+      "Cantidad": 676.0,
+      "Total": 10469.76
+    },
+    {
+      "Sucursal": "Los Güeros",
+      "Fecha": "2026-09-12",
+      "Descripcion": "CREM ALPURA 4 LT",
+      "Cantidad": 21.0,
+      "Total": 4578.0
+    },
+    {
+      "Sucursal": "Los Güeros",
+      "Fecha": "2026-09-12",
+      "Descripcion": "CREM ALPURA 426 ML",
+      "Cantidad": 1855.0,
+      "Total": 58519.98767999999
+    },
+    {
+      "Sucursal": "Los Güeros",
+      "Fecha": "2026-09-12",
+      "Descripcion": "CREM LALA 200ML",
+      "Cantidad": 168.0,
+      "Total": 2485.0559999999996
+    },
+    {
+      "Sucursal": "Los Güeros",
+      "Fecha": "2026-09-12",
+      "Descripcion": "CREM LALA 4 LT",
+      "Cantidad": 130.0,
+      "Total": 27619.99872
+    },
+    {
+      "Sucursal": "Los Güeros",
+      "Fecha": "2026-09-12",
+      "Descripcion": "CREM LALA 426ML",
+      "Cantidad": 353.0,
+      "Total": 10364.997999999998
+    },
+    {
+      "Sucursal": "Los Güeros",
+      "Fecha": "2026-09-12",
+      "Descripcion": "CREM LALA 900ML",
+      "Cantidad": 109.0,
+      "Total": 6753.26
+    },
+    {
+      "Sucursal": "Los Güeros",
+      "Fecha": "2026-09-12",
+      "Descripcion": "CREM SNT CLARA 4LT",
+      "Cantidad": 1.0,
+      "Total": 286.99998
+    },
+    {
+      "Sucursal": "Los Güeros",
+      "Fecha": "2026-09-12",
+      "Descripcion": "CREM SNT CLRA 420ML",
+      "Cantidad": 3.0,
+      "Total": 762.00003
+    },
+    {
+      "Sucursal": "Los Güeros",
+      "Fecha": "2026-09-12",
+      "Descripcion": "CREM VEGETAL SABINO",
+      "Cantidad": 1.0,
+      "Total": 165.0
+    },
+    {
+      "Sucursal": "Los Güeros",
+      "Fecha": "2026-09-12",
+      "Descripcion": "CREMA GINA",
+      "Cantidad": 55.0,
+      "Total": 1385.0
+    },
+    {
+      "Sucursal": "Los Güeros",
+      "Fecha": "2026-09-12",
+      "Descripcion": "DOBLE 1/2 KG",
+      "Cantidad": 80.0,
+      "Total": 4750.8
+    },
+    {
+      "Sucursal": "Los Güeros",
+      "Fecha": "2026-09-12",
+      "Descripcion": "DOBLE 1K QUESOMEX",
+      "Cantidad": 1.0,
+      "Total": 94.0
+    },
+    {
+      "Sucursal": "Los Güeros",
+      "Fecha": "2026-09-12",
+      "Descripcion": "DOBLE 1KG CHILCHOTA",
+      "Cantidad": 39.0,
+      "Total": 4615.74
+    },
+    {
+      "Sucursal": "Los Güeros",
+      "Fecha": "2026-09-12",
+      "Descripcion": "DOBLE CREMA SUPREMO",
+      "Cantidad": 21.0,
+      "Total": 1955.0
+    },
+    {
+      "Sucursal": "Los Güeros",
+      "Fecha": "2026-09-12",
+      "Descripcion": "DOBLE DURANGUEÑO",
+      "Cantidad": 25.0,
+      "Total": 2567.96
+    },
+    {
+      "Sucursal": "Los Güeros",
+      "Fecha": "2026-09-12",
+      "Descripcion": "FLORENTINA 1K MOZARELLA",
+      "Cantidad": 2.0,
+      "Total": 198.0
+    },
+    {
+      "Sucursal": "Los Güeros",
+      "Fecha": "2026-09-12",
+      "Descripcion": "FLORENTINA 5K MOZARELLA",
+      "Cantidad": 10.0,
+      "Total": 3900.0002000000004
+    },
+    {
+      "Sucursal": "Los Güeros",
+      "Fecha": "2026-09-12",
+      "Descripcion": "FRIJOL BAYO REF ISADORA 24/450G",
+      "Cantidad": 1.0,
+      "Total": 345.00001
+    },
+    {
+      "Sucursal": "Los Güeros",
+      "Fecha": "2026-09-12",
+      "Descripcion": "HUNTS BBQ OR 550G",
+      "Cantidad": 24.0,
+      "Total": 1080.0
+    },
+    {
+      "Sucursal": "Los Güeros",
+      "Fecha": "2026-09-12",
+      "Descripcion": "IBERIA 1KG PZA",
+      "Cantidad": 2.0,
+      "Total": 172.0
+    },
+    {
+      "Sucursal": "Los Güeros",
+      "Fecha": "2026-09-12",
+      "Descripcion": "JAM ALPINO PIERNA",
+      "Cantidad": 7.0,
+      "Total": 3177.99989
+    },
+    {
+      "Sucursal": "Los Güeros",
+      "Fecha": "2026-09-12",
+      "Descripcion": "JAM AMERICANO FUD",
+      "Cantidad": 3.0,
+      "Total": 1409.99997
+    },
+    {
+      "Sucursal": "Los Güeros",
+      "Fecha": "2026-09-12",
+      "Descripcion": "JAM BALA SAN ANTONIO",
+      "Cantidad": 4.0,
+      "Total": 1060.0
+    },
+    {
+      "Sucursal": "Los Güeros",
+      "Fecha": "2026-09-12",
+      "Descripcion": "JAM ESCOLAR AROOS",
+      "Cantidad": 1.0,
+      "Total": 270.00001
+    },
+    {
+      "Sucursal": "Los Güeros",
+      "Fecha": "2026-09-12",
+      "Descripcion": "JAM GALICIA MANDOLINA",
+      "Cantidad": 4.0,
+      "Total": 2512.00004
+    },
+    {
+      "Sucursal": "Los Güeros",
+      "Fecha": "2026-09-12",
+      "Descripcion": "JAM GALY MAND AMERICANO",
+      "Cantidad": 7.0,
+      "Total": 3115.00014
+    },
+    {
+      "Sucursal": "Los Güeros",
+      "Fecha": "2026-09-12",
+      "Descripcion": "JAM GUEROS TABIQUE",
+      "Cantidad": 15.0,
+      "Total": 9105.00025
+    },
+    {
+      "Sucursal": "Los Güeros",
+      "Fecha": "2026-09-12",
+      "Descripcion": "JAM HACIENDA BLANCO",
+      "Cantidad": 2.0,
+      "Total": 614.0
+    },
+    {
+      "Sucursal": "Los Güeros",
+      "Fecha": "2026-09-12",
+      "Descripcion": "JAM HOLANDES ECO MONARCA",
+      "Cantidad": 14.6,
+      "Total": 525.6
+    },
+    {
+      "Sucursal": "Los Güeros",
+      "Fecha": "2026-09-12",
+      "Descripcion": "JAM MANANTI MANDOLINA",
+      "Cantidad": 11.0,
+      "Total": 7980.49978
+    },
+    {
+      "Sucursal": "Los Güeros",
+      "Fecha": "2026-09-12",
+      "Descripcion": "JAM MANDO GUEROS",
+      "Cantidad": 31.8,
+      "Total": 2671.2000000000003
+    },
+    {
+      "Sucursal": "Los Güeros",
+      "Fecha": "2026-09-12",
+      "Descripcion": "JAM PATRON AZUL CUADRADO",
+      "Cantidad": 2.0,
+      "Total": 1420.0
+    },
+    {
+      "Sucursal": "Los Güeros",
+      "Fecha": "2026-09-12",
+      "Descripcion": "JAM PATRON NEGRO HOLANDEZ CUAD",
+      "Cantidad": 4.0,
+      "Total": 3479.99984
+    },
+    {
+      "Sucursal": "Los Güeros",
+      "Fecha": "2026-09-12",
+      "Descripcion": "JAM PAVO GALICIA",
+      "Cantidad": 19.0,
+      "Total": 6870.000280000001
+    },
+    {
+      "Sucursal": "Los Güeros",
+      "Fecha": "2026-09-12",
+      "Descripcion": "JAM PIERNA FUD",
+      "Cantidad": 12.0,
+      "Total": 7019.999760000001
+    },
+    {
+      "Sucursal": "Los Güeros",
+      "Fecha": "2026-09-12",
+      "Descripcion": "JAM PIERNA GUEROS HORN",
+      "Cantidad": 4.0,
+      "Total": 1640.0
+    },
+    {
+      "Sucursal": "Los Güeros",
+      "Fecha": "2026-09-12",
+      "Descripcion": "JAM PNA FAM CAPISTRANO",
+      "Cantidad": 1.0,
+      "Total": 455.0
+    },
+    {
+      "Sucursal": "Los Güeros",
+      "Fecha": "2026-09-12",
+      "Descripcion": "JAM PROADSA ORO",
+      "Cantidad": 29.05,
+      "Total": 1278.2
+    },
+    {
+      "Sucursal": "Los Güeros",
+      "Fecha": "2026-09-12",
+      "Descripcion": "JAM ROJO GALICIA",
+      "Cantidad": 4.0,
+      "Total": 1980.0
+    },
+    {
+      "Sucursal": "Los Güeros",
+      "Fecha": "2026-09-12",
+      "Descripcion": "JAM SAN CARLOS",
+      "Cantidad": 5.02,
+      "Total": 401.59999999999997
+    },
+    {
+      "Sucursal": "Los Güeros",
+      "Fecha": "2026-09-12",
+      "Descripcion": "JAM TABIQUE JARVA",
+      "Cantidad": 28.57,
+      "Total": 2842.71
+    },
+    {
+      "Sucursal": "Los Güeros",
+      "Fecha": "2026-09-12",
+      "Descripcion": "JAM TABIQUE MANANTIALES",
+      "Cantidad": 4.0,
+      "Total": 3634.00008
+    },
+    {
+      "Sucursal": "Los Güeros",
+      "Fecha": "2026-09-12",
+      "Descripcion": "JAM VIRG GALICIA MIXTO",
+      "Cantidad": 12.0,
+      "Total": 3259.9998800000008
+    },
+    {
+      "Sucursal": "Los Güeros",
+      "Fecha": "2026-09-12",
+      "Descripcion": "JAM VIRG GALY",
+      "Cantidad": 1.0,
+      "Total": 225.0
+    },
+    {
+      "Sucursal": "Los Güeros",
+      "Fecha": "2026-09-12",
+      "Descripcion": "JAM VIRG PAVO FUD",
+      "Cantidad": 24.0,
+      "Total": 11400.00048
+    },
+    {
+      "Sucursal": "Los Güeros",
+      "Fecha": "2026-09-12",
+      "Descripcion": "JAM VIRG PAVO JARVA",
+      "Cantidad": 11.43,
+      "Total": 925.8299999999999
+    },
+    {
+      "Sucursal": "Los Güeros",
+      "Fecha": "2026-09-12",
+      "Descripcion": "JAM VIRG PREM ZWAN",
+      "Cantidad": 5.0,
+      "Total": 2670.0000999999997
+    },
+    {
+      "Sucursal": "Los Güeros",
+      "Fecha": "2026-09-12",
+      "Descripcion": "JAM VIVA COCIDO",
+      "Cantidad": 2.0,
+      "Total": 749.99998
+    },
+    {
+      "Sucursal": "Los Güeros",
+      "Fecha": "2026-09-12",
+      "Descripcion": "JAMON PAVO SN ANTONIO",
+      "Cantidad": 5.0,
+      "Total": 1525.0
+    },
+    {
+      "Sucursal": "Los Güeros",
+      "Fecha": "2026-09-12",
+      "Descripcion": "JUGO SASONADOR DURAN",
+      "Cantidad": 1.0,
+      "Total": 53.0
+    },
+    {
+      "Sucursal": "Los Güeros",
+      "Fecha": "2026-09-12",
+      "Descripcion": "LECHE CLASICA ALPURA 2000",
+      "Cantidad": 2.0,
+      "Total": 589.99996
+    },
+    {
+      "Sucursal": "Los Güeros",
+      "Fecha": "2026-09-12",
+      "Descripcion": "LECHE LALA DESLA 1LT",
+      "Cantidad": 3.0,
+      "Total": 855.0000299999999
+    },
+    {
+      "Sucursal": "Los Güeros",
+      "Fecha": "2026-09-12",
+      "Descripcion": "LECHE LALA ENTERA 1LT",
+      "Cantidad": 3.0,
+      "Total": 855.0000299999999
+    },
+    {
+      "Sucursal": "Los Güeros",
+      "Fecha": "2026-09-12",
+      "Descripcion": "LECHE SANTA CLARA",
+      "Cantidad": 8.0,
+      "Total": 2400.00008
+    },
+    {
+      "Sucursal": "Los Güeros",
+      "Fecha": "2026-09-12",
+      "Descripcion": "LECHERA GUEROS",
+      "Cantidad": 1.0,
+      "Total": 835.00003
+    },
+    {
+      "Sucursal": "Los Güeros",
+      "Fecha": "2026-09-12",
+      "Descripcion": "MAIZ GUEROS POZOLERO",
+      "Cantidad": 28.0,
+      "Total": 408.52
+    },
+    {
+      "Sucursal": "Los Güeros",
+      "Fecha": "2026-09-12",
+      "Descripcion": "MAIZ LA COSECHITA POZOLERO",
+      "Cantidad": 839.0,
+      "Total": 15125.0
+    },
+    {
+      "Sucursal": "Los Güeros",
+      "Fecha": "2026-09-12",
+      "Descripcion": "MAIZ SHERYN POZOLERO",
+      "Cantidad": 100.0,
+      "Total": 2150.0
+    },
+    {
+      "Sucursal": "Los Güeros",
+      "Fecha": "2026-09-12",
+      "Descripcion": "MAN ARCONOR",
+      "Cantidad": 20.1,
+      "Total": 1477.5
+    },
+    {
+      "Sucursal": "Los Güeros",
+      "Fecha": "2026-09-12",
+      "Descripcion": "MAN FIORELO 3.8K PZA",
+      "Cantidad": 9.0,
+      "Total": 4329.99985
+    },
+    {
+      "Sucursal": "Los Güeros",
+      "Fecha": "2026-09-12",
+      "Descripcion": "MAN GOUDA CAMPESINA ROJO",
+      "Cantidad": 88.76,
+      "Total": 10877.2
+    },
+    {
+      "Sucursal": "Los Güeros",
+      "Fecha": "2026-09-12",
+      "Descripcion": "MAN NOCHE BUENA",
+      "Cantidad": 180.87,
+      "Total": 28215.719999999998
+    },
+    {
+      "Sucursal": "Los Güeros",
+      "Fecha": "2026-09-12",
+      "Descripcion": "MAN PLANCHA NVA ZELANDA",
+      "Cantidad": 20.3,
+      "Total": 2334.5
+    },
+    {
+      "Sucursal": "Los Güeros",
+      "Fecha": "2026-09-12",
+      "Descripcion": "MAN SIERREÑO",
+      "Cantidad": 12.14,
+      "Total": 1030.33
+    },
+    {
+      "Sucursal": "Los Güeros",
+      "Fecha": "2026-09-12",
+      "Descripcion": "MANCHEGO CAPERUCITA",
+      "Cantidad": 38.900000000000006,
+      "Total": 5446.0
+    },
+    {
+      "Sucursal": "Los Güeros",
+      "Fecha": "2026-09-12",
+      "Descripcion": "MANCHEGO REB CASTELL",
+      "Cantidad": 2.0,
+      "Total": 200.0
+    },
+    {
+      "Sucursal": "Los Güeros",
+      "Fecha": "2026-09-12",
+      "Descripcion": "MANCHEGO VILLITA",
+      "Cantidad": 29.36,
+      "Total": 4358.52
+    },
+    {
+      "Sucursal": "Los Güeros",
+      "Fecha": "2026-09-12",
+      "Descripcion": "MANTE CHIPILO 90GR",
+      "Cantidad": 5.0,
+      "Total": 1850.0
+    },
+    {
+      "Sucursal": "Los Güeros",
+      "Fecha": "2026-09-12",
+      "Descripcion": "MARG IBERIA 1KG",
+      "Cantidad": 1.0,
+      "Total": 770.0
+    },
+    {
+      "Sucursal": "Los Güeros",
+      "Fecha": "2026-09-12",
+      "Descripcion": "MARG IBERIA 225GR",
+      "Cantidad": 10.0,
+      "Total": 2068.0
+    },
+    {
+      "Sucursal": "Los Güeros",
+      "Fecha": "2026-09-12",
+      "Descripcion": "MARG IBERIA 90GR",
+      "Cantidad": 18.0,
+      "Total": 3316.0
+    },
+    {
+      "Sucursal": "Los Güeros",
+      "Fecha": "2026-09-12",
+      "Descripcion": "MARG190 PRIMAVERA",
+      "Cantidad": 3.0,
+      "Total": 1184.99991
+    },
+    {
+      "Sucursal": "Los Güeros",
+      "Fecha": "2026-09-12",
+      "Descripcion": "MAYO 16 MC CORMICK",
+      "Cantidad": 12.0,
+      "Total": 530.04
+    },
+    {
+      "Sucursal": "Los Güeros",
+      "Fecha": "2026-09-12",
+      "Descripcion": "MAYO 64 MC CORMICK",
+      "Cantidad": 12.0,
+      "Total": 1550.04
+    },
+    {
+      "Sucursal": "Los Güeros",
+      "Fecha": "2026-09-12",
+      "Descripcion": "MAYO GALON MC CORMICK",
+      "Cantidad": 56.0,
+      "Total": 15570.0
+    },
+    {
+      "Sucursal": "Los Güeros",
+      "Fecha": "2026-09-12",
+      "Descripcion": "MENONITA",
+      "Cantidad": 97.38,
+      "Total": 10530.6
+    },
+    {
+      "Sucursal": "Los Güeros",
+      "Fecha": "2026-09-12",
+      "Descripcion": "MENONITA REBANADO",
+      "Cantidad": 0.5,
+      "Total": 59.0
+    },
+    {
+      "Sucursal": "Los Güeros",
+      "Fecha": "2026-09-12",
+      "Descripcion": "MORTADELA DUBY",
+      "Cantidad": 12.0,
+      "Total": 2904.00012
+    },
+    {
+      "Sucursal": "Los Güeros",
+      "Fecha": "2026-09-12",
+      "Descripcion": "MORTADELA FUD",
+      "Cantidad": 7.0,
+      "Total": 1835.00004
+    },
+    {
+      "Sucursal": "Los Güeros",
+      "Fecha": "2026-09-12",
+      "Descripcion": "MORTADELA HECTTOR",
+      "Cantidad": 4.0,
+      "Total": 900.00004
+    },
+    {
+      "Sucursal": "Los Güeros",
+      "Fecha": "2026-09-12",
+      "Descripcion": "MORTADELA KIR",
+      "Cantidad": 2.0,
+      "Total": 554.00002
+    },
+    {
+      "Sucursal": "Los Güeros",
+      "Fecha": "2026-09-12",
+      "Descripcion": "MORTADELA SAN ANTONIO",
+      "Cantidad": 4.0,
+      "Total": 960.00004
+    },
+    {
+      "Sucursal": "Los Güeros",
+      "Fecha": "2026-09-12",
+      "Descripcion": "MOZARELLA 1K GUEROS.",
+      "Cantidad": 24.0,
+      "Total": 1932.0
+    },
+    {
+      "Sucursal": "Los Güeros",
+      "Fecha": "2026-09-12",
+      "Descripcion": "NESCAFE 350G",
+      "Cantidad": 30.0,
+      "Total": 5250.000300000001
+    },
+    {
+      "Sucursal": "Los Güeros",
+      "Fecha": "2026-09-12",
+      "Descripcion": "NUTRILECHE",
+      "Cantidad": 3.0,
+      "Total": 659.99997
+    },
+    {
+      "Sucursal": "Los Güeros",
+      "Fecha": "2026-09-12",
+      "Descripcion": "NUTRILECHE 2L",
+      "Cantidad": 1.0,
+      "Total": 225.0
+    },
+    {
+      "Sucursal": "Los Güeros",
+      "Fecha": "2026-09-12",
+      "Descripcion": "NUTRILECHE DESLACTOSADA",
+      "Cantidad": 2.0,
+      "Total": 462.00002
+    },
+    {
+      "Sucursal": "Los Güeros",
+      "Fecha": "2026-09-12",
+      "Descripcion": "OAXACA SN MARTIN  ESPECIAL",
+      "Cantidad": 3.52,
+      "Total": 341.44
+    },
+    {
+      "Sucursal": "Los Güeros",
+      "Fecha": "2026-09-12",
+      "Descripcion": "OAXACA VERACRUZ",
+      "Cantidad": 8.6,
+      "Total": 885.8
+    },
+    {
+      "Sucursal": "Los Güeros",
+      "Fecha": "2026-09-12",
+      "Descripcion": "PAN SELLO CHILCHOTA",
+      "Cantidad": 21.4,
+      "Total": 2696.4
+    },
+    {
+      "Sucursal": "Los Güeros",
+      "Fecha": "2026-09-12",
+      "Descripcion": "PAN VOLCANES 1K",
+      "Cantidad": 5.0,
+      "Total": 650.0
+    },
+    {
+      "Sucursal": "Los Güeros",
+      "Fecha": "2026-09-12",
+      "Descripcion": "PANELA D´LECHE",
+      "Cantidad": 34.480000000000004,
+      "Total": 3516.96
+    },
+    {
+      "Sucursal": "Los Güeros",
+      "Fecha": "2026-09-12",
+      "Descripcion": "PANELA EL ABUELO",
+      "Cantidad": 4.42,
+      "Total": 472.94
+    },
+    {
+      "Sucursal": "Los Güeros",
+      "Fecha": "2026-09-12",
+      "Descripcion": "PANELA FRANJA 2.2KG",
+      "Cantidad": 40.0,
+      "Total": 6600.0
+    },
+    {
+      "Sucursal": "Los Güeros",
+      "Fecha": "2026-09-12",
+      "Descripcion": "PANELA QUESOMEX",
+      "Cantidad": 3.4,
+      "Total": 336.59999999999997
+    },
+    {
+      "Sucursal": "Los Güeros",
+      "Fecha": "2026-09-12",
+      "Descripcion": "PANELA VOLCANES GDE",
+      "Cantidad": 27.0,
+      "Total": 10050.000030000001
+    },
+    {
+      "Sucursal": "Los Güeros",
+      "Fecha": "2026-09-12",
+      "Descripcion": "PARME PREMIER 2K",
+      "Cantidad": 1.0,
+      "Total": 238.5
+    },
+    {
+      "Sucursal": "Los Güeros",
+      "Fecha": "2026-09-12",
+      "Descripcion": "PECH AHUMADA MANANTIALES",
+      "Cantidad": 15.0,
+      "Total": 5204.99985
+    },
+    {
+      "Sucursal": "Los Güeros",
+      "Fecha": "2026-09-12",
+      "Descripcion": "PECH ALPINO PAVO",
+      "Cantidad": 2.0,
+      "Total": 936.00002
+    },
+    {
+      "Sucursal": "Los Güeros",
+      "Fecha": "2026-09-12",
+      "Descripcion": "PECH NATURAL MANANTIALES",
+      "Cantidad": 7.0,
+      "Total": 2285.49993
+    },
+    {
+      "Sucursal": "Los Güeros",
+      "Fecha": "2026-09-12",
+      "Descripcion": "PECH PAVO ZWAN",
+      "Cantidad": 1.0,
+      "Total": 1122.99998
+    },
+    {
+      "Sucursal": "Los Güeros",
+      "Fecha": "2026-09-12",
+      "Descripcion": "PECH SAN RAFAEL",
+      "Cantidad": 3.0,
+      "Total": 2625.00006
+    },
+    {
+      "Sucursal": "Los Güeros",
+      "Fecha": "2026-09-12",
+      "Descripcion": "PEPERONI HECTOR 1K",
+      "Cantidad": 5.0,
+      "Total": 542.0
+    },
+    {
+      "Sucursal": "Los Güeros",
+      "Fecha": "2026-09-12",
+      "Descripcion": "PEPERONI PATRON",
+      "Cantidad": 20.0,
+      "Total": 1910.0
+    },
+    {
+      "Sucursal": "Los Güeros",
+      "Fecha": "2026-09-12",
+      "Descripcion": "PHILADELPHIA 1KG",
+      "Cantidad": 1.0,
+      "Total": 155.0
+    },
+    {
+      "Sucursal": "Los Güeros",
+      "Fecha": "2026-09-12",
+      "Descripcion": "PIERNA QUIROZ REB ESPAÑOLA",
+      "Cantidad": 1.0,
+      "Total": 88.0
+    },
+    {
+      "Sucursal": "Los Güeros",
+      "Fecha": "2026-09-12",
+      "Descripcion": "PIMIENTA Y LIMON DURAN",
+      "Cantidad": 2.0,
+      "Total": 140.0
+    },
+    {
+      "Sucursal": "Los Güeros",
+      "Fecha": "2026-09-12",
+      "Descripcion": "PIMIENTO DUBY",
+      "Cantidad": 1.0,
+      "Total": 220.00001
+    },
+    {
+      "Sucursal": "Los Güeros",
+      "Fecha": "2026-09-12",
+      "Descripcion": "PUERCO CASTRO",
+      "Cantidad": 4.0,
+      "Total": 300.0
+    },
+    {
+      "Sucursal": "Los Güeros",
+      "Fecha": "2026-09-12",
+      "Descripcion": "Q MANCHEGO FUD 180GR",
+      "Cantidad": 8.0,
+      "Total": 272.0
+    },
+    {
+      "Sucursal": "Los Güeros",
+      "Fecha": "2026-09-12",
+      "Descripcion": "Q. GOUDA GUEROS",
+      "Cantidad": 11.76,
+      "Total": 1352.4
+    },
+    {
+      "Sucursal": "Los Güeros",
+      "Fecha": "2026-09-12",
+      "Descripcion": "Q. PUERCO  CHESTER",
+      "Cantidad": 4.1,
+      "Total": 166.04999999999998
+    },
+    {
+      "Sucursal": "Los Güeros",
+      "Fecha": "2026-09-12",
+      "Descripcion": "Q. PUERCO ANTHUR",
+      "Cantidad": 28.83,
+      "Total": 1816.29
+    },
+    {
+      "Sucursal": "Los Güeros",
+      "Fecha": "2026-09-12",
+      "Descripcion": "Q. PUERCO FUD",
+      "Cantidad": 11.0,
+      "Total": 4807.0
+    },
+    {
+      "Sucursal": "Los Güeros",
+      "Fecha": "2026-09-12",
+      "Descripcion": "Q. PUERCO GUEROS BLANCO",
+      "Cantidad": 3.77,
+      "Total": 192.27
+    },
+    {
+      "Sucursal": "Los Güeros",
+      "Fecha": "2026-09-12",
+      "Descripcion": "Q. PUERCO JARVA",
+      "Cantidad": 4.26,
+      "Total": 315.24
+    },
+    {
+      "Sucursal": "Los Güeros",
+      "Fecha": "2026-09-12",
+      "Descripcion": "Q. PUERCO MALDONADO",
+      "Cantidad": 8.0,
+      "Total": 544.0
+    },
+    {
+      "Sucursal": "Los Güeros",
+      "Fecha": "2026-09-12",
+      "Descripcion": "Q. PUERCO NEZA",
+      "Cantidad": 20.16,
+      "Total": 1693.44
+    },
+    {
+      "Sucursal": "Los Güeros",
+      "Fecha": "2026-09-12",
+      "Descripcion": "Q.PUERCO GALICIA",
+      "Cantidad": 23.939999999999998,
+      "Total": 2168.964
+    },
+    {
+      "Sucursal": "Los Güeros",
+      "Fecha": "2026-09-12",
+      "Descripcion": "QUESO COTIJA",
+      "Cantidad": 32.339999999999996,
+      "Total": 3153.68
+    },
+    {
+      "Sucursal": "Los Güeros",
+      "Fecha": "2026-09-12",
+      "Descripcion": "QUESO GOUDA MONARCA",
+      "Cantidad": 3.1,
+      "Total": 176.70000000000002
+    },
+    {
+      "Sucursal": "Los Güeros",
+      "Fecha": "2026-09-12",
+      "Descripcion": "QUESO MOLIDO",
+      "Cantidad": 10.0,
+      "Total": 125.0
+    },
+    {
+      "Sucursal": "Los Güeros",
+      "Fecha": "2026-09-12",
+      "Descripcion": "QUESO PANELA ESPECIAL",
+      "Cantidad": 35.78,
+      "Total": 4222.04
+    },
+    {
+      "Sucursal": "Los Güeros",
+      "Fecha": "2026-09-12",
+      "Descripcion": "QUESO PHILADELPHIA 180GR",
+      "Cantidad": 157.0,
+      "Total": 5620.48
+    },
+    {
+      "Sucursal": "Los Güeros",
+      "Fecha": "2026-09-12",
+      "Descripcion": "QUESO SALAMANCA PUERCO",
+      "Cantidad": 4.1,
+      "Total": 381.29999999999995
+    },
+    {
+      "Sucursal": "Los Güeros",
+      "Fecha": "2026-09-12",
+      "Descripcion": "RALLADO COCO 10K BOL",
+      "Cantidad": 2.0,
+      "Total": 254.0
+    },
+    {
+      "Sucursal": "Los Güeros",
+      "Fecha": "2026-09-12",
+      "Descripcion": "RANCHERITO LIQUIDO",
+      "Cantidad": 139.0,
+      "Total": 3825.0
+    },
+    {
+      "Sucursal": "Los Güeros",
+      "Fecha": "2026-09-12",
+      "Descripcion": "SAL ANY",
+      "Cantidad": 27.0,
+      "Total": 2670.0
+    },
+    {
+      "Sucursal": "Los Güeros",
+      "Fecha": "2026-09-12",
+      "Descripcion": "SAL BAFAR CLUB FRANKFURT",
+      "Cantidad": 2.0,
+      "Total": 184.0
+    },
+    {
+      "Sucursal": "Los Güeros",
+      "Fecha": "2026-09-12",
+      "Descripcion": "SAL CHERO",
+      "Cantidad": 44.0,
+      "Total": 4300.0
+    },
+    {
+      "Sucursal": "Los Güeros",
+      "Fecha": "2026-09-12",
+      "Descripcion": "SAL COCK. 1/2 ZWAN",
+      "Cantidad": 3.0,
+      "Total": 171.0
+    },
+    {
+      "Sucursal": "Los Güeros",
+      "Fecha": "2026-09-12",
+      "Descripcion": "SAL CON AJO DURAN",
+      "Cantidad": 5.0,
+      "Total": 350.0
+    },
+    {
+      "Sucursal": "Los Güeros",
+      "Fecha": "2026-09-12",
+      "Descripcion": "SAL FRANKF ALPINO",
+      "Cantidad": 26.0,
+      "Total": 2964.0
+    },
+    {
+      "Sucursal": "Los Güeros",
+      "Fecha": "2026-09-12",
+      "Descripcion": "SAL FRANKF SAN ANTONIO",
+      "Cantidad": 25.0,
+      "Total": 2545.0
+    },
+    {
+      "Sucursal": "Los Güeros",
+      "Fecha": "2026-09-12",
+      "Descripcion": "SAL FUD HOT DOG",
+      "Cantidad": 4.0,
+      "Total": 828.0
+    },
+    {
+      "Sucursal": "Los Güeros",
+      "Fecha": "2026-09-12",
+      "Descripcion": "SAL MILLAN 2/K",
+      "Cantidad": 16.0,
+      "Total": 972.0
+    },
+    {
+      "Sucursal": "Los Güeros",
+      "Fecha": "2026-09-12",
+      "Descripcion": "SAL MILLAN ROJA",
+      "Cantidad": 12.0,
+      "Total": 882.0
+    },
+    {
+      "Sucursal": "Los Güeros",
+      "Fecha": "2026-09-12",
+      "Descripcion": "SAL PAVO FUD",
+      "Cantidad": 79.0,
+      "Total": 9260.0002
+    },
+    {
+      "Sucursal": "Los Güeros",
+      "Fecha": "2026-09-12",
+      "Descripcion": "SAL PAVO JUM HECTOR",
+      "Cantidad": 7.0,
+      "Total": 742.0
+    },
+    {
+      "Sucursal": "Los Güeros",
+      "Fecha": "2026-09-12",
+      "Descripcion": "SAL PAVO ZWAN 3K",
+      "Cantidad": 1.0,
+      "Total": 182.0
+    },
+    {
+      "Sucursal": "Los Güeros",
+      "Fecha": "2026-09-12",
+      "Descripcion": "SAL PREMIUM SAN ANTONIO",
+      "Cantidad": 40.0,
+      "Total": 4378.0
+    },
+    {
+      "Sucursal": "Los Güeros",
+      "Fecha": "2026-09-12",
+      "Descripcion": "SAL VIVA NORMAL",
+      "Cantidad": 58.0,
+      "Total": 6226.0
+    },
+    {
+      "Sucursal": "Los Güeros",
+      "Fecha": "2026-09-12",
+      "Descripcion": "SAL ZWAN COC 2K",
+      "Cantidad": 1.0,
+      "Total": 218.00001
+    },
+    {
+      "Sucursal": "Los Güeros",
+      "Fecha": "2026-09-12",
+      "Descripcion": "SALMUERA PAVO FUD",
+      "Cantidad": 4.0,
+      "Total": 640.0
+    },
+    {
+      "Sucursal": "Los Güeros",
+      "Fecha": "2026-09-12",
+      "Descripcion": "SALMUERA VIENA FUD",
+      "Cantidad": 2.0,
+      "Total": 355.99998
+    },
+    {
+      "Sucursal": "Los Güeros",
+      "Fecha": "2026-09-12",
+      "Descripcion": "SALSA BBQ L&K GALON",
+      "Cantidad": 4.0,
+      "Total": 580.0
+    },
+    {
+      "Sucursal": "Los Güeros",
+      "Fecha": "2026-09-12",
+      "Descripcion": "SELLO BARRA CAN CHILCHOTA",
+      "Cantidad": 4.0,
+      "Total": 517.28
+    },
+    {
+      "Sucursal": "Los Güeros",
+      "Fecha": "2026-09-12",
+      "Descripcion": "SINCHO",
+      "Cantidad": 9.8,
+      "Total": 985.0
+    },
+    {
+      "Sucursal": "Los Güeros",
+      "Fecha": "2026-09-12",
+      "Descripcion": "SUADERO DURAN",
+      "Cantidad": 3.0,
+      "Total": 210.0
+    },
+    {
+      "Sucursal": "Los Güeros",
+      "Fecha": "2026-09-12",
+      "Descripcion": "SUSTITUTO DE CREMA MEMBERS",
+      "Cantidad": 98.0,
+      "Total": 8401.52
+    },
+    {
+      "Sucursal": "Los Güeros",
+      "Fecha": "2026-09-12",
+      "Descripcion": "TOCINO AHUMADO GALY ESPECIAL",
+      "Cantidad": 1.6,
+      "Total": 161.60000000000002
+    },
+    {
+      "Sucursal": "Los Güeros",
+      "Fecha": "2026-09-12",
+      "Descripcion": "TOCINO GUEROS AHUMADO",
+      "Cantidad": 70.6,
+      "Total": 5781.3
+    },
+    {
+      "Sucursal": "Los Güeros",
+      "Fecha": "2026-09-12",
+      "Descripcion": "TOCINO MONARCA PQT REB",
+      "Cantidad": 2.0,
+      "Total": 204.0
+    },
+    {
+      "Sucursal": "Los Güeros",
+      "Fecha": "2026-09-12",
+      "Descripcion": "TOCINO RECORTE MONARCA",
+      "Cantidad": 5.0,
+      "Total": 230.0
+    },
+    {
+      "Sucursal": "Los Güeros",
+      "Fecha": "2026-09-12",
+      "Descripcion": "TOR CHICA HARINA",
+      "Cantidad": 155.0,
+      "Total": 4960.0
+    },
+    {
+      "Sucursal": "Los Güeros",
+      "Fecha": "2026-09-12",
+      "Descripcion": "TOR GRANDE HARINA",
+      "Cantidad": 45.0,
+      "Total": 1440.0
+    },
+    {
+      "Sucursal": "Los Güeros",
+      "Fecha": "2026-09-12",
+      "Descripcion": "TOSTADAS CHARRAS",
+      "Cantidad": 21.0,
+      "Total": 10665.00009
+    },
+    {
+      "Sucursal": "Los Güeros",
+      "Fecha": "2026-09-12",
+      "Descripcion": "TOSTADAS TIO BETO",
+      "Cantidad": 12.0,
+      "Total": 6540.000360000001
+    },
+    {
+      "Sucursal": "Los Güeros",
+      "Fecha": "2026-09-12",
+      "Descripcion": "YAKULT",
+      "Cantidad": 3.0,
+      "Total": 569.99997
+    },
+    {
+      "Sucursal": "Los Güeros",
+      "Fecha": "2026-09-12",
+      "Descripcion": "YOG DURAZNO 1K YOP",
+      "Cantidad": 2.0,
+      "Total": 88.0
+    },
+    {
+      "Sucursal": "Los Güeros",
+      "Fecha": "2026-09-12",
+      "Descripcion": "YOG FRESA YOP 1K",
+      "Cantidad": 2.0,
+      "Total": 88.0
+    },
+    {
+      "Sucursal": "Los Güeros",
+      "Fecha": "2026-09-12",
+      "Descripcion": "YOG GRIE NAT YOP 1K",
+      "Cantidad": 3.0,
+      "Total": 216.0
+    },
+    {
+      "Sucursal": "Los Güeros",
+      "Fecha": "2026-09-12",
+      "Descripcion": "YOG GRIE SIN AZCR 1K YOP",
+      "Cantidad": 3.0,
+      "Total": 219.0
+    },
+    {
+      "Sucursal": "Los Güeros",
+      "Fecha": "2026-09-12",
+      "Descripcion": "YOG NATURAL 1KYOP",
+      "Cantidad": 1.0,
+      "Total": 44.0
+    },
+    {
+      "Sucursal": "Los Güeros",
+      "Fecha": "2026-09-12",
+      "Descripcion": "YOG SABINO CEREAL",
+      "Cantidad": 4.0,
+      "Total": 388.0
+    },
+    {
+      "Sucursal": "Los Güeros",
+      "Fecha": "2026-09-12",
+      "Descripcion": "YOG SABINO DURAZNO",
+      "Cantidad": 6.0,
+      "Total": 582.0
+    },
+    {
+      "Sucursal": "Los Güeros",
+      "Fecha": "2026-09-12",
+      "Descripcion": "YOG SABINO FRESA",
+      "Cantidad": 6.0,
+      "Total": 582.0
+    },
+    {
+      "Sucursal": "Los Güeros",
+      "Fecha": "2026-09-12",
+      "Descripcion": "YOG SABINO MANGO",
+      "Cantidad": 2.0,
+      "Total": 194.0
+    },
+    {
+      "Sucursal": "Los Güeros",
+      "Fecha": "2026-09-12",
+      "Descripcion": "YOG SABINO NUEZ",
+      "Cantidad": 2.0,
+      "Total": 194.0
+    },
+    {
+      "Sucursal": "Los Güeros",
+      "Fecha": "2026-09-12",
+      "Descripcion": "YOG SABINO PIÑA/COCO",
+      "Cantidad": 2.0,
+      "Total": 194.0
+    },
+    {
+      "Sucursal": "Los Güeros",
+      "Fecha": "2026-09-12",
       "Descripcion": "YOG SABINO ZARZAMORA",
       "Cantidad": 2.0,
       "Total": 194.0
