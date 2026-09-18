@@ -50,27 +50,77 @@
     <main class="max-w-7xl mx-auto px-6 pt-8 space-y-8">
         
         <!-- Filter Controls Bar -->
-        <div class="glass-card rounded-2xl p-6 shadow-sm border border-slate-200/80">
-            <div class="flex flex-col lg:flex-row items-stretch lg:items-center justify-between gap-6">
+        <div class="glass-card rounded-2xl p-6 shadow-sm border border-slate-200/80 relative z-40">
+            <div class="flex flex-col xl:flex-row items-stretch xl:items-center justify-between gap-6">
                 
-                <div class="flex flex-col md:flex-row items-stretch md:items-center gap-4 flex-1">
-                    <div class="flex-1 min-w-[220px]">
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-5 gap-4 flex-1">
+                    
+                    <!-- Multi-Select Sucursales -->
+                    <div class="relative" id="dropdown-branch-container">
                         <label class="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">
-                            <i class="fa-solid fa-store text-blue-500 mr-1.5"></i> Sucursal
+                            <i class="fa-solid fa-store text-blue-500 mr-1.5"></i> Sucursales
                         </label>
-                        <select id="filter-branch" class="w-full bg-slate-50 border border-slate-300 text-slate-800 text-sm font-semibold rounded-xl p-3 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all outline-none">
-                            <option value="all">Todas las Sucursales</option>
+                        <button type="button" id="btn-branch-toggle" onclick="toggleDropdown('branch')" class="w-full bg-slate-50 border border-slate-300 text-slate-800 text-sm font-semibold rounded-xl p-3 flex items-center justify-between focus:ring-2 focus:ring-blue-500 transition-all outline-none">
+                            <span id="label-branch" class="truncate">Todas las Sucursales</span>
+                            <i class="fa-solid fa-chevron-down text-slate-400 text-xs ml-2"></i>
+                        </button>
+                        <div id="menu-branch" class="hidden absolute left-0 top-full mt-2 bg-white rounded-2xl shadow-2xl border border-slate-200 z-50 p-3 max-h-72 flex flex-col gap-2 w-64 sm:w-72">
+                            <div class="flex items-center justify-between pb-2 border-b border-slate-100 px-1">
+                                <button type="button" onclick="selectAllBranches(true)" class="text-xs font-bold text-blue-600 hover:text-blue-800">
+                                    Seleccionar Todas
+                                </button>
+                                <button type="button" onclick="selectAllBranches(false)" class="text-xs font-bold text-slate-400 hover:text-slate-600">
+                                    Desmarcar
+                                </button>
+                            </div>
+                            <div id="list-branch" class="overflow-y-auto custom-scrollbar flex-1 space-y-1 pr-1"></div>
+                        </div>
+                    </div>
+
+                    <!-- Single Select Proveedor -->
+                    <div>
+                        <label class="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">
+                            <i class="fa-solid fa-truck-field text-indigo-500 mr-1.5"></i> Proveedor
+                        </label>
+                        <select id="filter-supplier" class="w-full bg-slate-50 border border-slate-300 text-slate-800 text-sm font-semibold rounded-xl p-3 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition-all outline-none">
+                            <option value="all">Todos los Proveedores</option>
                         </select>
                     </div>
 
-                    <div class="min-w-[160px]">
+                    <!-- Multi-Select Productos -->
+                    <div class="relative" id="dropdown-product-container">
+                        <label class="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">
+                            <i class="fa-solid fa-box text-emerald-500 mr-1.5"></i> Productos
+                        </label>
+                        <button type="button" id="btn-product-toggle" onclick="toggleDropdown('product')" class="w-full bg-slate-50 border border-slate-300 text-slate-800 text-sm font-semibold rounded-xl p-3 flex items-center justify-between focus:ring-2 focus:ring-emerald-500 transition-all outline-none">
+                            <span id="label-product" class="truncate">Todos los Productos</span>
+                            <i class="fa-solid fa-chevron-down text-slate-400 text-xs ml-2"></i>
+                        </button>
+                        <div id="menu-product" class="hidden absolute left-0 top-full mt-2 bg-white rounded-2xl shadow-2xl border border-slate-200 z-50 p-3 max-h-80 flex flex-col gap-2 w-72 sm:w-80">
+                            <div class="relative">
+                                <i class="fa-solid fa-magnifying-glass text-slate-400 text-xs absolute left-3 top-3"></i>
+                                <input type="text" id="search-product-input" onkeyup="filterProductListSearch()" placeholder="Buscar producto..." class="w-full bg-slate-50 border border-slate-200 rounded-lg pl-8 pr-3 py-1.5 text-xs text-slate-800 font-semibold focus:outline-none focus:border-emerald-500">
+                            </div>
+                            <div class="flex items-center justify-between pb-2 border-b border-slate-100 px-1">
+                                <button type="button" onclick="selectAllProducts(true)" class="text-xs font-bold text-emerald-600 hover:text-emerald-800">
+                                    Seleccionar Todos
+                                </button>
+                                <button type="button" onclick="selectAllProducts(false)" class="text-xs font-bold text-slate-400 hover:text-slate-600">
+                                    Desmarcar
+                                </button>
+                            </div>
+                            <div id="list-product" class="overflow-y-auto custom-scrollbar flex-1 space-y-1 pr-1"></div>
+                        </div>
+                    </div>
+
+                    <div>
                         <label class="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">
                             <i class="fa-regular fa-calendar text-blue-500 mr-1.5"></i> Fecha Inicio
                         </label>
                         <input type="date" id="filter-start" class="w-full bg-slate-50 border border-slate-300 text-slate-800 text-sm font-semibold rounded-xl p-2.5 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all outline-none">
                     </div>
 
-                    <div class="min-w-[160px]">
+                    <div>
                         <label class="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">
                             <i class="fa-regular fa-calendar-check text-blue-500 mr-1.5"></i> Fecha Fin
                         </label>
@@ -79,7 +129,7 @@
                 </div>
 
                 <!-- Date Presets -->
-                <div class="flex items-center gap-2 pt-2 lg:pt-0 border-t lg:border-t-0 border-slate-200">
+                <div class="flex items-center gap-2 pt-2 xl:pt-0 border-t xl:border-t-0 border-slate-200">
                     <button onclick="setPreset('all')" class="px-3.5 py-2 text-xs font-bold rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 transition-all">
                         Todo el Rango
                     </button>
@@ -174,6 +224,77 @@
             </div>
             <div class="relative h-[420px] w-full">
                 <canvas id="trendChart"></canvas>
+            </div>
+        </div>
+
+        <!-- Selected Product Daily Sales Matrix Section (when product selected) -->
+        <div id="product-matrix-section" class="hidden glass-card rounded-2xl p-6 shadow-sm border border-slate-200/80">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6 pb-4 border-b border-slate-100">
+                <div class="flex items-center gap-3">
+                    <div class="h-10 w-10 rounded-xl bg-emerald-100 text-emerald-600 flex items-center justify-center font-bold text-lg">
+                        <i class="fa-solid fa-boxes-stacked"></i>
+                    </div>
+                    <div>
+                        <h2 class="text-lg font-bold text-slate-900 flex items-center gap-2">
+                            <span>Matriz de Ventas Diarias del Producto:</span>
+                            <span id="product-matrix-name-title" class="text-emerald-600 font-extrabold"></span>
+                        </h2>
+                        <p class="text-xs text-slate-500 font-medium">Unidades vendidas (piezas) por día desglosadas por sucursal para los productos seleccionados</p>
+                    </div>
+                </div>
+                <div class="flex items-center gap-2">
+                    <span id="product-matrix-total-badge" class="px-3 py-1 rounded-full text-xs font-bold bg-emerald-50 text-emerald-700 border border-emerald-200">
+                        0 Piezas Acumuladas
+                    </span>
+                </div>
+            </div>
+
+            <div class="overflow-x-auto custom-scrollbar rounded-xl border border-slate-200">
+                <table class="w-full text-left text-sm border-collapse">
+                    <thead id="product-matrix-head" class="bg-slate-100 text-slate-600 font-bold uppercase text-[11px] tracking-wider"></thead>
+                    <tbody id="product-matrix-body" class="divide-y divide-slate-100 text-slate-700 font-medium bg-white"></tbody>
+                    <tfoot id="product-matrix-foot" class="bg-slate-900 text-white font-bold"></tfoot>
+                </table>
+            </div>
+        </div>
+
+        <!-- Supplier Products Ranking Section (when supplier selected) -->
+        <div id="supplier-section" class="hidden glass-card rounded-2xl p-6 shadow-sm border border-slate-200/80">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6 pb-4 border-b border-slate-100">
+                <div class="flex items-center gap-3">
+                    <div class="h-10 w-10 rounded-xl bg-indigo-100 text-indigo-600 flex items-center justify-center font-bold text-lg">
+                        <i class="fa-solid fa-truck-field"></i>
+                    </div>
+                    <div>
+                        <h2 class="text-lg font-bold text-slate-900 flex items-center gap-2">
+                            <span>Ranking de Productos del Proveedor:</span>
+                            <span id="supplier-name-title" class="text-indigo-600 font-extrabold"></span>
+                        </h2>
+                        <p class="text-xs text-slate-500 font-medium">Productos ordenados de mayor a menor facturación en el período filtrado</p>
+                    </div>
+                </div>
+                <div class="flex items-center gap-2">
+                    <span id="supplier-products-count" class="px-3 py-1 rounded-full text-xs font-bold bg-indigo-50 text-indigo-700 border border-indigo-200">
+                        0 Productos
+                    </span>
+                </div>
+            </div>
+
+            <div class="overflow-x-auto max-h-[550px] custom-scrollbar rounded-xl border border-slate-200">
+                <table class="w-full text-left text-sm border-collapse">
+                    <thead class="bg-slate-100 text-slate-600 font-bold uppercase text-[11px] tracking-wider sticky top-0">
+                        <tr>
+                            <th class="py-3.5 px-4 w-16 text-center">Rank</th>
+                            <th class="py-3.5 px-4">Producto</th>
+                            <th class="py-3.5 px-4 text-center">Sucursales Presente</th>
+                            <th class="py-3.5 px-3 text-right">Cant. Vendida</th>
+                            <th class="py-3.5 px-4 text-right">Total Facturado</th>
+                            <th class="py-3.5 px-4 text-right">% del Proveedor</th>
+                        </tr>
+                    </thead>
+                    <tbody id="supplier-products-body" class="divide-y divide-slate-100 text-slate-700 font-medium bg-white"></tbody>
+                    <tfoot id="supplier-products-foot" class="bg-slate-900 text-white font-bold"></tfoot>
+                </table>
             </div>
         </div>
 
@@ -275,6 +396,12 @@
         let PRODUCT_DATA = [];
         let trendChart;
 
+        // MultiSelect State
+        let SELECTED_BRANCHES = 'all'; // 'all' or Array
+        let SELECTED_PRODUCTS = 'all'; // 'all' or Array
+        let ALL_BRANCH_NAMES = [];
+        let CURRENT_PRODUCT_NAMES = [];
+
         window.formatDashboardDate = function(dateStr) {
             if (!dateStr) return '';
             const parts = dateStr.split('-');
@@ -286,6 +413,170 @@
 
         function formatCurrency(val) {
             return '$' + (val || 0).toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+        }
+
+        function toggleDropdown(type) {
+            const menu = document.getElementById('menu-' + type);
+            const otherType = type === 'branch' ? 'product' : 'branch';
+            const otherMenu = document.getElementById('menu-' + otherType);
+            if (otherMenu) otherMenu.classList.add('hidden');
+            if (menu) menu.classList.toggle('hidden');
+        }
+
+        document.addEventListener('click', function(e) {
+            const branchContainer = document.getElementById('dropdown-branch-container');
+            const productContainer = document.getElementById('dropdown-product-container');
+            if (branchContainer && !branchContainer.contains(e.target)) {
+                document.getElementById('menu-branch').classList.add('hidden');
+            }
+            if (productContainer && !productContainer.contains(e.target)) {
+                document.getElementById('menu-product').classList.add('hidden');
+            }
+        });
+
+        function renderBranchOptions() {
+            const list = document.getElementById('list-branch');
+            const isAllChecked = (SELECTED_BRANCHES === 'all');
+            
+            list.innerHTML = ALL_BRANCH_NAMES.map(b => {
+                const isChecked = isAllChecked || (Array.isArray(SELECTED_BRANCHES) && SELECTED_BRANCHES.includes(b));
+                return `
+                    <label class="flex items-center gap-2 p-1.5 rounded-lg hover:bg-slate-100 cursor-pointer text-xs font-semibold text-slate-800">
+                        <input type="checkbox" value="${b}" ${isChecked ? 'checked' : ''} onchange="onBranchCheckChange()" class="rounded border-slate-300 text-blue-600 focus:ring-blue-500 h-4 w-4">
+                        <span class="truncate">${b}</span>
+                    </label>
+                `;
+            }).join('');
+
+            updateBranchLabel();
+        }
+
+        function updateBranchLabel() {
+            const label = document.getElementById('label-branch');
+            if (SELECTED_BRANCHES === 'all' || (Array.isArray(SELECTED_BRANCHES) && SELECTED_BRANCHES.length === ALL_BRANCH_NAMES.length)) {
+                label.textContent = 'Todas las Sucursales (' + ALL_BRANCH_NAMES.length + ')';
+            } else if (Array.isArray(SELECTED_BRANCHES) && SELECTED_BRANCHES.length > 0) {
+                if (SELECTED_BRANCHES.length === 1) {
+                    label.textContent = SELECTED_BRANCHES[0];
+                } else {
+                    label.textContent = SELECTED_BRANCHES.length + ' Sucursales seleccionadas';
+                }
+            } else {
+                label.textContent = 'Ninguna Sucursal';
+            }
+        }
+
+        function onBranchCheckChange() {
+            const checkboxes = document.querySelectorAll('#list-branch input[type="checkbox"]:checked');
+            const checkedValues = Array.from(checkboxes).map(cb => cb.value);
+            
+            if (checkedValues.length === 0 || checkedValues.length === ALL_BRANCH_NAMES.length) {
+                SELECTED_BRANCHES = 'all';
+            } else {
+                SELECTED_BRANCHES = checkedValues;
+            }
+            updateBranchLabel();
+            updateDashboard();
+        }
+
+        function selectAllBranches(select) {
+            if (select) {
+                SELECTED_BRANCHES = 'all';
+            } else {
+                SELECTED_BRANCHES = [];
+            }
+            renderBranchOptions();
+            updateDashboard();
+        }
+
+        function updateProductOptions(selectedSupplier) {
+            const productSet = new Set();
+            PRODUCT_DATA.forEach(p => {
+                if (!p.Descripcion) return;
+                if (selectedSupplier !== 'all') {
+                    if (Array.isArray(p.proveedor)) {
+                        if (!p.proveedor.includes(selectedSupplier)) return;
+                    } else if (p.proveedor !== selectedSupplier) {
+                        return;
+                    }
+                }
+                productSet.add(p.Descripcion.trim());
+            });
+            
+            CURRENT_PRODUCT_NAMES = Array.from(productSet).sort();
+            
+            if (Array.isArray(SELECTED_PRODUCTS)) {
+                SELECTED_PRODUCTS = SELECTED_PRODUCTS.filter(p => CURRENT_PRODUCT_NAMES.includes(p));
+                if (SELECTED_PRODUCTS.length === 0) SELECTED_PRODUCTS = 'all';
+            }
+            
+            renderProductOptions();
+        }
+
+        function renderProductOptions() {
+            const list = document.getElementById('list-product');
+            const searchVal = (document.getElementById('search-product-input')?.value || '').toLowerCase();
+            const isAllChecked = (SELECTED_PRODUCTS === 'all');
+
+            const visibleProducts = CURRENT_PRODUCT_NAMES.filter(p => p.toLowerCase().includes(searchVal));
+
+            if (visibleProducts.length === 0) {
+                list.innerHTML = '<div class="text-xs text-slate-400 p-2 text-center font-medium">No se encontraron productos</div>';
+            } else {
+                list.innerHTML = visibleProducts.map(p => {
+                    const isChecked = isAllChecked || (Array.isArray(SELECTED_PRODUCTS) && SELECTED_PRODUCTS.includes(p));
+                    return `
+                        <label class="flex items-center gap-2 p-1.5 rounded-lg hover:bg-slate-100 cursor-pointer text-xs font-semibold text-slate-800">
+                            <input type="checkbox" value="${p}" ${isChecked ? 'checked' : ''} onchange="onProductCheckChange()" class="rounded border-slate-300 text-emerald-600 focus:ring-emerald-500 h-4 w-4">
+                            <span class="truncate">${p}</span>
+                        </label>
+                    `;
+                }).join('');
+            }
+
+            updateProductLabel();
+        }
+
+        function filterProductListSearch() {
+            renderProductOptions();
+        }
+
+        function updateProductLabel() {
+            const label = document.getElementById('label-product');
+            if (SELECTED_PRODUCTS === 'all' || (Array.isArray(SELECTED_PRODUCTS) && SELECTED_PRODUCTS.length === CURRENT_PRODUCT_NAMES.length)) {
+                label.textContent = 'Todos los Productos (' + CURRENT_PRODUCT_NAMES.length + ')';
+            } else if (Array.isArray(SELECTED_PRODUCTS) && SELECTED_PRODUCTS.length > 0) {
+                if (SELECTED_PRODUCTS.length === 1) {
+                    label.textContent = SELECTED_PRODUCTS[0];
+                } else {
+                    label.textContent = SELECTED_PRODUCTS.length + ' Productos seleccionados';
+                }
+            } else {
+                label.textContent = 'Ningún Producto';
+            }
+        }
+
+        function onProductCheckChange() {
+            const checkboxes = document.querySelectorAll('#list-product input[type="checkbox"]:checked');
+            const checkedValues = Array.from(checkboxes).map(cb => cb.value);
+            
+            if (checkedValues.length === 0 || checkedValues.length === CURRENT_PRODUCT_NAMES.length) {
+                SELECTED_PRODUCTS = 'all';
+            } else {
+                SELECTED_PRODUCTS = checkedValues;
+            }
+            updateProductLabel();
+            updateDashboard();
+        }
+
+        function selectAllProducts(select) {
+            if (select) {
+                SELECTED_PRODUCTS = 'all';
+            } else {
+                SELECTED_PRODUCTS = [];
+            }
+            renderProductOptions();
+            updateDashboard();
         }
 
         async function init() {
@@ -302,10 +593,21 @@
                 
                 const branchSet = new Set(PRODUCT_DATA.map(p => p.Sucursal));
                 if (data.branches) Object.keys(data.branches).forEach(b => branchSet.add(b));
-                const branchNames = Array.from(branchSet).filter(Boolean).sort();
+                ALL_BRANCH_NAMES = Array.from(branchSet).filter(Boolean).sort();
+
+                // Extract unique Proveedores
+                const proveedorSet = new Set();
+                PRODUCT_DATA.forEach(p => {
+                    if (Array.isArray(p.proveedor)) {
+                        p.proveedor.forEach(pr => { if (pr && typeof pr === 'string') proveedorSet.add(pr.trim()); });
+                    } else if (p.proveedor && typeof p.proveedor === 'string') {
+                        proveedorSet.add(p.proveedor.trim());
+                    }
+                });
+                const sortedProveedores = Array.from(proveedorSet).filter(Boolean).sort();
                 
                 const branches = {};
-                branchNames.forEach(b => {
+                ALL_BRANCH_NAMES.forEach(b => {
                     branches[b] = dates.map(() => 0);
                 });
                 
@@ -322,21 +624,28 @@
                     colors: ["#3b82f6", "#10b981", "#f59e0b", "#8b5cf6", "#ec4899", "#06b6d4", "#ef4444", "#f97316", "#6366f1", "#14b8a6", "#a855f7"]
                 };
                 
-                const select = document.getElementById('filter-branch');
-                select.innerHTML = '<option value="all">Todas las Sucursales (' + branchNames.length + ')</option>';
-                Object.keys(FULL_DATA.branches).forEach(b => {
+                renderBranchOptions();
+
+                const selectSupplier = document.getElementById('filter-supplier');
+                selectSupplier.innerHTML = '<option value="all">Todos los Proveedores (' + sortedProveedores.length + ')</option>';
+                sortedProveedores.forEach(pr => {
                     const opt = document.createElement('option');
-                    opt.value = b; opt.textContent = b;
-                    select.appendChild(opt);
+                    opt.value = pr; opt.textContent = pr;
+                    selectSupplier.appendChild(opt);
                 });
                 
+                updateProductOptions('all');
+
                 if (FULL_DATA.dates.length > 0) {
                     document.getElementById('filter-start').value = FULL_DATA.dates[0];
                     document.getElementById('filter-end').value = FULL_DATA.dates[FULL_DATA.dates.length - 1];
                     document.getElementById('sync-time').textContent = window.formatDashboardDate(FULL_DATA.dates[FULL_DATA.dates.length - 1]) + ' 2026';
                 }
                 
-                document.getElementById('filter-branch').addEventListener('change', updateDashboard);
+                document.getElementById('filter-supplier').addEventListener('change', () => {
+                    updateProductOptions(document.getElementById('filter-supplier').value);
+                    updateDashboard();
+                });
                 document.getElementById('filter-start').addEventListener('change', updateDashboard);
                 document.getElementById('filter-end').addEventListener('change', updateDashboard);
                 
@@ -365,32 +674,73 @@
             updateDashboard();
         }
 
+        function computeDynamicBranchData(dates, selectedSupplier, selectedProducts) {
+            const branches = {};
+            ALL_BRANCH_NAMES.forEach(b => {
+                branches[b] = dates.map(() => 0);
+            });
+
+            PRODUCT_DATA.forEach(p => {
+                const dIdx = dates.indexOf(p.Fecha);
+                if (dIdx === -1 || !branches[p.Sucursal]) return;
+
+                // Branch filter
+                if (SELECTED_BRANCHES !== 'all' && Array.isArray(SELECTED_BRANCHES)) {
+                    if (!SELECTED_BRANCHES.includes(p.Sucursal)) return;
+                }
+
+                // Supplier filter
+                if (selectedSupplier !== 'all') {
+                    if (Array.isArray(p.proveedor)) {
+                        if (!p.proveedor.includes(selectedSupplier)) return;
+                    } else if (p.proveedor !== selectedSupplier) {
+                        return;
+                    }
+                }
+
+                // Product filter
+                if (selectedProducts !== 'all' && Array.isArray(selectedProducts)) {
+                    if (!p.Descripcion || !selectedProducts.includes(p.Descripcion.trim())) return;
+                }
+
+                branches[p.Sucursal][dIdx] += (p.Total || 0);
+            });
+
+            return branches;
+        }
+
         function updateDashboard() {
-            const selectedBranch = document.getElementById('filter-branch').value;
+            const selectedSupplier = document.getElementById('filter-supplier').value;
             const start = document.getElementById('filter-start').value;
             const end = document.getElementById('filter-end').value;
+
+            const currentBranchData = computeDynamicBranchData(FULL_DATA.dates, selectedSupplier, SELECTED_PRODUCTS);
 
             const filteredDateIndices = FULL_DATA.dates
                 .map((d, i) => (d >= start && d <= end) ? i : -1)
                 .filter(i => i !== -1);
             
-            const activeBranchNames = selectedBranch === 'all' ? Object.keys(FULL_DATA.branches) : [selectedBranch];
+            const activeBranchNames = (SELECTED_BRANCHES === 'all')
+                ? ALL_BRANCH_NAMES
+                : (Array.isArray(SELECTED_BRANCHES) ? SELECTED_BRANCHES : [SELECTED_BRANCHES]);
 
             let totalAmount = 0;
             const branchTotals = {};
+            let activeBranchesCount = 0;
             
             activeBranchNames.forEach(b => {
                 let sum = 0;
-                filteredDateIndices.forEach(i => { sum += FULL_DATA.branches[b][i]; });
+                filteredDateIndices.forEach(i => { sum += (currentBranchData[b] ? currentBranchData[b][i] : 0); });
                 branchTotals[b] = sum;
                 totalAmount += sum;
+                if (sum > 0) activeBranchesCount++;
             });
 
             // Update KPI 1: Total
             document.getElementById('kpi-total-amount').textContent = formatCurrency(totalAmount);
 
             // Update KPI 2: Active Branches Count
-            document.getElementById('kpi-active-branches').textContent = activeBranchNames.length + ' / ' + Object.keys(FULL_DATA.branches).length;
+            document.getElementById('kpi-active-branches').textContent = activeBranchesCount + ' / ' + ALL_BRANCH_NAMES.length;
 
             // Update KPI 3: Daily Average
             const daysCount = Math.max(1, filteredDateIndices.length);
@@ -409,12 +759,14 @@
             document.getElementById('kpi-top-branch').textContent = topBranchName;
             document.getElementById('kpi-top-branch-amount').textContent = formatCurrency(topBranchMax);
 
-            updateTable(activeBranchNames, filteredDateIndices);
-            updateChart(activeBranchNames, filteredDateIndices);
-            updateProductTables(selectedBranch, filteredDateIndices);
+            updateTable(activeBranchNames, filteredDateIndices, currentBranchData);
+            updateChart(activeBranchNames, filteredDateIndices, currentBranchData);
+            updateProductMatrixTable(SELECTED_BRANCHES, selectedSupplier, SELECTED_PRODUCTS, filteredDateIndices);
+            updateSupplierProductsTable(SELECTED_BRANCHES, selectedSupplier, SELECTED_PRODUCTS, filteredDateIndices);
+            updateProductTables(SELECTED_BRANCHES, selectedSupplier, SELECTED_PRODUCTS, filteredDateIndices);
         }
 
-        function updateTable(branches, indices) {
+        function updateTable(branches, indices, branchData) {
             const head = document.getElementById('table-head');
             const body = document.getElementById('table-body');
             const foot = document.getElementById('table-foot');
@@ -428,7 +780,7 @@
             branches.forEach(b => {
                 let rowHtml = '<tr class="hover:bg-blue-50/50 transition-colors"><td class="py-3.5 px-4 sticky-col font-semibold text-slate-900 bg-white flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-blue-500"></span>' + b + '</td>';
                 indices.forEach((i, idx) => {
-                    const val = FULL_DATA.branches[b][i];
+                    const val = branchData[b] ? branchData[b][i] : 0;
                     rowHtml += '<td class="py-3.5 px-3 text-right font-semibold text-slate-800">' + formatCurrency(val) + '</td>';
                     dailyTotals[idx] += val;
                 });
@@ -441,7 +793,7 @@
             foot.innerHTML = footHtml + '</tr>';
         }
 
-        function updateChart(branches, indices) {
+        function updateChart(branches, indices, branchData) {
             const ctx = document.getElementById('trendChart').getContext('2d');
             const labels = indices.map(i => window.formatDashboardDate(FULL_DATA.dates[i]));
             
@@ -449,7 +801,7 @@
                 const color = FULL_DATA.colors[idx % FULL_DATA.colors.length];
                 return {
                     label: b,
-                    data: indices.map(i => FULL_DATA.branches[b][i]),
+                    data: indices.map(i => branchData[b] ? branchData[b][i] : 0),
                     borderColor: color,
                     backgroundColor: color + '15',
                     fill: true,
@@ -493,18 +845,240 @@
             });
         }
 
-        function updateProductTables(selectedBranch, indices) {
-            const section = document.getElementById('product-section');
-            if (selectedBranch === 'all') {
+        function updateProductMatrixTable(selectedBranches, selectedSupplier, selectedProducts, indices) {
+            const section = document.getElementById('product-matrix-section');
+            if (selectedProducts === 'all') {
                 section.classList.add('hidden');
                 return;
             }
             section.classList.remove('hidden');
+
+            const titleElem = document.getElementById('product-matrix-name-title');
+            if (Array.isArray(selectedProducts)) {
+                if (selectedProducts.length === 1) {
+                    titleElem.textContent = selectedProducts[0];
+                } else {
+                    titleElem.textContent = selectedProducts.length + ' Productos Seleccionados';
+                }
+            } else {
+                titleElem.textContent = selectedProducts;
+            }
+
+            const activeDates = indices.map(i => FULL_DATA.dates[i]);
+            const activeBranchNames = (selectedBranches === 'all') 
+                ? ALL_BRANCH_NAMES 
+                : (Array.isArray(selectedBranches) ? selectedBranches : [selectedBranches]);
+
+            const filtered = PRODUCT_DATA.filter(p => {
+                if (!p.Descripcion) return false;
+                if (Array.isArray(selectedProducts)) {
+                    if (!selectedProducts.includes(p.Descripcion.trim())) return false;
+                } else if (p.Descripcion.trim() !== selectedProducts.trim()) return false;
+
+                if (!activeDates.includes(p.Fecha)) return false;
+
+                if (selectedBranches !== 'all' && Array.isArray(selectedBranches)) {
+                    if (!selectedBranches.includes(p.Sucursal)) return false;
+                }
+
+                if (selectedSupplier !== 'all') {
+                    if (Array.isArray(p.proveedor)) {
+                        if (!p.proveedor.includes(selectedSupplier)) return false;
+                    } else if (p.proveedor !== selectedSupplier) {
+                        return false;
+                    }
+                }
+                return true;
+            });
+
+            const qtyMatrix = {};
+            activeBranchNames.forEach(b => {
+                qtyMatrix[b] = activeDates.map(() => 0);
+            });
+
+            let grandProductQty = 0;
+            let grandProductTotal = 0;
+            filtered.forEach(p => {
+                const dIdx = activeDates.indexOf(p.Fecha);
+                if (dIdx !== -1 && qtyMatrix[p.Sucursal]) {
+                    qtyMatrix[p.Sucursal][dIdx] += (p.Cantidad || 0);
+                    grandProductQty += (p.Cantidad || 0);
+                    grandProductTotal += (p.Total || 0);
+                }
+            });
+
+            document.getElementById('product-matrix-total-badge').textContent = grandProductQty.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + ' Piezas (' + formatCurrency(grandProductTotal) + ')';
+
+            const head = document.getElementById('product-matrix-head');
+            const body = document.getElementById('product-matrix-body');
+            const foot = document.getElementById('product-matrix-foot');
+
+            let headHtml = '<tr class="border-b border-slate-200"><th class="py-4 px-4 sticky-col font-bold text-slate-700 bg-slate-100">Sucursal</th>';
+            indices.forEach(i => {
+                headHtml += '<th class="py-4 px-3 text-right font-bold text-slate-700">' + window.formatDashboardDate(FULL_DATA.dates[i]) + '</th>';
+            });
+            headHtml += '<th class="py-4 px-4 text-right font-bold text-emerald-700 bg-emerald-50">TOTAL PIEZAS</th></tr>';
+            head.innerHTML = headHtml;
+
+            let bodyHtml = '';
+            let dailyQtys = new Array(indices.length).fill(0);
+
+            activeBranchNames.forEach(b => {
+                let rowQtySum = 0;
+                let rowHtml = '<tr class="hover:bg-emerald-50/30 transition-colors"><td class="py-3.5 px-4 sticky-col font-semibold text-slate-900 bg-white flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-emerald-500"></span>' + b + '</td>';
+                
+                indices.forEach((i, idx) => {
+                    const qtyVal = qtyMatrix[b] ? qtyMatrix[b][idx] : 0;
+                    rowQtySum += qtyVal;
+                    dailyQtys[idx] += qtyVal;
+                    
+                    if (qtyVal > 0) {
+                        rowHtml += `<td class="py-3.5 px-3 text-right font-bold text-slate-800">${qtyVal.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</td>`;
+                    } else {
+                        rowHtml += `<td class="py-3.5 px-3 text-right text-slate-300">0.00</td>`;
+                    }
+                });
+
+                rowHtml += `<td class="py-3.5 px-4 text-right font-extrabold text-emerald-600 bg-emerald-50/50">${rowQtySum.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</td></tr>`;
+                bodyHtml += rowHtml;
+            });
+
+            body.innerHTML = bodyHtml;
+
+            let footHtml = '<tr class="font-extrabold text-white bg-slate-900"><td class="py-4 px-4 sticky-col bg-slate-900 text-emerald-400 text-sm uppercase tracking-wider">TOTAL GRUPO (PIEZAS)</td>';
+            dailyQtys.forEach(q => {
+                footHtml += '<td class="py-4 px-3 text-right text-sm text-white">' + q.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + '</td>';
+            });
+            footHtml += '<td class="py-4 px-4 text-right text-sm text-emerald-400 bg-slate-800">' + grandProductQty.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + '</td></tr>';
+            foot.innerHTML = footHtml;
+        }
+
+        function updateSupplierProductsTable(selectedBranches, selectedSupplier, selectedProducts, indices) {
+            const section = document.getElementById('supplier-section');
+            if (selectedSupplier === 'all') {
+                section.classList.add('hidden');
+                return;
+            }
+            section.classList.remove('hidden');
+
+            document.getElementById('supplier-name-title').textContent = selectedSupplier;
+
+            const activeDates = indices.map(i => FULL_DATA.dates[i]);
+
+            const filtered = PRODUCT_DATA.filter(p => {
+                if (!activeDates.includes(p.Fecha)) return false;
+                if (selectedBranches !== 'all' && Array.isArray(selectedBranches)) {
+                    if (!selectedBranches.includes(p.Sucursal)) return false;
+                }
+                if (selectedSupplier !== 'all') {
+                    if (Array.isArray(p.proveedor)) {
+                        if (!p.proveedor.includes(selectedSupplier)) return false;
+                    } else if (p.proveedor !== selectedSupplier) {
+                        return false;
+                    }
+                }
+                if (selectedProducts !== 'all' && Array.isArray(selectedProducts)) {
+                    if (!p.Descripcion || !selectedProducts.includes(p.Descripcion.trim())) return false;
+                }
+                return true;
+            });
+
+            const agg = {};
+            let grandTotal = 0;
+            let grandQty = 0;
+
+            filtered.forEach(p => {
+                const name = p.Descripcion;
+                if (!agg[name]) agg[name] = { qty: 0, total: 0, branches: new Set() };
+                agg[name].qty += (p.Cantidad || 0);
+                agg[name].total += (p.Total || 0);
+                agg[name].branches.add(p.Sucursal);
+                grandTotal += (p.Total || 0);
+                grandQty += (p.Cantidad || 0);
+            });
+
+            const sorted = Object.entries(agg)
+                .map(([name, data]) => ({
+                    name,
+                    qty: data.qty,
+                    total: data.total,
+                    branchCount: data.branches.size,
+                    pct: grandTotal > 0 ? (data.total / grandTotal * 100) : 0
+                }))
+                .sort((a, b) => b.total - a.total);
+
+            document.getElementById('supplier-products-count').textContent = sorted.length + ' Productos';
+
+            const getRankBadge = (idx) => {
+                if (idx === 0) return '<span class="text-base">🥇</span>';
+                if (idx === 1) return '<span class="text-base">🥈</span>';
+                if (idx === 2) return '<span class="text-base">🥉</span>';
+                return `<span class="text-xs font-bold text-slate-400">#${idx + 1}</span>`;
+            };
+
+            const tbody = document.getElementById('supplier-products-body');
+            if (sorted.length === 0) {
+                tbody.innerHTML = '<tr><td colspan="6" class="py-8 text-center text-slate-400 font-semibold">No se encontraron productos para este proveedor en el periodo seleccionado</td></tr>';
+                document.getElementById('supplier-products-foot').innerHTML = '';
+                return;
+            }
+
+            tbody.innerHTML = sorted.map((p, idx) => `
+                <tr class="hover:bg-indigo-50/40 transition-colors">
+                    <td class="py-3.5 px-4 text-center font-bold">${getRankBadge(idx)}</td>
+                    <td class="py-3.5 px-4 font-semibold text-slate-900">${p.name}</td>
+                    <td class="py-3.5 px-4 text-center">
+                        <span class="px-2.5 py-1 rounded-full text-xs font-bold bg-slate-100 text-slate-700">
+                            ${p.branchCount} ${p.branchCount === 1 ? 'sucursal' : 'sucursales'}
+                        </span>
+                    </td>
+                    <td class="py-3.5 px-3 text-right font-bold text-slate-700">${p.qty.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</td>
+                    <td class="py-3.5 px-4 text-right font-extrabold text-indigo-600">${formatCurrency(p.total)}</td>
+                    <td class="py-3.5 px-4 text-right">
+                        <div class="flex items-center justify-end gap-2">
+                            <span class="text-xs font-bold text-slate-600">${p.pct.toFixed(1)}%</span>
+                            <div class="w-16 bg-slate-100 rounded-full h-2 overflow-hidden">
+                                <div class="bg-indigo-500 h-2 rounded-full" style="width: ${Math.min(100, Math.max(0, p.pct))}%"></div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            `).join('');
+
+            document.getElementById('supplier-products-foot').innerHTML = `
+                <tr class="font-extrabold text-white bg-slate-900">
+                    <td colspan="3" class="py-4 px-4 text-indigo-300 text-sm uppercase tracking-wider">TOTAL PROVEEDOR (${sorted.length} productos)</td>
+                    <td class="py-4 px-3 text-right text-sm text-slate-200">${grandQty.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</td>
+                    <td class="py-4 px-4 text-right text-sm text-emerald-400">${formatCurrency(grandTotal)}</td>
+                    <td class="py-4 px-4 text-right text-sm text-indigo-300">100.0%</td>
+                </tr>
+            `;
+        }
+
+        function updateProductTables(selectedBranches, selectedSupplier, selectedProducts, indices) {
+            const section = document.getElementById('product-section');
+            if (selectedBranches === 'all' || (Array.isArray(selectedBranches) && selectedBranches.length !== 1)) {
+                section.classList.add('hidden');
+                return;
+            }
+            const targetBranch = Array.isArray(selectedBranches) ? selectedBranches[0] : selectedBranches;
+            section.classList.remove('hidden');
             
             const activeDates = indices.map(i => FULL_DATA.dates[i]);
-            const filtered = PRODUCT_DATA.filter(p => 
-                activeDates.includes(p.Fecha) && p.Sucursal === selectedBranch
-            );
+            const filtered = PRODUCT_DATA.filter(p => {
+                if (!activeDates.includes(p.Fecha) || p.Sucursal !== targetBranch) return false;
+                if (selectedSupplier !== 'all') {
+                    if (Array.isArray(p.proveedor)) {
+                        if (!p.proveedor.includes(selectedSupplier)) return false;
+                    } else if (p.proveedor !== selectedSupplier) {
+                        return false;
+                    }
+                }
+                if (selectedProducts !== 'all' && Array.isArray(selectedProducts)) {
+                    if (!p.Descripcion || !selectedProducts.includes(p.Descripcion.trim())) return false;
+                }
+                return true;
+            });
 
             const agg = {};
             filtered.forEach(p => {
