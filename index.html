@@ -11,7 +11,7 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
         body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #f8fafc; color: #1e293b; }
-        .sticky-col { position: sticky; left: 0; background: white; z-index: 10; }
+        .sticky-col { position: sticky; left: 0; z-index: 10; }
         .glass-card { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); border: 1px solid #e2e8f0; }
         .custom-scrollbar::-webkit-scrollbar { height: 6px; width: 6px; }
         .custom-scrollbar::-webkit-scrollbar-track { background: #f1f5f9; border-radius: 4px; }
@@ -254,7 +254,7 @@
                 <table class="w-full text-left text-sm border-collapse">
                     <thead id="product-matrix-head" class="bg-slate-100 text-slate-600 font-bold uppercase text-[11px] tracking-wider"></thead>
                     <tbody id="product-matrix-body" class="divide-y divide-slate-100 text-slate-700 font-medium bg-white"></tbody>
-                    <tfoot id="product-matrix-foot" class="bg-slate-900 text-white font-bold"></tfoot>
+                    <tfoot id="product-matrix-foot" class="bg-slate-900 text-white font-bold sticky bottom-0 z-30"></tfoot>
                 </table>
             </div>
         </div>
@@ -296,6 +296,36 @@
                     <tbody id="supplier-products-body" class="divide-y divide-slate-100 text-slate-700 font-medium bg-white"></tbody>
                     <tfoot id="supplier-products-foot" class="bg-slate-900 text-white font-bold"></tfoot>
                 </table>
+            </div>
+
+            <!-- Supplier Branch Monthly Breakdown Section -->
+            <div class="mt-8 pt-8 border-t border-slate-200/80">
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
+                    <div class="flex items-center gap-3">
+                        <div class="h-10 w-10 rounded-xl bg-purple-100 text-purple-600 flex items-center justify-center font-bold text-lg">
+                            <i class="fa-solid fa-calendar-days"></i>
+                        </div>
+                        <div>
+                            <h2 class="text-lg font-bold text-slate-900 flex items-center gap-2">
+                                <span>Desglose Mensual por Sucursal y Producto</span>
+                            </h2>
+                            <p class="text-xs text-slate-500 font-medium">Volumen de piezas vendidas por mes desglosado para cada sucursal seleccionada</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <span id="supplier-monthly-count-badge" class="px-3 py-1 rounded-full text-xs font-bold bg-purple-50 text-purple-700 border border-purple-200">
+                            0 Registros
+                        </span>
+                    </div>
+                </div>
+
+                <div class="overflow-x-auto max-h-[550px] custom-scrollbar rounded-xl border border-slate-200">
+                    <table class="w-full text-left text-sm border-collapse">
+                        <thead id="supplier-monthly-head" class="bg-slate-100 text-slate-600 font-bold uppercase text-[11px] tracking-wider sticky top-0 z-10"></thead>
+                        <tbody id="supplier-monthly-body" class="divide-y divide-slate-100 text-slate-700 font-medium bg-white"></tbody>
+                        <tfoot id="supplier-monthly-foot" class="bg-slate-900 text-white font-bold sticky bottom-0 z-30"></tfoot>
+                    </table>
+                </div>
             </div>
         </div>
 
@@ -381,7 +411,7 @@
                 <table class="w-full text-left text-sm border-collapse">
                     <thead id="table-head" class="bg-slate-100 text-slate-600 font-bold"></thead>
                     <tbody id="table-body" class="divide-y divide-slate-100 text-slate-700 font-medium"></tbody>
-                    <tfoot id="table-foot" class="bg-slate-900 text-white font-bold"></tfoot>
+                    <tfoot id="table-foot" class="bg-slate-900 text-white font-bold sticky bottom-0 z-30"></tfoot>
                 </table>
             </div>
         </div>
@@ -798,6 +828,7 @@
             updateChart(activeBranchNames, filteredDateIndices, currentBranchData);
             updateProductMatrixTable(SELECTED_BRANCHES, selectedSupplier, SELECTED_PRODUCTS, filteredDateIndices);
             updateSupplierProductsTable(SELECTED_BRANCHES, selectedSupplier, SELECTED_PRODUCTS, filteredDateIndices);
+            updateSupplierBranchMonthlyTable(SELECTED_BRANCHES, selectedSupplier, SELECTED_PRODUCTS, filteredDateIndices);
             updateProductTables(SELECTED_BRANCHES, selectedSupplier, SELECTED_PRODUCTS, filteredDateIndices);
         }
 
@@ -823,7 +854,7 @@
             });
             body.innerHTML = bodyHtml;
 
-            let footHtml = '<tr class="font-extrabold text-white bg-slate-900"><td class="py-4 px-4 sticky-col bg-slate-900 text-blue-400 text-sm uppercase tracking-wider">TOTAL GRUPO</td>';
+            let footHtml = '<tr class="font-extrabold text-white bg-slate-900"><td class="py-4 px-4 sticky left-0 bg-slate-900 z-40 text-blue-400 text-sm uppercase tracking-wider">TOTAL GRUPO</td>';
             dailyTotals.forEach(t => { footHtml += '<td class="py-4 px-3 text-right text-sm text-white">' + formatCurrency(t) + '</td>'; });
             foot.innerHTML = footHtml + '</tr>';
         }
@@ -980,7 +1011,7 @@
 
             body.innerHTML = bodyHtml;
 
-            let footHtml = '<tr class="font-extrabold text-white bg-slate-900"><td class="py-4 px-4 sticky-col bg-slate-900 text-emerald-400 text-sm uppercase tracking-wider">TOTAL GRUPO (PIEZAS)</td>';
+            let footHtml = '<tr class="font-extrabold text-white bg-slate-900"><td class="py-4 px-4 sticky left-0 bg-slate-900 z-40 text-emerald-400 text-sm uppercase tracking-wider">TOTAL GRUPO (PIEZAS)</td>';
             dailyQtys.forEach(q => {
                 footHtml += '<td class="py-4 px-3 text-right text-sm text-white">' + q.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + '</td>';
             });
@@ -1088,6 +1119,148 @@
                     <td class="py-4 px-4 text-right text-sm text-indigo-300">100.0%</td>
                 </tr>
             `;
+        }
+
+        function updateSupplierBranchMonthlyTable(selectedBranches, selectedSupplier, selectedProducts, indices) {
+            const head = document.getElementById('supplier-monthly-head');
+            const tbody = document.getElementById('supplier-monthly-body');
+            const foot = document.getElementById('supplier-monthly-foot');
+            const badge = document.getElementById('supplier-monthly-count-badge');
+
+            if (selectedSupplier === 'all' || !PRODUCT_DATA || PRODUCT_DATA.length === 0) {
+                if (head) head.innerHTML = '';
+                if (tbody) tbody.innerHTML = '';
+                if (foot) foot.innerHTML = '';
+                if (badge) badge.textContent = '0 Registros';
+                return;
+            }
+
+            const activeDates = indices.map(i => FULL_DATA.dates[i]);
+
+            const monthKeysSet = new Set();
+            activeDates.forEach(d => {
+                if (d && d.length >= 7) {
+                    monthKeysSet.add(d.substring(0, 7));
+                }
+            });
+            const monthKeys = Array.from(monthKeysSet).sort();
+
+            const monthLabels = monthKeys.map(mKey => {
+                const parts = mKey.split('-');
+                const year = parts[0];
+                const monthIdx = parseInt(parts[1], 10) - 1;
+                const months = ["Ene", "Feb", "Mar", "Abr", "May", "Jun", "Jul", "Ago", "Sep", "Oct", "Nov", "Dic"];
+                return (months[monthIdx] || monthIdx) + ' ' + year;
+            });
+
+            const filtered = PRODUCT_DATA.filter(p => {
+                if (!activeDates.includes(p.Fecha)) return false;
+                if (selectedBranches !== 'all' && Array.isArray(selectedBranches)) {
+                    if (!selectedBranches.includes(p.Sucursal)) return false;
+                }
+                if (selectedSupplier !== 'all') {
+                    if (Array.isArray(p.proveedor)) {
+                        if (!p.proveedor.includes(selectedSupplier)) return false;
+                    } else if (p.proveedor !== selectedSupplier) {
+                        return false;
+                    }
+                }
+                if (selectedProducts !== 'all' && Array.isArray(selectedProducts)) {
+                    if (!p.Descripcion || !selectedProducts.includes(p.Descripcion.trim())) return false;
+                }
+                return true;
+            });
+
+            const agg = {};
+            let grandQty = 0;
+            let grandTotal = 0;
+            const monthTotals = {};
+            monthKeys.forEach(m => monthTotals[m] = 0);
+
+            filtered.forEach(p => {
+                const branch = p.Sucursal || 'Sin Sucursal';
+                const product = (p.Descripcion || 'Sin Nombre').trim();
+                const key = branch + '___' + product;
+                const mKey = p.Fecha ? p.Fecha.substring(0, 7) : '';
+
+                if (!agg[key]) {
+                    agg[key] = {
+                        branch,
+                        product,
+                        months: {},
+                        totalQty: 0,
+                        totalMoney: 0
+                    };
+                    monthKeys.forEach(m => agg[key].months[m] = 0);
+                }
+
+                const qty = p.Cantidad || 0;
+                const total = p.Total || 0;
+
+                if (mKey && agg[key].months[mKey] !== undefined) {
+                    agg[key].months[mKey] += qty;
+                    monthTotals[mKey] += qty;
+                }
+                agg[key].totalQty += qty;
+                agg[key].totalMoney += total;
+                grandQty += qty;
+                grandTotal += total;
+            });
+
+            const rows = Object.values(agg).sort((a, b) => {
+                if (a.branch !== b.branch) {
+                    return a.branch.localeCompare(b.branch);
+                }
+                return b.totalMoney - a.totalMoney;
+            });
+
+            if (badge) badge.textContent = rows.length + ' Registros';
+
+            if (rows.length === 0) {
+                head.innerHTML = '';
+                tbody.innerHTML = '<tr><td colspan="' + (monthKeys.length + 4) + '" class="py-8 text-center text-slate-400 font-semibold">No se encontraron productos por sucursal para este proveedor</td></tr>';
+                foot.innerHTML = '';
+                return;
+            }
+
+            let headHtml = '<tr>';
+            headHtml += '<th class="py-3.5 px-4 sticky-col bg-slate-100 z-20">Sucursal</th>';
+            headHtml += '<th class="py-3.5 px-4 bg-slate-100">Producto</th>';
+            monthLabels.forEach(mLbl => {
+                headHtml += '<th class="py-3.5 px-3 text-right bg-slate-100">' + mLbl + ' (Pzs)</th>';
+            });
+            headHtml += '<th class="py-3.5 px-4 text-right bg-slate-100">Total Piezas</th>';
+            headHtml += '<th class="py-3.5 px-4 text-right bg-slate-100">Total Facturado</th>';
+            headHtml += '</tr>';
+            head.innerHTML = headHtml;
+
+            let bodyHtml = '';
+            rows.forEach(r => {
+                bodyHtml += '<tr class="hover:bg-purple-50/40 transition-colors">';
+                bodyHtml += '<td class="py-3.5 px-4 font-bold text-slate-900 sticky-col bg-white z-10">' + r.branch + '</td>';
+                bodyHtml += '<td class="py-3.5 px-4 font-semibold text-slate-800">' + r.product + '</td>';
+
+                monthKeys.forEach(mKey => {
+                    const q = r.months[mKey] || 0;
+                    bodyHtml += '<td class="py-3.5 px-3 text-right font-medium ' + (q > 0 ? 'text-slate-900 font-semibold' : 'text-slate-300') + '">' + (q > 0 ? q.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 }) : '-') + '</td>';
+                });
+
+                bodyHtml += '<td class="py-3.5 px-4 text-right font-bold text-slate-800">' + r.totalQty.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + '</td>';
+                bodyHtml += '<td class="py-3.5 px-4 text-right font-extrabold text-purple-600">' + formatCurrency(r.totalMoney) + '</td>';
+                bodyHtml += '</tr>';
+            });
+            tbody.innerHTML = bodyHtml;
+
+            let footHtml = '<tr class="font-extrabold text-white bg-slate-900">';
+            footHtml += '<td colspan="2" class="py-4 px-4 text-purple-300 text-sm uppercase tracking-wider sticky left-0 bg-slate-900 z-40">TOTAL PROVEEDOR POR MES</td>';
+            monthKeys.forEach(mKey => {
+                const mq = monthTotals[mKey] || 0;
+                footHtml += '<td class="py-4 px-3 text-right text-sm text-slate-200">' + mq.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + '</td>';
+            });
+            footHtml += '<td class="py-4 px-4 text-right text-sm text-purple-300">' + grandQty.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + '</td>';
+            footHtml += '<td class="py-4 px-4 text-right text-sm text-emerald-400">' + formatCurrency(grandTotal) + '</td>';
+            footHtml += '</tr>';
+            foot.innerHTML = footHtml;
         }
 
         function updateProductTables(selectedBranches, selectedSupplier, selectedProducts, indices) {
