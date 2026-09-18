@@ -6,6 +6,7 @@
     <title>Dashboard Ejecutivo de Ventas | Grupo Güeros</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
@@ -29,7 +30,7 @@
                 <div>
                     <div class="flex items-center gap-2">
                         <h1 class="text-2xl font-extrabold tracking-tight">Grupo Güeros</h1>
-                        <span class="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 flex items-center gap-1.5">
+                        <span id="status-badge" class="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 flex items-center gap-1.5">
                             <span class="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
                             En vivo
                         </span>
@@ -581,60 +582,16 @@
 
         async function init() {
             try {
-                const response = await fetch('dashboard_data.json?t=' + Date.now());
+                // Fase 1: Carga ultra rápida del resumen para renderizado inmediato
+                const response = await fetch('dashboard_resumen.json?t=' + Date.now());
                 if (!response.ok) throw new Error('HTTP status ' + response.status);
                 const data = await response.json();
                 
-                PRODUCT_DATA = data.products || [];
-                
-                const dateSet = new Set(PRODUCT_DATA.map(p => p.Fecha));
-                if (data.dates) data.dates.forEach(d => dateSet.add(d));
-                const dates = Array.from(dateSet).filter(Boolean).sort();
-                
-                const branchSet = new Set(PRODUCT_DATA.map(p => p.Sucursal));
-                if (data.branches) Object.keys(data.branches).forEach(b => branchSet.add(b));
-                ALL_BRANCH_NAMES = Array.from(branchSet).filter(Boolean).sort();
+                FULL_DATA.dates = data.dates || [];
+                FULL_DATA.branches = data.branches || {};
+                ALL_BRANCH_NAMES = Object.keys(FULL_DATA.branches).sort();
 
-                // Extract unique Proveedores
-                const proveedorSet = new Set();
-                PRODUCT_DATA.forEach(p => {
-                    if (Array.isArray(p.proveedor)) {
-                        p.proveedor.forEach(pr => { if (pr && typeof pr === 'string') proveedorSet.add(pr.trim()); });
-                    } else if (p.proveedor && typeof p.proveedor === 'string') {
-                        proveedorSet.add(p.proveedor.trim());
-                    }
-                });
-                const sortedProveedores = Array.from(proveedorSet).filter(Boolean).sort();
-                
-                const branches = {};
-                ALL_BRANCH_NAMES.forEach(b => {
-                    branches[b] = dates.map(() => 0);
-                });
-                
-                PRODUCT_DATA.forEach(p => {
-                    const dIdx = dates.indexOf(p.Fecha);
-                    if (dIdx !== -1 && branches[p.Sucursal]) {
-                        branches[p.Sucursal][dIdx] += (p.Total || 0);
-                    }
-                });
-                
-                FULL_DATA = {
-                    dates: dates,
-                    branches: branches,
-                    colors: ["#3b82f6", "#10b981", "#f59e0b", "#8b5cf6", "#ec4899", "#06b6d4", "#ef4444", "#f97316", "#6366f1", "#14b8a6", "#a855f7"]
-                };
-                
                 renderBranchOptions();
-
-                const selectSupplier = document.getElementById('filter-supplier');
-                selectSupplier.innerHTML = '<option value="all">Todos los Proveedores (' + sortedProveedores.length + ')</option>';
-                sortedProveedores.forEach(pr => {
-                    const opt = document.createElement('option');
-                    opt.value = pr; opt.textContent = pr;
-                    selectSupplier.appendChild(opt);
-                });
-                
-                updateProductOptions('all');
 
                 if (FULL_DATA.dates.length > 0) {
                     document.getElementById('filter-start').value = FULL_DATA.dates[0];
@@ -649,12 +606,86 @@
                 document.getElementById('filter-start').addEventListener('change', updateDashboard);
                 document.getElementById('filter-end').addEventListener('change', updateDashboard);
                 
+                // Renderizado inmediato de KPIs y Gráficos principales
                 updateDashboard();
+
+                // Fase 2: Carga en segundo plano de productos.csv con PapaParse
+                loadProductsCSV();
             } catch (err) {
-                console.error("Error cargando dashboard_data.json:", err);
+                console.error("Error cargando dashboard_resumen.json:", err);
                 document.getElementById('kpi-total-amount').textContent = 'Error';
-                alert("Atención: No se pudo cargar automáticamente 'dashboard_data.json'. Si estás abriendo el archivo localmente como file:///, por favor abre el proyecto usando un servidor web local (por ejemplo con Live Server, 'npx serve' o 'python -m http.server').");
+                alert("Atención: No se pudo cargar automáticamente 'dashboard_resumen.json'. Si estás abriendo el archivo localmente como file:///, por favor abre el proyecto usando un servidor web local (por ejemplo con Live Server, 'npx serve' o 'python -m http.server').");
             }
+        }
+
+        function loadProductsCSV() {
+            const statusBadge = document.getElementById('status-badge');
+            if (statusBadge) {
+                statusBadge.className = "px-2.5 py-0.5 rounded-full text-xs font-semibold bg-amber-500/20 text-amber-400 border border-amber-500/30 flex items-center gap-1.5";
+                statusBadge.innerHTML = `<span class="h-1.5 w-1.5 rounded-full bg-amber-400 animate-ping"></span>Cargando detalle...`;
+            }
+
+            Papa.parse('productos.csv?t=' + Date.now(), {
+                download: true,
+                header: true,
+                dynamicTyping: true,
+                skipEmptyLines: true,
+                complete: function(results) {
+                    PRODUCT_DATA = (results.data || []).map(p => {
+                        let prov = p.proveedor;
+                        if (typeof prov === 'string' && prov.includes('; ')) {
+                            prov = prov.split('; ').map(s => s.trim());
+                        }
+                        return {
+                            Sucursal: p.Sucursal,
+                            Fecha: p.Fecha,
+                            Descripcion: p.Descripcion,
+                            Cantidad: typeof p.Cantidad === 'number' ? p.Cantidad : parseFloat(p.Cantidad) || 0,
+                            Total: typeof p.Total === 'number' ? p.Total : parseFloat(p.Total) || 0,
+                            proveedor: prov
+                        };
+                    });
+
+                    // Extract unique Proveedores
+                    const proveedorSet = new Set();
+                    PRODUCT_DATA.forEach(p => {
+                        if (Array.isArray(p.proveedor)) {
+                            p.proveedor.forEach(pr => { if (pr && typeof pr === 'string') proveedorSet.add(pr.trim()); });
+                        } else if (p.proveedor && typeof p.proveedor === 'string') {
+                            proveedorSet.add(p.proveedor.trim());
+                        }
+                    });
+                    const sortedProveedores = Array.from(proveedorSet).filter(Boolean).sort();
+
+                    const selectSupplier = document.getElementById('filter-supplier');
+                    const currentSelected = selectSupplier.value;
+                    selectSupplier.innerHTML = '<option value="all">Todos los Proveedores (' + sortedProveedores.length + ')</option>';
+                    sortedProveedores.forEach(pr => {
+                        const opt = document.createElement('option');
+                        opt.value = pr; opt.textContent = pr;
+                        selectSupplier.appendChild(opt);
+                    });
+                    if (sortedProveedores.includes(currentSelected)) {
+                        selectSupplier.value = currentSelected;
+                    }
+                    
+                    updateProductOptions(selectSupplier.value);
+
+                    if (statusBadge) {
+                        statusBadge.className = "px-2.5 py-0.5 rounded-full text-xs font-semibold bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 flex items-center gap-1.5";
+                        statusBadge.innerHTML = `<span class="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse"></span>En vivo (${PRODUCT_DATA.length.toLocaleString()} reg)`;
+                    }
+
+                    updateDashboard();
+                },
+                error: function(err) {
+                    console.error("Error cargando productos.csv:", err);
+                    if (statusBadge) {
+                        statusBadge.className = "px-2.5 py-0.5 rounded-full text-xs font-semibold bg-rose-500/20 text-rose-400 border border-rose-500/30 flex items-center gap-1.5";
+                        statusBadge.innerHTML = `Error cargando detalle`;
+                    }
+                }
+            });
         }
 
         function setPreset(preset) {
@@ -675,6 +706,10 @@
         }
 
         function computeDynamicBranchData(dates, selectedSupplier, selectedProducts) {
+            if (selectedSupplier === 'all' && selectedProducts === 'all' && SELECTED_BRANCHES === 'all' && PRODUCT_DATA.length === 0) {
+                return FULL_DATA.branches || {};
+            }
+
             const branches = {};
             ALL_BRANCH_NAMES.forEach(b => {
                 branches[b] = dates.map(() => 0);
