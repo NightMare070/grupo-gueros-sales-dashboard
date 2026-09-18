@@ -22,7 +22,7 @@
 <body class="min-h-screen pb-12">
     <!-- Top Executive Header -->
     <header class="bg-slate-900 text-white shadow-lg border-b border-slate-800">
-        <div class="max-w-7xl mx-auto px-6 py-6 flex flex-col md:flex-row md:items-center justify-between gap-4">
+        <div class="max-w-[1700px] mx-auto px-6 md:px-10 py-6 flex flex-col md:flex-row md:items-center justify-between gap-4">
             <div class="flex items-center gap-4">
                 <div class="h-12 w-12 rounded-xl bg-gradient-to-tr from-blue-600 to-indigo-500 flex items-center justify-center text-white font-bold text-xl shadow-md">
                     GG
@@ -48,96 +48,122 @@
         </div>
     </header>
 
-    <main class="max-w-7xl mx-auto px-6 pt-8 space-y-8">
+    <main class="max-w-[1700px] mx-auto px-6 md:px-10 pt-8 space-y-8">
         
         <!-- Filter Controls Bar -->
         <div class="glass-card rounded-2xl p-6 shadow-sm border border-slate-200/80 relative z-40">
-            <div class="flex flex-col xl:flex-row items-stretch xl:items-center justify-between gap-6">
+            
+            <!-- Level 1: Main Business & Catalog Filters (5 Columns) -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 mb-6">
                 
-                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-5 gap-4 flex-1">
-                    
-                    <!-- Multi-Select Sucursales -->
-                    <div class="relative" id="dropdown-branch-container">
-                        <label class="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">
-                            <i class="fa-solid fa-store text-blue-500 mr-1.5"></i> Sucursales
-                        </label>
-                        <button type="button" id="btn-branch-toggle" onclick="toggleDropdown('branch')" class="w-full bg-slate-50 border border-slate-300 text-slate-800 text-sm font-semibold rounded-xl p-3 flex items-center justify-between focus:ring-2 focus:ring-blue-500 transition-all outline-none">
-                            <span id="label-branch" class="truncate">Todas las Sucursales</span>
-                            <i class="fa-solid fa-chevron-down text-slate-400 text-xs ml-2"></i>
-                        </button>
-                        <div id="menu-branch" class="hidden absolute left-0 top-full mt-2 bg-white rounded-2xl shadow-2xl border border-slate-200 z-50 p-3 max-h-72 flex flex-col gap-2 w-64 sm:w-72">
-                            <div class="flex items-center justify-between pb-2 border-b border-slate-100 px-1">
-                                <button type="button" onclick="selectAllBranches(true)" class="text-xs font-bold text-blue-600 hover:text-blue-800">
-                                    Seleccionar Todas
-                                </button>
-                                <button type="button" onclick="selectAllBranches(false)" class="text-xs font-bold text-slate-400 hover:text-slate-600">
-                                    Desmarcar
-                                </button>
-                            </div>
-                            <div id="list-branch" class="overflow-y-auto custom-scrollbar flex-1 space-y-1 pr-1"></div>
+                <!-- Multi-Select Sucursales -->
+                <div class="relative" id="dropdown-branch-container">
+                    <label class="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">
+                        <i class="fa-solid fa-store text-blue-500 mr-1.5"></i> Sucursales
+                    </label>
+                    <button type="button" id="btn-branch-toggle" onclick="toggleDropdown('branch')" class="w-full bg-slate-50 border border-slate-300 text-slate-800 text-sm font-semibold rounded-xl p-3 flex items-center justify-between focus:ring-2 focus:ring-blue-500 transition-all outline-none">
+                        <span id="label-branch" class="truncate">Todas las Sucursales</span>
+                        <i class="fa-solid fa-chevron-down text-slate-400 text-xs ml-2"></i>
+                    </button>
+                    <div id="menu-branch" class="hidden absolute left-0 top-full mt-2 bg-white rounded-2xl shadow-2xl border border-slate-200 z-50 p-3 max-h-72 flex flex-col gap-2 w-64 sm:w-72">
+                        <div class="flex items-center justify-between pb-2 border-b border-slate-100 px-1">
+                            <button type="button" onclick="selectAllBranches(true)" class="text-xs font-bold text-blue-600 hover:text-blue-800">
+                                Seleccionar Todas
+                            </button>
+                            <button type="button" onclick="selectAllBranches(false)" class="text-xs font-bold text-slate-400 hover:text-slate-600">
+                                Desmarcar
+                            </button>
                         </div>
-                    </div>
-
-                    <!-- Single Select Proveedor -->
-                    <div>
-                        <label class="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">
-                            <i class="fa-solid fa-truck-field text-indigo-500 mr-1.5"></i> Proveedor
-                        </label>
-                        <select id="filter-supplier" class="w-full bg-slate-50 border border-slate-300 text-slate-800 text-sm font-semibold rounded-xl p-3 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition-all outline-none">
-                            <option value="all">Todos los Proveedores</option>
-                        </select>
-                    </div>
-
-                    <!-- Multi-Select Productos -->
-                    <div class="relative" id="dropdown-product-container">
-                        <label class="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">
-                            <i class="fa-solid fa-box text-emerald-500 mr-1.5"></i> Productos
-                        </label>
-                        <button type="button" id="btn-product-toggle" onclick="toggleDropdown('product')" class="w-full bg-slate-50 border border-slate-300 text-slate-800 text-sm font-semibold rounded-xl p-3 flex items-center justify-between focus:ring-2 focus:ring-emerald-500 transition-all outline-none">
-                            <span id="label-product" class="truncate">Todos los Productos</span>
-                            <i class="fa-solid fa-chevron-down text-slate-400 text-xs ml-2"></i>
-                        </button>
-                        <div id="menu-product" class="hidden absolute left-0 top-full mt-2 bg-white rounded-2xl shadow-2xl border border-slate-200 z-50 p-3 max-h-80 flex flex-col gap-2 w-72 sm:w-80">
-                            <div class="relative">
-                                <i class="fa-solid fa-magnifying-glass text-slate-400 text-xs absolute left-3 top-3"></i>
-                                <input type="text" id="search-product-input" onkeyup="filterProductListSearch()" placeholder="Buscar producto..." class="w-full bg-slate-50 border border-slate-200 rounded-lg pl-8 pr-3 py-1.5 text-xs text-slate-800 font-semibold focus:outline-none focus:border-emerald-500">
-                            </div>
-                            <div class="flex items-center justify-between pb-2 border-b border-slate-100 px-1">
-                                <button type="button" onclick="selectAllProducts(true)" class="text-xs font-bold text-emerald-600 hover:text-emerald-800">
-                                    Seleccionar Todos
-                                </button>
-                                <button type="button" onclick="selectAllProducts(false)" class="text-xs font-bold text-slate-400 hover:text-slate-600">
-                                    Desmarcar
-                                </button>
-                            </div>
-                            <div id="list-product" class="overflow-y-auto custom-scrollbar flex-1 space-y-1 pr-1"></div>
-                        </div>
-                    </div>
-
-                    <div>
-                        <label class="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">
-                            <i class="fa-regular fa-calendar text-blue-500 mr-1.5"></i> Fecha Inicio
-                        </label>
-                        <input type="date" id="filter-start" class="w-full bg-slate-50 border border-slate-300 text-slate-800 text-sm font-semibold rounded-xl p-2.5 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all outline-none">
-                    </div>
-
-                    <div>
-                        <label class="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">
-                            <i class="fa-regular fa-calendar-check text-blue-500 mr-1.5"></i> Fecha Fin
-                        </label>
-                        <input type="date" id="filter-end" class="w-full bg-slate-50 border border-slate-300 text-slate-800 text-sm font-semibold rounded-xl p-2.5 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all outline-none">
+                        <div id="list-branch" class="overflow-y-auto custom-scrollbar flex-1 space-y-1 pr-1"></div>
                     </div>
                 </div>
 
-                <!-- Date Presets -->
-                <div class="flex items-center gap-2 pt-2 xl:pt-0 border-t xl:border-t-0 border-slate-200">
-                    <button onclick="setPreset('all')" class="px-3.5 py-2 text-xs font-bold rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 transition-all">
+                <!-- Single Select Proveedor -->
+                <div>
+                    <label class="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">
+                        <i class="fa-solid fa-truck-field text-indigo-500 mr-1.5"></i> Proveedor
+                    </label>
+                    <select id="filter-supplier" class="w-full bg-slate-50 border border-slate-300 text-slate-800 text-sm font-semibold rounded-xl p-3 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition-all outline-none">
+                        <option value="all">Todos los Proveedores</option>
+                    </select>
+                </div>
+
+                <!-- Single Select Categoría -->
+                <div>
+                    <label class="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">
+                        <i class="fa-solid fa-layer-group text-amber-500 mr-1.5"></i> Categoría
+                    </label>
+                    <select id="filter-category" class="w-full bg-slate-50 border border-slate-300 text-slate-800 text-sm font-semibold rounded-xl p-3 focus:ring-2 focus:ring-amber-500 focus:border-amber-500 transition-all outline-none">
+                        <option value="all">Todas las Categorías</option>
+                    </select>
+                </div>
+
+                <!-- Single Select Subcategoría -->
+                <div>
+                    <label class="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">
+                        <i class="fa-solid fa-tags text-teal-500 mr-1.5"></i> Subcategoría
+                    </label>
+                    <select id="filter-subcategory" class="w-full bg-slate-50 border border-slate-300 text-slate-800 text-sm font-semibold rounded-xl p-3 focus:ring-2 focus:ring-teal-500 focus:border-teal-500 transition-all outline-none">
+                        <option value="all">Todas las Subcategorías</option>
+                    </select>
+                </div>
+
+                <!-- Multi-Select Productos -->
+                <div class="relative" id="dropdown-product-container">
+                    <label class="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">
+                        <i class="fa-solid fa-box text-emerald-500 mr-1.5"></i> Productos
+                    </label>
+                    <button type="button" id="btn-product-toggle" onclick="toggleDropdown('product')" class="w-full bg-slate-50 border border-slate-300 text-slate-800 text-sm font-semibold rounded-xl p-3 flex items-center justify-between focus:ring-2 focus:ring-emerald-500 transition-all outline-none">
+                        <span id="label-product" class="truncate">Todos los Productos</span>
+                        <i class="fa-solid fa-chevron-down text-slate-400 text-xs ml-2"></i>
+                    </button>
+                    <div id="menu-product" class="hidden absolute left-0 top-full mt-2 bg-white rounded-2xl shadow-2xl border border-slate-200 z-50 p-3 max-h-80 flex flex-col gap-2 w-72 sm:w-80">
+                        <div class="relative">
+                            <i class="fa-solid fa-magnifying-glass text-slate-400 text-xs absolute left-3 top-3"></i>
+                            <input type="text" id="search-product-input" onkeyup="filterProductListSearch()" placeholder="Buscar producto..." class="w-full bg-slate-50 border border-slate-200 rounded-lg pl-8 pr-3 py-1.5 text-xs text-slate-800 font-semibold focus:outline-none focus:border-emerald-500">
+                        </div>
+                        <div class="flex items-center justify-between pb-2 border-b border-slate-100 px-1">
+                            <button type="button" onclick="selectAllProducts(true)" class="text-xs font-bold text-emerald-600 hover:text-emerald-800">
+                                Seleccionar Todos
+                            </button>
+                            <button type="button" onclick="selectAllProducts(false)" class="text-xs font-bold text-slate-400 hover:text-slate-600">
+                                Desmarcar
+                            </button>
+                        </div>
+                        <div id="list-product" class="overflow-y-auto custom-scrollbar flex-1 space-y-1 pr-1"></div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Level 2: Time Range & Quick Presets Bar -->
+            <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 pt-4 border-t border-slate-200/80">
+                
+                <div class="flex flex-wrap items-center gap-4">
+                    <div class="flex items-center gap-2">
+                        <label class="text-xs font-bold text-slate-500 uppercase tracking-wider whitespace-nowrap">
+                            <i class="fa-regular fa-calendar text-blue-500 mr-1"></i> Desde:
+                        </label>
+                        <input type="date" id="filter-start" class="bg-slate-50 border border-slate-300 text-slate-800 text-sm font-semibold rounded-xl p-2.5 focus:ring-2 focus:ring-blue-500 outline-none">
+                    </div>
+
+                    <div class="flex items-center gap-2">
+                        <label class="text-xs font-bold text-slate-500 uppercase tracking-wider whitespace-nowrap">
+                            <i class="fa-regular fa-calendar-check text-blue-500 mr-1"></i> Hasta:
+                        </label>
+                        <input type="date" id="filter-end" class="bg-slate-50 border border-slate-300 text-slate-800 text-sm font-semibold rounded-xl p-2.5 focus:ring-2 focus:ring-blue-500 outline-none">
+                    </div>
+                </div>
+
+                <div class="flex items-center gap-2">
+                    <span class="text-xs font-bold text-slate-400 uppercase tracking-wider mr-1 hidden lg:inline">Rango Rápido:</span>
+                    <button onclick="setPreset('all')" class="px-3.5 py-2 text-xs font-bold rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 transition-all border border-slate-200">
                         Todo el Rango
                     </button>
-                    <button onclick="setPreset('last1')" class="px-3.5 py-2 text-xs font-bold rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 transition-all">
+                    <button onclick="setPreset('last1')" class="px-3.5 py-2 text-xs font-bold rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 transition-all border border-slate-200">
                         Último Día
                     </button>
-                    <button onclick="setPreset('last2')" class="px-3.5 py-2 text-xs font-bold rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 transition-all">
+                    <button onclick="setPreset('last2')" class="px-3.5 py-2 text-xs font-bold rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 transition-all border border-slate-200">
                         Últimos 2 Días
                     </button>
                 </div>
@@ -326,6 +352,68 @@
                         <tfoot id="supplier-monthly-foot" class="bg-slate-900 text-white font-bold sticky bottom-0 z-30"></tfoot>
                     </table>
                 </div>
+            </div>
+        </div>
+
+        <!-- Category Subcategories Monthly Breakdown Section (when category selected) -->
+        <div id="category-section" class="hidden glass-card rounded-2xl p-6 shadow-sm border border-slate-200/80">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6 pb-4 border-b border-slate-100">
+                <div class="flex items-center gap-3">
+                    <div class="h-10 w-10 rounded-xl bg-amber-100 text-amber-600 flex items-center justify-center font-bold text-lg">
+                        <i class="fa-solid fa-layer-group"></i>
+                    </div>
+                    <div>
+                        <h2 class="text-lg font-bold text-slate-900 flex items-center gap-2">
+                            <span>Desglose Mensual por Subcategoría:</span>
+                            <span id="category-name-title" class="text-amber-600 font-extrabold"></span>
+                        </h2>
+                        <p class="text-xs text-slate-500 font-medium">Volumen de piezas vendidas por mes agrupadas por subcategoría</p>
+                    </div>
+                </div>
+                <div class="flex items-center gap-2">
+                    <span id="category-monthly-count-badge" class="px-3 py-1 rounded-full text-xs font-bold bg-amber-50 text-amber-700 border border-amber-200">
+                        0 Subcategorías
+                    </span>
+                </div>
+            </div>
+
+            <div class="overflow-x-auto max-h-[550px] custom-scrollbar rounded-xl border border-slate-200">
+                <table class="w-full text-left text-sm border-collapse">
+                    <thead id="category-monthly-head" class="bg-slate-100 text-slate-600 font-bold uppercase text-[11px] tracking-wider sticky top-0 z-20"></thead>
+                    <tbody id="category-monthly-body" class="divide-y divide-slate-100 text-slate-700 font-medium bg-white"></tbody>
+                    <tfoot id="category-monthly-foot" class="bg-slate-900 text-white font-bold sticky bottom-0 z-30"></tfoot>
+                </table>
+            </div>
+        </div>
+
+        <!-- Subcategory Products Monthly Breakdown Section (when subcategory selected) -->
+        <div id="subcategory-products-section" class="hidden glass-card rounded-2xl p-6 shadow-sm border border-slate-200/80">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6 pb-4 border-b border-slate-100">
+                <div class="flex items-center gap-3">
+                    <div class="h-10 w-10 rounded-xl bg-teal-100 text-teal-600 flex items-center justify-center font-bold text-lg">
+                        <i class="fa-solid fa-cubes"></i>
+                    </div>
+                    <div>
+                        <h2 class="text-lg font-bold text-slate-900 flex items-center gap-2">
+                            <span>Desglose Mensual por Producto (Subcategoría:</span>
+                            <span id="subcategory-name-title" class="text-teal-600 font-extrabold"></span><span>)</span>
+                        </h2>
+                        <p class="text-xs text-slate-500 font-medium">Volumen de piezas vendidas por mes agrupadas por producto de la subcategoría</p>
+                    </div>
+                </div>
+                <div class="flex items-center gap-2">
+                    <span id="subcategory-products-monthly-count-badge" class="px-3 py-1 rounded-full text-xs font-bold bg-teal-50 text-teal-700 border border-teal-200">
+                        0 Productos
+                    </span>
+                </div>
+            </div>
+
+            <div class="overflow-x-auto max-h-[550px] custom-scrollbar rounded-xl border border-slate-200">
+                <table class="w-full text-left text-sm border-collapse">
+                    <thead id="subcategory-products-monthly-head" class="bg-slate-100 text-slate-600 font-bold uppercase text-[11px] tracking-wider sticky top-0 z-20"></thead>
+                    <tbody id="subcategory-products-monthly-body" class="divide-y divide-slate-100 text-slate-700 font-medium bg-white"></tbody>
+                    <tfoot id="subcategory-products-monthly-foot" class="bg-slate-900 text-white font-bold sticky bottom-0 z-30"></tfoot>
+                </table>
             </div>
         </div>
 
@@ -520,10 +608,67 @@
             updateDashboard();
         }
 
-        function updateProductOptions(selectedSupplier) {
+        function updateCategoryOptions() {
+            const catSet = new Set();
+            PRODUCT_DATA.forEach(p => {
+                if (p.categoria && typeof p.categoria === 'string') {
+                    catSet.add(p.categoria.trim());
+                }
+            });
+            const sortedCategories = Array.from(catSet).filter(Boolean).sort();
+
+            const selectCategory = document.getElementById('filter-category');
+            if (!selectCategory) return;
+            const currentSelected = selectCategory.value;
+            selectCategory.innerHTML = '<option value="all">Todas las Categorías (' + sortedCategories.length + ')</option>';
+            sortedCategories.forEach(c => {
+                const opt = document.createElement('option');
+                opt.value = c; opt.textContent = c;
+                selectCategory.appendChild(opt);
+            });
+            if (sortedCategories.includes(currentSelected)) {
+                selectCategory.value = currentSelected;
+            } else {
+                selectCategory.value = 'all';
+            }
+        }
+
+        function updateSubcategoryOptions(selectedCategory) {
+            const subcatSet = new Set();
+            PRODUCT_DATA.forEach(p => {
+                if (selectedCategory && selectedCategory !== 'all' && p.categoria !== selectedCategory) return;
+                if (p.subcategoria && typeof p.subcategoria === 'string') {
+                    subcatSet.add(p.subcategoria.trim());
+                }
+            });
+            const sortedSubcategories = Array.from(subcatSet).filter(Boolean).sort();
+
+            const selectSubcategory = document.getElementById('filter-subcategory');
+            if (!selectSubcategory) return;
+            const currentSelected = selectSubcategory.value;
+            selectSubcategory.innerHTML = '<option value="all">Todas las Subcategorías (' + sortedSubcategories.length + ')</option>';
+            sortedSubcategories.forEach(s => {
+                const opt = document.createElement('option');
+                opt.value = s; opt.textContent = s;
+                selectSubcategory.appendChild(opt);
+            });
+            if (sortedSubcategories.includes(currentSelected)) {
+                selectSubcategory.value = currentSelected;
+            } else {
+                selectSubcategory.value = 'all';
+            }
+        }
+
+        function updateProductOptions() {
+            const selectedSupplier = document.getElementById('filter-supplier')?.value || 'all';
+            const selectedCategory = document.getElementById('filter-category')?.value || 'all';
+            const selectedSubcategory = document.getElementById('filter-subcategory')?.value || 'all';
+
             const productSet = new Set();
             PRODUCT_DATA.forEach(p => {
                 if (!p.Descripcion) return;
+
+                // Supplier filter
                 if (selectedSupplier !== 'all') {
                     if (Array.isArray(p.proveedor)) {
                         if (!p.proveedor.includes(selectedSupplier)) return;
@@ -531,6 +676,13 @@
                         return;
                     }
                 }
+
+                // Category filter
+                if (selectedCategory !== 'all' && p.categoria !== selectedCategory) return;
+
+                // Subcategory filter
+                if (selectedSubcategory !== 'all' && p.subcategoria !== selectedSubcategory) return;
+
                 productSet.add(p.Descripcion.trim());
             });
             
@@ -630,7 +782,17 @@
                 }
                 
                 document.getElementById('filter-supplier').addEventListener('change', () => {
-                    updateProductOptions(document.getElementById('filter-supplier').value);
+                    updateProductOptions();
+                    updateDashboard();
+                });
+                document.getElementById('filter-category').addEventListener('change', () => {
+                    const cat = document.getElementById('filter-category').value;
+                    updateSubcategoryOptions(cat);
+                    updateProductOptions();
+                    updateDashboard();
+                });
+                document.getElementById('filter-subcategory').addEventListener('change', () => {
+                    updateProductOptions();
                     updateDashboard();
                 });
                 document.getElementById('filter-start').addEventListener('change', updateDashboard);
@@ -672,7 +834,9 @@
                             Descripcion: p.Descripcion,
                             Cantidad: typeof p.Cantidad === 'number' ? p.Cantidad : parseFloat(p.Cantidad) || 0,
                             Total: typeof p.Total === 'number' ? p.Total : parseFloat(p.Total) || 0,
-                            proveedor: prov
+                            proveedor: prov,
+                            categoria: (p.categoria || 'Otros').trim(),
+                            subcategoria: (p.subcategoria || 'Otros').trim()
                         };
                     });
 
@@ -699,7 +863,9 @@
                         selectSupplier.value = currentSelected;
                     }
                     
-                    updateProductOptions(selectSupplier.value);
+                    updateCategoryOptions();
+                    updateSubcategoryOptions('all');
+                    updateProductOptions();
 
                     if (statusBadge) {
                         statusBadge.className = "px-2.5 py-0.5 rounded-full text-xs font-semibold bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 flex items-center gap-1.5";
@@ -735,8 +901,8 @@
             updateDashboard();
         }
 
-        function computeDynamicBranchData(dates, selectedSupplier, selectedProducts) {
-            if (selectedSupplier === 'all' && selectedProducts === 'all' && SELECTED_BRANCHES === 'all' && PRODUCT_DATA.length === 0) {
+        function computeDynamicBranchData(dates, selectedSupplier, selectedProducts, selectedCategory, selectedSubcategory) {
+            if (selectedSupplier === 'all' && selectedProducts === 'all' && SELECTED_BRANCHES === 'all' && selectedCategory === 'all' && selectedSubcategory === 'all' && PRODUCT_DATA.length === 0) {
                 return FULL_DATA.branches || {};
             }
 
@@ -763,6 +929,12 @@
                     }
                 }
 
+                // Category filter
+                if (selectedCategory && selectedCategory !== 'all' && p.categoria !== selectedCategory) return;
+
+                // Subcategory filter
+                if (selectedSubcategory && selectedSubcategory !== 'all' && p.subcategoria !== selectedSubcategory) return;
+
                 // Product filter
                 if (selectedProducts !== 'all' && Array.isArray(selectedProducts)) {
                     if (!p.Descripcion || !selectedProducts.includes(p.Descripcion.trim())) return;
@@ -775,11 +947,13 @@
         }
 
         function updateDashboard() {
-            const selectedSupplier = document.getElementById('filter-supplier').value;
+            const selectedSupplier = document.getElementById('filter-supplier')?.value || 'all';
+            const selectedCategory = document.getElementById('filter-category')?.value || 'all';
+            const selectedSubcategory = document.getElementById('filter-subcategory')?.value || 'all';
             const start = document.getElementById('filter-start').value;
             const end = document.getElementById('filter-end').value;
 
-            const currentBranchData = computeDynamicBranchData(FULL_DATA.dates, selectedSupplier, SELECTED_PRODUCTS);
+            const currentBranchData = computeDynamicBranchData(FULL_DATA.dates, selectedSupplier, SELECTED_PRODUCTS, selectedCategory, selectedSubcategory);
 
             const filteredDateIndices = FULL_DATA.dates
                 .map((d, i) => (d >= start && d <= end) ? i : -1)
@@ -826,10 +1000,12 @@
 
             updateTable(activeBranchNames, filteredDateIndices, currentBranchData);
             updateChart(activeBranchNames, filteredDateIndices, currentBranchData);
-            updateProductMatrixTable(SELECTED_BRANCHES, selectedSupplier, SELECTED_PRODUCTS, filteredDateIndices);
-            updateSupplierProductsTable(SELECTED_BRANCHES, selectedSupplier, SELECTED_PRODUCTS, filteredDateIndices);
-            updateSupplierBranchMonthlyTable(SELECTED_BRANCHES, selectedSupplier, SELECTED_PRODUCTS, filteredDateIndices);
-            updateProductTables(SELECTED_BRANCHES, selectedSupplier, SELECTED_PRODUCTS, filteredDateIndices);
+            updateProductMatrixTable(SELECTED_BRANCHES, selectedSupplier, SELECTED_PRODUCTS, selectedCategory, selectedSubcategory, filteredDateIndices);
+            updateSupplierProductsTable(SELECTED_BRANCHES, selectedSupplier, SELECTED_PRODUCTS, selectedCategory, selectedSubcategory, filteredDateIndices);
+            updateSupplierBranchMonthlyTable(SELECTED_BRANCHES, selectedSupplier, SELECTED_PRODUCTS, selectedCategory, selectedSubcategory, filteredDateIndices);
+            updateCategorySubcategoryMonthlyTable(SELECTED_BRANCHES, selectedSupplier, SELECTED_PRODUCTS, selectedCategory, selectedSubcategory, filteredDateIndices);
+            updateSubcategoryProductsMonthlyTable(SELECTED_BRANCHES, selectedSupplier, SELECTED_PRODUCTS, selectedCategory, selectedSubcategory, filteredDateIndices);
+            updateProductTables(SELECTED_BRANCHES, selectedSupplier, SELECTED_PRODUCTS, selectedCategory, selectedSubcategory, filteredDateIndices);
         }
 
         function updateTable(branches, indices, branchData) {
@@ -911,7 +1087,7 @@
             });
         }
 
-        function updateProductMatrixTable(selectedBranches, selectedSupplier, selectedProducts, indices) {
+        function updateProductMatrixTable(selectedBranches, selectedSupplier, selectedProducts, selectedCategory, selectedSubcategory, indices) {
             const section = document.getElementById('product-matrix-section');
             if (selectedProducts === 'all') {
                 section.classList.add('hidden');
@@ -954,6 +1130,10 @@
                         return false;
                     }
                 }
+
+                if (selectedCategory && selectedCategory !== 'all' && p.categoria !== selectedCategory) return false;
+                if (selectedSubcategory && selectedSubcategory !== 'all' && p.subcategoria !== selectedSubcategory) return false;
+
                 return true;
             });
 
@@ -1019,7 +1199,7 @@
             foot.innerHTML = footHtml;
         }
 
-        function updateSupplierProductsTable(selectedBranches, selectedSupplier, selectedProducts, indices) {
+        function updateSupplierProductsTable(selectedBranches, selectedSupplier, selectedProducts, selectedCategory, selectedSubcategory, indices) {
             const section = document.getElementById('supplier-section');
             if (selectedSupplier === 'all') {
                 section.classList.add('hidden');
@@ -1043,6 +1223,8 @@
                         return false;
                     }
                 }
+                if (selectedCategory && selectedCategory !== 'all' && p.categoria !== selectedCategory) return false;
+                if (selectedSubcategory && selectedSubcategory !== 'all' && p.subcategoria !== selectedSubcategory) return false;
                 if (selectedProducts !== 'all' && Array.isArray(selectedProducts)) {
                     if (!p.Descripcion || !selectedProducts.includes(p.Descripcion.trim())) return false;
                 }
@@ -1121,7 +1303,7 @@
             `;
         }
 
-        function updateSupplierBranchMonthlyTable(selectedBranches, selectedSupplier, selectedProducts, indices) {
+        function updateSupplierBranchMonthlyTable(selectedBranches, selectedSupplier, selectedProducts, selectedCategory, selectedSubcategory, indices) {
             const head = document.getElementById('supplier-monthly-head');
             const tbody = document.getElementById('supplier-monthly-body');
             const foot = document.getElementById('supplier-monthly-foot');
@@ -1165,6 +1347,8 @@
                         return false;
                     }
                 }
+                if (selectedCategory && selectedCategory !== 'all' && p.categoria !== selectedCategory) return false;
+                if (selectedSubcategory && selectedSubcategory !== 'all' && p.subcategoria !== selectedSubcategory) return false;
                 if (selectedProducts !== 'all' && Array.isArray(selectedProducts)) {
                     if (!p.Descripcion || !selectedProducts.includes(p.Descripcion.trim())) return false;
                 }
@@ -1263,7 +1447,299 @@
             foot.innerHTML = footHtml;
         }
 
-        function updateProductTables(selectedBranches, selectedSupplier, selectedProducts, indices) {
+        function updateCategorySubcategoryMonthlyTable(selectedBranches, selectedSupplier, selectedProducts, selectedCategory, selectedSubcategory, indices) {
+            const section = document.getElementById('category-section');
+            const head = document.getElementById('category-monthly-head');
+            const tbody = document.getElementById('category-monthly-body');
+            const foot = document.getElementById('category-monthly-foot');
+            const badge = document.getElementById('category-monthly-count-badge');
+            const title = document.getElementById('category-name-title');
+
+            if (selectedCategory === 'all' || !PRODUCT_DATA || PRODUCT_DATA.length === 0) {
+                if (section) section.classList.add('hidden');
+                if (head) head.innerHTML = '';
+                if (tbody) tbody.innerHTML = '';
+                if (foot) foot.innerHTML = '';
+                if (badge) badge.textContent = '0 Subcategorías';
+                return;
+            }
+
+            if (section) section.classList.remove('hidden');
+            if (title) title.textContent = selectedCategory;
+
+            const activeDates = indices.map(i => FULL_DATA.dates[i]);
+
+            const monthKeysSet = new Set();
+            activeDates.forEach(d => {
+                if (d && d.length >= 7) {
+                    monthKeysSet.add(d.substring(0, 7));
+                }
+            });
+            const monthKeys = Array.from(monthKeysSet).sort();
+
+            const monthLabels = monthKeys.map(mKey => {
+                const parts = mKey.split('-');
+                const year = parts[0];
+                const monthIdx = parseInt(parts[1], 10) - 1;
+                const months = ["Ene", "Feb", "Mar", "Abr", "May", "Jun", "Jul", "Ago", "Sep", "Oct", "Nov", "Dic"];
+                return (months[monthIdx] || monthIdx) + ' ' + year;
+            });
+
+            const filtered = PRODUCT_DATA.filter(p => {
+                if (!activeDates.includes(p.Fecha)) return false;
+                if (selectedBranches !== 'all' && Array.isArray(selectedBranches)) {
+                    if (!selectedBranches.includes(p.Sucursal)) return false;
+                }
+                if (selectedSupplier !== 'all') {
+                    if (Array.isArray(p.proveedor)) {
+                        if (!p.proveedor.includes(selectedSupplier)) return false;
+                    } else if (p.proveedor !== selectedSupplier) {
+                        return false;
+                    }
+                }
+                if (p.categoria !== selectedCategory) return false;
+                if (selectedSubcategory && selectedSubcategory !== 'all' && p.subcategoria !== selectedSubcategory) return false;
+                if (selectedProducts !== 'all' && Array.isArray(selectedProducts)) {
+                    if (!p.Descripcion || !selectedProducts.includes(p.Descripcion.trim())) return false;
+                }
+                return true;
+            });
+
+            const agg = {};
+            let grandQty = 0;
+            let grandTotal = 0;
+            const monthTotals = {};
+            monthKeys.forEach(m => monthTotals[m] = 0);
+
+            filtered.forEach(p => {
+                const subcat = (p.subcategoria || 'Sin Subcategoría').trim();
+                const mKey = p.Fecha ? p.Fecha.substring(0, 7) : '';
+
+                if (!agg[subcat]) {
+                    agg[subcat] = {
+                        subcat,
+                        branches: new Set(),
+                        months: {},
+                        totalQty: 0,
+                        totalMoney: 0
+                    };
+                    monthKeys.forEach(m => agg[subcat].months[m] = 0);
+                }
+
+                const qty = p.Cantidad || 0;
+                const total = p.Total || 0;
+
+                if (p.Sucursal) agg[subcat].branches.add(p.Sucursal);
+
+                if (mKey && agg[subcat].months[mKey] !== undefined) {
+                    agg[subcat].months[mKey] += qty;
+                    monthTotals[mKey] += qty;
+                }
+                agg[subcat].totalQty += qty;
+                agg[subcat].totalMoney += total;
+                grandQty += qty;
+                grandTotal += total;
+            });
+
+            const rows = Object.values(agg).sort((a, b) => b.totalMoney - a.totalMoney);
+
+            if (badge) badge.textContent = rows.length + ' Subcategorías';
+
+            if (rows.length === 0) {
+                if (head) head.innerHTML = '';
+                if (tbody) tbody.innerHTML = '<tr><td colspan="' + (monthKeys.length + 4) + '" class="py-8 text-center text-slate-400 font-semibold">No se encontraron subcategorías en el periodo seleccionado</td></tr>';
+                if (foot) foot.innerHTML = '';
+                return;
+            }
+
+            let headHtml = '<tr>';
+            headHtml += '<th class="py-3.5 px-4 sticky top-0 left-0 bg-slate-100 z-40">Subcategoría</th>';
+            headHtml += '<th class="py-3.5 px-4 text-center bg-slate-100 sticky top-0 z-20">Sucursales Presente</th>';
+            monthLabels.forEach(mLbl => {
+                headHtml += '<th class="py-3.5 px-3 text-right bg-slate-100 sticky top-0 z-20">' + mLbl + ' (Pzs)</th>';
+            });
+            headHtml += '<th class="py-3.5 px-4 text-right bg-slate-100 sticky top-0 z-20">Total Piezas</th>';
+            headHtml += '<th class="py-3.5 px-4 text-right bg-slate-100 sticky top-0 z-20">Total Facturado</th>';
+            headHtml += '</tr>';
+            if (head) head.innerHTML = headHtml;
+
+            let bodyHtml = '';
+            rows.forEach(r => {
+                const branchCount = r.branches.size;
+                bodyHtml += '<tr class="hover:bg-amber-50/40 transition-colors">';
+                bodyHtml += '<td class="py-3.5 px-4 font-bold text-slate-900 sticky-col bg-white z-10">' + r.subcat + '</td>';
+                bodyHtml += '<td class="py-3.5 px-4 text-center"><span class="px-2.5 py-1 rounded-full text-xs font-bold bg-slate-100 text-slate-700">' + branchCount + ' ' + (branchCount === 1 ? 'sucursal' : 'sucursales') + '</span></td>';
+
+                monthKeys.forEach(mKey => {
+                    const q = r.months[mKey] || 0;
+                    bodyHtml += '<td class="py-3.5 px-3 text-right font-medium ' + (q > 0 ? 'text-slate-900 font-semibold' : 'text-slate-300') + '">' + (q > 0 ? q.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 }) : '-') + '</td>';
+                });
+
+                bodyHtml += '<td class="py-3.5 px-4 text-right font-bold text-slate-800">' + r.totalQty.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + '</td>';
+                bodyHtml += '<td class="py-3.5 px-4 text-right font-extrabold text-amber-600">' + formatCurrency(r.totalMoney) + '</td>';
+                bodyHtml += '</tr>';
+            });
+            if (tbody) tbody.innerHTML = bodyHtml;
+
+            let footHtml = '<tr class="font-extrabold text-white bg-slate-900">';
+            footHtml += '<td colspan="2" class="py-4 px-4 text-amber-300 text-sm uppercase tracking-wider sticky left-0 bg-slate-900 z-40">TOTAL CATEGORÍA POR MES</td>';
+            monthKeys.forEach(mKey => {
+                const mq = monthTotals[mKey] || 0;
+                footHtml += '<td class="py-4 px-3 text-right text-sm text-slate-200">' + mq.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + '</td>';
+            });
+            footHtml += '<td class="py-4 px-4 text-right text-sm text-amber-300">' + grandQty.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + '</td>';
+            footHtml += '<td class="py-4 px-4 text-right text-sm text-emerald-400">' + formatCurrency(grandTotal) + '</td>';
+            footHtml += '</tr>';
+            if (foot) foot.innerHTML = footHtml;
+        }
+
+        function updateSubcategoryProductsMonthlyTable(selectedBranches, selectedSupplier, selectedProducts, selectedCategory, selectedSubcategory, indices) {
+            const section = document.getElementById('subcategory-products-section');
+            const head = document.getElementById('subcategory-products-monthly-head');
+            const tbody = document.getElementById('subcategory-products-monthly-body');
+            const foot = document.getElementById('subcategory-products-monthly-foot');
+            const badge = document.getElementById('subcategory-products-monthly-count-badge');
+            const title = document.getElementById('subcategory-name-title');
+
+            if (selectedSubcategory === 'all' || !PRODUCT_DATA || PRODUCT_DATA.length === 0) {
+                if (section) section.classList.add('hidden');
+                if (head) head.innerHTML = '';
+                if (tbody) tbody.innerHTML = '';
+                if (foot) foot.innerHTML = '';
+                if (badge) badge.textContent = '0 Productos';
+                return;
+            }
+
+            if (section) section.classList.remove('hidden');
+            if (title) title.textContent = selectedSubcategory;
+
+            const activeDates = indices.map(i => FULL_DATA.dates[i]);
+
+            const monthKeysSet = new Set();
+            activeDates.forEach(d => {
+                if (d && d.length >= 7) {
+                    monthKeysSet.add(d.substring(0, 7));
+                }
+            });
+            const monthKeys = Array.from(monthKeysSet).sort();
+
+            const monthLabels = monthKeys.map(mKey => {
+                const parts = mKey.split('-');
+                const year = parts[0];
+                const monthIdx = parseInt(parts[1], 10) - 1;
+                const months = ["Ene", "Feb", "Mar", "Abr", "May", "Jun", "Jul", "Ago", "Sep", "Oct", "Nov", "Dic"];
+                return (months[monthIdx] || monthIdx) + ' ' + year;
+            });
+
+            const filtered = PRODUCT_DATA.filter(p => {
+                if (!activeDates.includes(p.Fecha)) return false;
+                if (selectedBranches !== 'all' && Array.isArray(selectedBranches)) {
+                    if (!selectedBranches.includes(p.Sucursal)) return false;
+                }
+                if (selectedSupplier !== 'all') {
+                    if (Array.isArray(p.proveedor)) {
+                        if (!p.proveedor.includes(selectedSupplier)) return false;
+                    } else if (p.proveedor !== selectedSupplier) {
+                        return false;
+                    }
+                }
+                if (selectedCategory && selectedCategory !== 'all' && p.categoria !== selectedCategory) return false;
+                if (p.subcategoria !== selectedSubcategory) return false;
+                if (selectedProducts !== 'all' && Array.isArray(selectedProducts)) {
+                    if (!p.Descripcion || !selectedProducts.includes(p.Descripcion.trim())) return false;
+                }
+                return true;
+            });
+
+            const agg = {};
+            let grandQty = 0;
+            let grandTotal = 0;
+            const monthTotals = {};
+            monthKeys.forEach(m => monthTotals[m] = 0);
+
+            filtered.forEach(p => {
+                const prodName = (p.Descripcion || 'Sin Nombre').trim();
+                const mKey = p.Fecha ? p.Fecha.substring(0, 7) : '';
+
+                if (!agg[prodName]) {
+                    agg[prodName] = {
+                        prodName,
+                        branches: new Set(),
+                        months: {},
+                        totalQty: 0,
+                        totalMoney: 0
+                    };
+                    monthKeys.forEach(m => agg[prodName].months[m] = 0);
+                }
+
+                const qty = p.Cantidad || 0;
+                const total = p.Total || 0;
+
+                if (p.Sucursal) agg[prodName].branches.add(p.Sucursal);
+
+                if (mKey && agg[prodName].months[mKey] !== undefined) {
+                    agg[prodName].months[mKey] += qty;
+                    monthTotals[mKey] += qty;
+                }
+                agg[prodName].totalQty += qty;
+                agg[prodName].totalMoney += total;
+                grandQty += qty;
+                grandTotal += total;
+            });
+
+            const rows = Object.values(agg).sort((a, b) => b.totalMoney - a.totalMoney);
+
+            if (badge) badge.textContent = rows.length + ' Productos';
+
+            if (rows.length === 0) {
+                if (head) head.innerHTML = '';
+                if (tbody) tbody.innerHTML = '<tr><td colspan="' + (monthKeys.length + 4) + '" class="py-8 text-center text-slate-400 font-semibold">No se encontraron productos para esta subcategoría en el periodo seleccionado</td></tr>';
+                if (foot) foot.innerHTML = '';
+                return;
+            }
+
+            let headHtml = '<tr>';
+            headHtml += '<th class="py-3.5 px-4 sticky top-0 left-0 bg-slate-100 z-40">Producto</th>';
+            headHtml += '<th class="py-3.5 px-4 text-center bg-slate-100 sticky top-0 z-20">Sucursales Presente</th>';
+            monthLabels.forEach(mLbl => {
+                headHtml += '<th class="py-3.5 px-3 text-right bg-slate-100 sticky top-0 z-20">' + mLbl + ' (Pzs)</th>';
+            });
+            headHtml += '<th class="py-3.5 px-4 text-right bg-slate-100 sticky top-0 z-20">Total Piezas</th>';
+            headHtml += '<th class="py-3.5 px-4 text-right bg-slate-100 sticky top-0 z-20">Total Facturado</th>';
+            headHtml += '</tr>';
+            if (head) head.innerHTML = headHtml;
+
+            let bodyHtml = '';
+            rows.forEach(r => {
+                const branchCount = r.branches.size;
+                bodyHtml += '<tr class="hover:bg-teal-50/40 transition-colors">';
+                bodyHtml += '<td class="py-3.5 px-4 font-bold text-slate-900 sticky-col bg-white z-10">' + r.prodName + '</td>';
+                bodyHtml += '<td class="py-3.5 px-4 text-center"><span class="px-2.5 py-1 rounded-full text-xs font-bold bg-slate-100 text-slate-700">' + branchCount + ' ' + (branchCount === 1 ? 'sucursal' : 'sucursales') + '</span></td>';
+
+                monthKeys.forEach(mKey => {
+                    const q = r.months[mKey] || 0;
+                    bodyHtml += '<td class="py-3.5 px-3 text-right font-medium ' + (q > 0 ? 'text-slate-900 font-semibold' : 'text-slate-300') + '">' + (q > 0 ? q.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 }) : '-') + '</td>';
+                });
+
+                bodyHtml += '<td class="py-3.5 px-4 text-right font-bold text-slate-800">' + r.totalQty.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + '</td>';
+                bodyHtml += '<td class="py-3.5 px-4 text-right font-extrabold text-teal-600">' + formatCurrency(r.totalMoney) + '</td>';
+                bodyHtml += '</tr>';
+            });
+            if (tbody) tbody.innerHTML = bodyHtml;
+
+            let footHtml = '<tr class="font-extrabold text-white bg-slate-900">';
+            footHtml += '<td colspan="2" class="py-4 px-4 text-teal-300 text-sm uppercase tracking-wider sticky left-0 bg-slate-900 z-40">TOTAL SUBCATEGORÍA POR MES</td>';
+            monthKeys.forEach(mKey => {
+                const mq = monthTotals[mKey] || 0;
+                footHtml += '<td class="py-4 px-3 text-right text-sm text-slate-200">' + mq.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + '</td>';
+            });
+            footHtml += '<td class="py-4 px-4 text-right text-sm text-teal-300">' + grandQty.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + '</td>';
+            footHtml += '<td class="py-4 px-4 text-right text-sm text-emerald-400">' + formatCurrency(grandTotal) + '</td>';
+            footHtml += '</tr>';
+            if (foot) foot.innerHTML = footHtml;
+        }
+
+        function updateProductTables(selectedBranches, selectedSupplier, selectedProducts, selectedCategory, selectedSubcategory, indices) {
             const section = document.getElementById('product-section');
             if (selectedBranches === 'all' || (Array.isArray(selectedBranches) && selectedBranches.length !== 1)) {
                 section.classList.add('hidden');
@@ -1282,6 +1758,8 @@
                         return false;
                     }
                 }
+                if (selectedCategory && selectedCategory !== 'all' && p.categoria !== selectedCategory) return false;
+                if (selectedSubcategory && selectedSubcategory !== 'all' && p.subcategoria !== selectedSubcategory) return false;
                 if (selectedProducts !== 'all' && Array.isArray(selectedProducts)) {
                     if (!p.Descripcion || !selectedProducts.includes(p.Descripcion.trim())) return false;
                 }
