@@ -252,7 +252,7 @@
 
             <div class="overflow-x-auto custom-scrollbar rounded-xl border border-slate-200">
                 <table class="w-full text-left text-sm border-collapse">
-                    <thead id="product-matrix-head" class="bg-slate-100 text-slate-600 font-bold uppercase text-[11px] tracking-wider"></thead>
+                    <thead id="product-matrix-head" class="bg-slate-100 text-slate-600 font-bold uppercase text-[11px] tracking-wider sticky top-0 z-20"></thead>
                     <tbody id="product-matrix-body" class="divide-y divide-slate-100 text-slate-700 font-medium bg-white"></tbody>
                     <tfoot id="product-matrix-foot" class="bg-slate-900 text-white font-bold sticky bottom-0 z-30"></tfoot>
                 </table>
@@ -321,7 +321,7 @@
 
                 <div class="overflow-x-auto max-h-[550px] custom-scrollbar rounded-xl border border-slate-200">
                     <table class="w-full text-left text-sm border-collapse">
-                        <thead id="supplier-monthly-head" class="bg-slate-100 text-slate-600 font-bold uppercase text-[11px] tracking-wider sticky top-0 z-10"></thead>
+                        <thead id="supplier-monthly-head" class="bg-slate-100 text-slate-600 font-bold uppercase text-[11px] tracking-wider sticky top-0 z-20"></thead>
                         <tbody id="supplier-monthly-body" class="divide-y divide-slate-100 text-slate-700 font-medium bg-white"></tbody>
                         <tfoot id="supplier-monthly-foot" class="bg-slate-900 text-white font-bold sticky bottom-0 z-30"></tfoot>
                     </table>
@@ -409,7 +409,7 @@
 
             <div class="overflow-x-auto custom-scrollbar rounded-xl border border-slate-200">
                 <table class="w-full text-left text-sm border-collapse">
-                    <thead id="table-head" class="bg-slate-100 text-slate-600 font-bold"></thead>
+                    <thead id="table-head" class="bg-slate-100 text-slate-600 font-bold uppercase text-[11px] tracking-wider sticky top-0 z-20"></thead>
                     <tbody id="table-body" class="divide-y divide-slate-100 text-slate-700 font-medium"></tbody>
                     <tfoot id="table-foot" class="bg-slate-900 text-white font-bold sticky bottom-0 z-30"></tfoot>
                 </table>
@@ -837,7 +837,7 @@
             const body = document.getElementById('table-body');
             const foot = document.getElementById('table-foot');
             
-            let headHtml = '<tr class="border-b border-slate-200 uppercase text-xs tracking-wider"><th class="py-4 px-4 sticky-col font-bold text-slate-700 bg-slate-100">Sucursal</th>';
+            let headHtml = '<tr class="border-b border-slate-200 uppercase text-xs tracking-wider"><th class="py-4 px-4 sticky top-0 left-0 z-40 font-bold text-slate-700 bg-slate-100">Sucursal</th>';
             indices.forEach(i => { headHtml += '<th class="py-4 px-3 text-right font-bold text-slate-700">' + window.formatDashboardDate(FULL_DATA.dates[i]) + '</th>'; });
             head.innerHTML = headHtml + '</tr>';
             
@@ -979,7 +979,7 @@
             const body = document.getElementById('product-matrix-body');
             const foot = document.getElementById('product-matrix-foot');
 
-            let headHtml = '<tr class="border-b border-slate-200"><th class="py-4 px-4 sticky-col font-bold text-slate-700 bg-slate-100">Sucursal</th>';
+            let headHtml = '<tr class="border-b border-slate-200"><th class="py-4 px-4 sticky top-0 left-0 z-40 font-bold text-slate-700 bg-slate-100">Sucursal</th>';
             indices.forEach(i => {
                 headHtml += '<th class="py-4 px-3 text-right font-bold text-slate-700">' + window.formatDashboardDate(FULL_DATA.dates[i]) + '</th>';
             });
@@ -1224,13 +1224,13 @@
             }
 
             let headHtml = '<tr>';
-            headHtml += '<th class="py-3.5 px-4 sticky-col bg-slate-100 z-20">Sucursal</th>';
-            headHtml += '<th class="py-3.5 px-4 bg-slate-100">Producto</th>';
+            headHtml += '<th class="py-3.5 px-4 sticky top-0 left-0 bg-slate-100 z-40">Sucursal</th>';
+            headHtml += '<th class="py-3.5 px-4 bg-slate-100 sticky top-0 z-20">Producto</th>';
             monthLabels.forEach(mLbl => {
-                headHtml += '<th class="py-3.5 px-3 text-right bg-slate-100">' + mLbl + ' (Pzs)</th>';
+                headHtml += '<th class="py-3.5 px-3 text-right bg-slate-100 sticky top-0 z-20">' + mLbl + ' (Pzs)</th>';
             });
-            headHtml += '<th class="py-3.5 px-4 text-right bg-slate-100">Total Piezas</th>';
-            headHtml += '<th class="py-3.5 px-4 text-right bg-slate-100">Total Facturado</th>';
+            headHtml += '<th class="py-3.5 px-4 text-right bg-slate-100 sticky top-0 z-20">Total Piezas</th>';
+            headHtml += '<th class="py-3.5 px-4 text-right bg-slate-100 sticky top-0 z-20">Total Facturado</th>';
             headHtml += '</tr>';
             head.innerHTML = headHtml;
 
