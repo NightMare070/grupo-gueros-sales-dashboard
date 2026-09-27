@@ -1,0 +1,140 @@
+import pyodbc
+import pandas as pd
+import json
+import os
+from datetime import datetime, timedelta
+
+# --- CONFIGURATION ---
+today = datetime.now()
+yesterday = today - timedelta(days=1)
+TARGET_DATE_STR = yesterday.strftime('%Y-%m-%d')
+TARGET_DATE_SQL = yesterday.strftime('%Y%m%d')
+JSON_PATH = r'C:\Users\agente\dashboard_repo\dashboard_data.json'
+CATALOG_PATH = r'C:\Users\agente\AppData\Local\HermesSecondBrain\Catalog\Categories_Summary.md'
+
+# Branch Database Directory (Excluding Sede Aeronautica)
+BRANCHES = {
+    "Centeno": {"server": "25.66.11.46\\SQLEXPRESS,1400", "db": r"C:\MyBusinessDatabase\MyBusinessPOS2010.mdf"},
+    "Dibujantes": {"server": "25.47.107.243\\SQLEXPRESS,1400", "db": "ACULCO"},
+    "GC1": {"server": "25.58.53.229\\SQLEXPRESS,1400", "db": "CUAJIMALPA"},
+    "GC2": {"server": "25.60.248.44\\SQLEXPRESS,1400", "db": "GCII"},
+    "GC3": {"server": "25.36.154.112\\SQLEXPRESS,1400", "db": "GCIII"},
+    "Xochimilco 1": {"server": "25.36.200.140\\SQLEXPRESS,1400", "db": "XU"},
+    "Xochimilco 2": {"server": "25.36.21.81\\SQLEXPRESS,1400", "db": "XD"},
+    "La Nueva": {"server": "25.17.7.172\\SQLEXPRESS,1400", "db": r"C:\MyBusinessDatabases\MyBusinessPOS2010.mdf"},
+    "Los Güeros": {"server": "25.71.106.101\\SQLEXPRESS,1400", "db": r"C:\MyBusinessDatabase\MyBusinessPOS2010.mdf"},
+    "Sur 16": {"server": "25.36.2.227\\SQLEXPRESS,1400", "db": "S16"},
+    "Monarca": {"server": "25.36.119.112\\SQLEXPRESS,1400", "db": "ERMITA"},
+    "Mineros": {"server": "25.27.27.7\\SQLEXPRESS,1400", "db": "MINEROS"},
+}
+
+USER = 'usuarioconsulta'
+PWD = 'Hermes2026*'
+
+def load_categories():
+    cat_map = {}
+    try:
+        with open(CATALOG_PATH, 'r', encoding='utf-8') as f:
+            current_cat = "OTROS"
+            for line in f:
+                line = line.strip()
+                if line.startswith('## '):
+                    current_cat = line.replace('## ', '').strip()
+                elif line.startswith('- '):
+                    sub_cat = line.replace('- ', '').strip()
+                    cat_map[sub_cat] = current_cat
+    except Exception as e:
+        print(f"Error loading categories: {e}")
+    return cat_map
+
+def get_category_info(prod_name, cat_map):
+    prod_lower = prod_name.lower()
+    sorted_keywords = sorted(cat_map.keys(), key=len, reverse=True)
+    for kw in sorted_keywords:
+        if kw.lower() in prod_lower:
+            return cat_map[kw], kw
+    return "Otros", "Otros"
+
+def extract_sales(branch_name, config):
+    conn_str = (
+        f"DRIVER={{ODBC Driver 18 for SQL Server}};"
+        f"SERVER={config['server']};"
+        f"DATABASE={config['db']};"
+        f"UID={USER};PWD={PWD};"
+        f"Encrypt=no;TrustServerCertificate=yes;"
+    )
+    
+    # Try with Proveedor first, fallback to without it
+    queries = [
+        f"SELECT Descripcion, Cantidad, Total, Proveedor FROM rventas WHERE Fecha = '{TARGET_DATE_SQL}' AND Nombre <> 'FALTANTES EMPLEADOS'",
+        f"SELECT Descripcion, Cantidad, Total FROM rventas WHERE Fecha = '{TARGET_DATE_SQL}' AND Nombre <> 'FALTANTES EMPLEADOS'"
+    ]
+    
+    for query in queries:
+        try:
+            conn = pyodbc.connect(conn_str, timeout=10)
+            df = pd.read_sql(query, conn)
+            conn.close()
+            if 'Proveedor' not in df.columns:
+                df['Proveedor'] = 'Desconocido'
+            return df
+        except Exception as e:
+            print(f"Attempt with query failed for {branch_name}: {e}")
+            continue
+            
+    print(f"All extraction attempts failed for {branch_name}")
+    return pd.DataFrame()
+
+def run():
+    cat_map = load_categories()
+    
+    try:
+        with open(JSON_PATH, 'r', encoding='utf-8') as f:
+            data = json.load(f)
+    except Exception as e:
+        print(f"Error loading JSON: {e}")
+        return
+
+    if TARGET_DATE_STR not in data['dates']:
+        data['dates'].append(TARGET_DATE_STR)
+
+    daily_products = []
+    
+    for b_name, b_cfg in BRANCHES.items():
+        df = extract_sales(b_name, b_cfg)
+        
+        total_sales = float(df['Total'].sum()) if not df.empty else 0.0
+        
+        # Handle branches as a dictionary: data['branches'][b_name] = [sales_list]
+        if b_name in data['branches']:
+            data['branches'][b_name].append(total_sales)
+        else:
+            # Create list with zeros for previous dates + current total
+            data['branches'][b_name] = [0.0] * (len(data['dates']) - 1) + [total_sales]
+            
+        if not df.empty:
+            for _, row in df.iterrows():
+                desc = str(row['Descripcion'])
+                if "PROM" in desc.upper() or "BLOQ" in desc.upper():
+                    continue
+                cat, subcat = get_category_info(desc, cat_map)
+                daily_products.append({
+                    "fecha": TARGET_DATE_STR,
+                    "producto": desc,
+                    "sucursal": b_name,
+                    "monto": float(row['Total']),
+                    "cantidad": float(row['Cantidad']) if row['Cantidad'] is not None else 0.0,
+                    "proveedor": str(row['Proveedor']),
+                    "categoria": cat,
+                    "subcategoria": subcat
+                })
+
+    data['products'].extend(daily_products)
+    
+    with open(JSON_PATH, 'w', encoding='utf-8') as f:
+        json.dump(data, f, indent=2)
+    
+    print(f"Success: {JSON_PATH} updated for {TARGET_DATE_STR}. Added {len(daily_products)} product items.")
+
+if __name__ == "__main__":
+    run()
