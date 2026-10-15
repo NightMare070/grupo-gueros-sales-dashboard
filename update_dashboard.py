@@ -3,8 +3,10 @@ import json
 import os
 from datetime import datetime, timedelta
 
-YESTERDAY_ISO = "2026-10-10"
-YESTERDAY_SQL = "20261010"
+# Calculate yesterday dynamically
+yesterday = datetime.now() - timedelta(days=1)
+YESTERDAY_ISO = yesterday.strftime('%Y-%m-%d')
+YESTERDAY_SQL = yesterday.strftime('%Y%m%d')
 
 REPO_PATH = r'C:\Users\agente\dashboard_repo'
 JSON_PATH = os.path.join(REPO_PATH, 'dashboard_data.json')
@@ -112,6 +114,10 @@ def main():
 
     with open(JSON_PATH, 'w', encoding='utf-8') as f:
         json.dump(data, f, indent=2)
+    
+    print("Running optimizer...")
+    os.system('node convert_data.js')
+    print("Optimizer finished.")
 
 if __name__ == "__main__":
     main()
