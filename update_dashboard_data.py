@@ -1,13 +1,15 @@
 import pyodbc
 import json
 import os
-import re
+import datetime
 
 # Configuration
 USER = "usuarioconsulta"
 PASS = "Hermes2026*"
-DATE_SQL = "20260929"
-DATE_ISO = "2026-09-29"
+today = datetime.date.today()
+yesterday = today - datetime.timedelta(days=1)
+DATE_SQL = yesterday.strftime('%Y%m%d')
+DATE_ISO = yesterday.strftime('%Y-%m-%d')
 
 BRANCHES = {
     "Centeno": {"server": "25.66.11.46\SQLEXPRESS,1400", "db": "C:\MyBusinessDatabase\MyBusinessPOS2010.mdf"},
@@ -105,16 +107,23 @@ def main():
         data["dates"].append(DATE_ISO)
 
     # Update branches
+    if "branches" not in data or not isinstance(data["branches"], list):
+        data["branches"] = []
+
     for branch_name, total in branch_totals.items():
         # Match branch name in JSON (might be different, so we find it)
         found = False
         for b in data["branches"]:
-            if b["name"].lower() == branch_name.lower() or branch_name.lower() in b["name"].lower():
+            if isinstance(b, dict) and ("name" in b) and (b["name"].lower() == branch_name.lower() or branch_name.lower() in b["name"].lower()):
+                if "values" not in b or not isinstance(b["values"], list):
+                    b["values"] = []
                 b["values"].append(total)
                 found = True
                 break
         if not found:
-            data["branches"].append({"name": branch_name, "values": [0.0]* (len(data["dates"])-1) + [total]})
+            # Create new branch entry with padding for missing dates
+            padding = [0.0] * (len(data.get("dates", [])) - 1)
+            data["branches"].append({"name": branch_name, "values": padding + [total]})
 
     # Update products
     data["products"].extend(daily_products)
