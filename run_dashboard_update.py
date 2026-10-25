@@ -71,7 +71,7 @@ def get_branch_data(branch):
         cursor = conn.cursor()
         cursor.execute(f"SELECT SUM(CAST(Total AS FLOAT)) FROM rventas WHERE Fecha = '{DATE_SQL}' AND Nombre <> 'FALTANTES EMPLEADOS'")
         total = cursor.fetchone()[0] or 0.0
-        cursor.execute(f"SELECT Descripcion, CAST(Total AS FLOAT), CAST(Cantidad AS FLOAT), proveedor FROM rventas WHERE Fecha = '{DATE_SQL}' AND Nombre <> 'FALTANTES EMPLEADOS'")
+        cursor.execute(f"SELECT Descripcion, CAST(Total AS FLOAT), CAST(Cantidad AS FLOAT) FROM rventas WHERE Fecha = '{DATE_SQL}' AND Nombre <> 'FALTANTES EMPLEADOS'")
         details = cursor.fetchall()
         conn.close()
         return total, details
@@ -110,7 +110,7 @@ def main():
             })
 
         for row in details:
-            desc, val, qty, prov = row
+            desc, val, qty = row
             if not desc or "PROM" in desc.upper() or "BLOQ" in desc.upper():
                 continue
             cat, sub = map_product(desc, cat_map)
@@ -120,7 +120,6 @@ def main():
                 "Descripcion": desc,
                 "Cantidad": qty,
                 "Total": val,
-                "proveedor": prov,
                 "categoria": cat,
                 "subcategoria": sub
             })
