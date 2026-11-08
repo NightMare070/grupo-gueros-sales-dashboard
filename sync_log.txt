@@ -1,0 +1,3 @@
+--- Sync Start ---
+[2026-11-02T07:15:49.567944] Loaded 117 mapping entries.
+[2026-11-02T07:15:50.011084] Extracting Centeno...
