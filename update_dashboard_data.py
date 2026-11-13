@@ -75,12 +75,12 @@ def main():
                 cursor = conn.cursor()
                 
                 # Total
-                cursor.execute(f"SELECT SUM(CAST(Total AS FLOAT)) FROM rventas WHERE Fecha = '{DATE_SQL}' AND Nombre <> 'FALTANTES EMPLEADOS'")
+                cursor.execute(f"SELECT SUM(CAST(Total AS FLOAT)) FROM rventas WHERE Fecha = '{DATE_SQL}' AND Nombre <> 'FALTANTES EMPLEADOS' AND Descripcion NOT LIKE '%PROM%' AND Descripcion NOT LIKE '%bloq%'")
                 row = cursor.fetchone()
                 branch_totals[branch] = float(row[0]) if row and row[0] else 0.0
                 
                 # Details
-                cursor.execute(f"SELECT Descripcion, Total FROM rventas WHERE Fecha = '{DATE_SQL}' AND Nombre <> 'FALTANTES EMPLEADOS'")
+                cursor.execute(f"SELECT Descripcion, Total FROM rventas WHERE Fecha = '{DATE_SQL}' AND Nombre <> 'FALTANTES EMPLEADOS' AND Descripcion NOT LIKE '%PROM%' AND Descripcion NOT LIKE '%bloq%'")
                 for row in cursor.fetchall():
                     desc = row[0]
                     val = float(row[1]) if row[1] else 0.0
