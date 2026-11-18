@@ -81,7 +81,7 @@ def main():
             cursor = conn.cursor()
             
             # 1. Total Sales
-            cursor.execute(f"SELECT SUM(CAST(Total AS FLOAT)) FROM rventas WHERE Fecha = '{YESTERDAY_SQL}' AND Nombre <> 'FALTANTES EMPLEADOS'")
+            cursor.execute(f"SELECT SUM(CAST(Total AS FLOAT)) FROM rventas WHERE CONVERT(VARCHAR, Fecha, 112) = '{YESTERDAY_SQL}' AND Nombre <> 'FALTANTES EMPLEADOS'")
             row = cursor.fetchone()
             total_sales = float(row[0]) if row and row[0] else 0.0
             
@@ -91,7 +91,7 @@ def main():
                 data['branches'][branch_name] = [0.0] * (len(data['dates']) - 1) + [total_sales]
 
             # 2. Products (REMOVED 'Proveedor' column)
-            cursor.execute(f"SELECT Descripcion, SUM(CAST(Total AS FLOAT)), SUM(CAST(Cantidad AS FLOAT)) FROM rventas WHERE Fecha = '{YESTERDAY_SQL}' AND Nombre <> 'FALTANTES EMPLEADOS' GROUP BY Descripcion")
+            cursor.execute(f"SELECT Descripcion, SUM(CAST(Total AS FLOAT)), SUM(CAST(Cantidad AS FLOAT)) FROM rventas WHERE CONVERT(VARCHAR, Fecha, 112) = '{YESTERDAY_SQL}' AND Nombre <> 'FALTANTES EMPLEADOS' GROUP BY Descripcion")
             rows = cursor.fetchall()
             
             for row in rows:
