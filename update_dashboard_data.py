@@ -24,8 +24,10 @@ JSON_PATH = r'C:\Users\agente\dashboard_repo\dashboard_data.json'
 CATS_PATH = r'C:\Users\agente\AppData\Local\HermesSecondBrain\Catalog\Categories_Summary.md'
 USER_ID = 'usuarioconsulta'
 PASSWORD = 'Hermes2026*'
-TARGET_DATE_SQL = '20261116'
-TARGET_DATE_ISO = '2026-11-16'
+TODAY = datetime.now()
+YESTERDAY = TODAY - timedelta(days=1)
+TARGET_DATE_SQL = YESTERDAY.strftime('%Y%m%d')
+TARGET_DATE_ISO = YESTERDAY.strftime('%Y-%m-%d')
 
 def parse_categories(path):
     cats = {}
